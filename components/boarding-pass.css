@@ -1,0 +1,85 @@
+/* Boarding pass component: case study header.
+   Shared by every case study page. Change styles here, not on individual pages.
+   Colors come from DESIGN.md. */
+
+:root {
+  --ink: #111111;
+  --paper: #FFFFFF;
+  --muted: #5C5C5C;
+  --red: #E30613;
+}
+
+.boarding-pass {
+  max-width: 560px;
+  margin: 0 auto;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  padding: 30px 30px 28px;
+  font-family: Archivo, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+}
+
+/* row 1: title */
+.bp-title {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 22px;
+}
+
+/* row 2: FROM → TO on one line, smaller than the title */
+.bp-route {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px 0;
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px dashed var(--ink);
+  margin-bottom: 22px;
+}
+.bp-point { display: flex; flex-direction: column; }
+.bp-point.bp-to { text-align: right; }
+.bp-k {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 2px;
+}
+.bp-v {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+}
+.bp-arrow { font-size: 22px; font-weight: 800; color: var(--ink); }
+
+/* row 3: image */
+.bp-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-bottom: 22px;
+}
+
+/* row 4: CTA, the only red element */
+.bp-cta {
+  display: block;
+  background: var(--red);
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 20px;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 600px) {
+  .bp-title { font-size: 30px; }
+  .bp-v { font-size: 18px; }
+}

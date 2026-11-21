@@ -11,6 +11,12 @@ This repository holds the portfolio website for Ji-Sook Yim (Product & UX Design
 - `DESIGN.md` holds the visual system: colors, type, spacing, components, and tone.
 - Site pages and shared styles will be added here as the site is built.
 
+## Components (required)
+- Every case study header is the boarding pass component: `components/boarding-pass.html` (markup) and `components/boarding-pass.css` (styles). Do not write a new header or restyle it on one page.
+- Case study pages are generated. To add or change one, edit or add a file in `content/case-studies/` (JSON), then run `node scripts/build-case-studies.mjs`. Do not hand-edit files in `case-studies/`.
+- To change the boarding pass for all case studies, edit the component files, then rebuild.
+- Homepage case study cards use the project card component described in `DESIGN.md`. Link each card to its generated page in `case-studies/`.
+
 ## Rules
 - Reuse shared components and styles instead of one-off styling.
 - Keep the homepage and case study pages built from the same components.

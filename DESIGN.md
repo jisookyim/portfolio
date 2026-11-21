@@ -42,7 +42,7 @@ Usage rules:
 - Impact highlight: full-width red block with a large number and a short line.
 - Testimonial block: large type, name and title in muted text.
 - Strengths row: three numbered columns with a red number and a top rule.
-- Boarding pass case study header: FROM → TO, passenger, flight, gate, date, seat (headline impact). Dashed perforation divides header from body.
+- Boarding pass case study header (`components/boarding-pass.html` and `.css`). Rows top to bottom: case study title (largest type), FROM → TO on one line (black ink, dashed rule below), image (16:9), red CTA button. Solid 2px black border. Use on every case study page. Do not add labels like "Boarding pass" or case study numbers.
 - Case study template: header (boarding pass), overview, sections, outcome, next project.
 - Contact call to action: large heading and one button.
 
