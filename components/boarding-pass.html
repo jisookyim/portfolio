@@ -1,5 +1,5 @@
-<!-- Boarding pass component template. Do not edit individual case study pages.
-     Edit this file, then run: node scripts/build-case-studies.mjs
+<!-- Boarding pass component template. Do not edit individual pages.
+     Edit this file, then run: node scripts/build-site.mjs
      Placeholders: title, from, to, image_src, image_alt, cta_text, cta_href -->
 <article class="boarding-pass">
   <h1 class="bp-title">{{title}}</h1>
@@ -8,6 +8,6 @@
     <div class="bp-arrow">→</div>
     <div class="bp-point bp-to"><p class="bp-k">To</p><p class="bp-v">{{to}}</p></div>
   </div>
-  <img class="bp-image" src="{{image_src}}" alt="{{image_alt}}">
   <a class="bp-cta" href="{{cta_href}}">{{cta_text}}</a>
+  <img class="bp-image" src="{{image_src}}" alt="{{image_alt}}">
 </article>
