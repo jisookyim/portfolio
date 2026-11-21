@@ -84,8 +84,8 @@ h2 {
 .projects { padding-bottom: 72px; }
 .ticket-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
+  grid-template-columns: 1fr;
+  gap: 48px;
 }
 .ticket-grid .boarding-pass { max-width: none; margin: 0; }
 
