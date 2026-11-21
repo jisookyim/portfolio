@@ -6,8 +6,11 @@ Source: current Squarespace homepage (jisookyim.com). Wording kept as-is for now
 - Ji-Sook Yim | Product & UX Design
 - Nav: AI Lab, Resume, About, Contact
 
-## Intro
-- Greeting and short bio: product design leader and mentor. Interests include language learning, a Swatch watch collection, and puzzles.
+## Intro (Ji-Sook's own wording, keep as written)
+I’m Ji-Sook, a product design leader and mentor. I’m also a language learning enthusiast (~B1-B2 in 🇩🇪🇫🇷, dabbling in 🇮🇹🇧🇷) with a modest 🇨🇭 Swatch collection who likes to navigate ambiguity to solve both jigsaw puzzles and product/UX problems. I’m on a mission to uncover the “why”, “who”, and insights to create meaningful human experiences.
+
+## Hero (From → To cycle)
+- Pairs live in `content/hero.json`.
 
 ## Core strengths
 1. Hands-on Design Leadership: 15+ years across research, product/UX design, and strategy

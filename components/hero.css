@@ -1,0 +1,76 @@
+/* Hero: the From → To cycle at the top of the homepage.
+   Text comes from content/hero.json. Colors come from DESIGN.md. */
+
+.hero {
+  padding: 72px 0 64px;
+}
+
+.hero-route {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px dashed var(--ink);
+  padding: 36px 0;
+}
+
+.hero-point { flex: 1; min-width: 0; }
+.hero-to { text-align: right; }
+
+.hero-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+
+/* all values share one grid cell, so they overlap and the cell sizes to the longest one */
+.hero-cycle {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+.hero-to .hero-cycle { justify-items: end; }
+
+.hero-cycle > span {
+  grid-area: 1 / 1;
+  font-size: clamp(40px, 6.4vw, 92px);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  overflow-wrap: anywhere;
+}
+.hero-cycle > span.is-active {
+  opacity: 1;
+  transform: none;
+}
+
+.hero-arrow {
+  align-self: center;
+  font-size: clamp(32px, 4.4vw, 64px);
+  font-weight: 800;
+  color: var(--ink);
+  flex: 0 0 auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cycle > span { transition: none; }
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 48px 0 40px; }
+  .hero-route {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    padding: 28px 0;
+  }
+  .hero-to { text-align: left; }
+  .hero-to .hero-cycle { justify-items: start; }
+  .hero-cycle > span { font-size: 40px; white-space: normal; }
+  .hero-arrow { transform: rotate(90deg); align-self: flex-start; font-size: 32px; }
+}
