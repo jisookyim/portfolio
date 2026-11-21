@@ -14,7 +14,7 @@
 }
 
 .hero-point { flex: 1; min-width: 0; }
-.hero-to { text-align: right; }
+.hero-to { text-align: left; }
 
 .hero-label {
   font-size: 12px;
@@ -30,7 +30,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr);
 }
-.hero-to .hero-cycle { justify-items: end; }
+.hero-to .hero-cycle { justify-items: start; }
 
 .hero-cycle > span {
   grid-area: 1 / 1;
