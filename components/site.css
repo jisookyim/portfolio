@@ -66,7 +66,6 @@ main, .site-nav {
   padding: 0 0 72px;
 }
 .strength { border-top: 2px solid var(--ink); padding-top: 14px; }
-.strength .num { font-size: 13px; font-weight: 700; color: var(--red); margin: 0 0 14px; }
 .strength h3 { font-size: 22px; font-weight: 700; margin: 0 0 8px; }
 .strength p { font-size: 15px; color: var(--muted); margin: 0; }
 

@@ -2,7 +2,7 @@
   "interval_ms": 2600,
   "pairs": [
     { "from": "Ambiguity", "to": "Clarity" },
-    { "from": "Undefined problem", "to": "Research-driven hypothesis" },
+    { "from": "Unclear goal", "to": "Hypothesis" },
     { "from": "Feature bloat", "to": "Simplicity" }
   ]
 }

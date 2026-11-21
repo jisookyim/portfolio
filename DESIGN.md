@@ -37,7 +37,8 @@ Usage rules:
 
 ## Components
 - Boarding pass card (`components/boarding-pass.html` and `.css`): used on the homepage only. Solid 2px black border, 36px padding. Desktop: two columns. Left column, top to bottom: case study title (40px, bold), FROM → TO on one line (black ink, rule above and dashed rule below), short blurb (17px, muted), red CTA button at the bottom. Right column: image in a fixed 4:3 frame. Mobile: one column, in this order: title, FROM → TO, blurb, image, CTA. Do not add labels such as "Boarding pass" or case study numbers.
-- Strengths row: three numbered columns with a red number and a top rule.
+- Strengths row: three columns, each with a top rule and no numbers.
+- From → To hero: below the intro, one rule above it, values cycle through pairs in `content/hero.json`. No CTA.
 - Testimonial block: large type, name and title in muted text.
 - Section heading: bold, with a top rule.
 - Closing call to action: large heading and one button.
