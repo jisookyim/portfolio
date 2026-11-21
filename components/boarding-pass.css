@@ -80,6 +80,11 @@
 }
 
 @media (max-width: 600px) {
-  .bp-title { font-size: 30px; }
+  .boarding-pass { padding: 20px 18px 20px; }
+  .bp-title { font-size: 28px; margin-bottom: 18px; }
+  .bp-route { gap: 10px; padding: 12px 0; margin-bottom: 18px; }
   .bp-v { font-size: 18px; }
+  .bp-arrow { font-size: 18px; }
+  .bp-image { margin-bottom: 18px; }
+  .bp-cta { font-size: 15px; padding: 14px 16px; }
 }
