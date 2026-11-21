@@ -15,6 +15,7 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 40px;
   align-items: stretch;
+  grid-template-rows: auto auto 1fr auto;
   background: var(--paper);
   border: 2px solid var(--ink);
   padding: 36px;
@@ -47,9 +48,20 @@
   align-self: start;
 }
 
-.bp-cta {
+/* row 3: short blurb under FROM → TO */
+.bp-blurb {
   grid-column: 1;
   grid-row: 3;
+  align-self: start;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 20px 0 0;
+}
+
+.bp-cta {
+  grid-column: 1;
+  grid-row: 4;
   align-self: end;
   justify-self: start;
   display: inline-block;
@@ -66,7 +78,7 @@
 /* right column: image in a fixed frame */
 .bp-image {
   grid-column: 2;
-  grid-row: 1 / span 3;
+  grid-row: 1 / span 4;
   display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -102,6 +114,7 @@
   .bp-route { padding: 12px 0; margin-bottom: 18px; gap: 10px; align-self: stretch; }
   .bp-v { font-size: 18px; }
   .bp-arrow { font-size: 18px; }
+  .bp-blurb { order: 1; margin: 0 0 18px; font-size: 16px; }
   .bp-image { order: 3; margin: 18px 0; }
   .bp-cta { order: 4; align-self: stretch; justify-self: stretch; margin-top: 0; text-align: center; font-size: 15px; padding: 14px 16px; }
 }
