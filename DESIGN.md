@@ -5,7 +5,7 @@ Status: foundation v1. Swiss direction chosen. Bolder colors still to be defined
 ## Direction
 - Style: Swiss (International Typographic Style). Strict grid, flush-left text, clear hierarchy, restrained color.
 - Feel: TBD (three words from Ji-Sook still pending)
-- Concept layer: the case study header is a boarding pass (FROM → TO, passenger, flight, gate, seat). This is a component, not a style.
+- Concept layer: the homepage project cards are boarding passes (FROM → TO). This is a component, not a style.
 - Avoid: common AI-template looks (purple gradients, glassmorphism, generic Inter-everywhere layouts).
 
 ## Colors
@@ -14,7 +14,7 @@ Base palette (Swiss):
 - Paper: #FFFFFF (page background)
 - Grey: #ECECEC (alternate section background)
 - Muted text: #5C5C5C (secondary copy)
-- Red: #E30613 (single accent: links, numbers, highlights)
+- Red: #E30613 (single accent: links, numbers, highlights, CTA)
 
 Bold palette: TBD. To be added later as a small set of extra accent colors. Until then, use the base palette only. Do not add new colors ad hoc.
 
@@ -25,26 +25,22 @@ Usage rules:
 ## Typography
 - Headings and body: Archivo (neo-grotesque sans-serif, Helvetica-like, free on Google Fonts). Swap only if Ji-Sook asks.
 - Do not use Inter, system defaults, or serif display faces unless added here.
-- Headings: bold (700–800), tight leading, sentence case or uppercase labels.
-- Body: regular (400), 16–19px, line height about 1.5.
-- Labels and data (FROM, TO, GATE, SEAT): uppercase, small, letter-spaced.
-- Sizes and line height for the full scale: TBD
+- Headings: bold (700–800), tight leading.
+- Body: regular (400), 17px, line height about 1.5.
+- Labels and data (FROM, TO): uppercase, small, letter-spaced.
 
 ## Layout
-- Grid: 12 columns, consistent gutters (24px desktop).
+- Maximum content width: 1120px. Two-column card grid on desktop, one column on mobile.
 - Text: flush-left, ragged-right. Never center long text.
-- Maximum content width: TBD (about 1040px)
-- Spacing scale: TBD (multiples of 8px)
+- Spacing: multiples of 8px.
 - Rules: 1–2px black lines to separate sections, used as structure.
 
 ## Components
-- Project card: bordered, flush-left, bold title, red link with underline.
-- Impact highlight: full-width red block with a large number and a short line.
-- Testimonial block: large type, name and title in muted text.
+- Boarding pass card (`components/boarding-pass.html` and `.css`): used on the homepage only. Rows top to bottom: case study title (largest type), FROM → TO on one line (black ink, dashed rule below), image (16:9), red CTA button. Solid 2px black border. Do not add labels such as "Boarding pass" or case study numbers.
 - Strengths row: three numbered columns with a red number and a top rule.
-- Boarding pass case study header (`components/boarding-pass.html` and `.css`). Rows top to bottom: case study title (largest type), FROM → TO on one line (black ink, dashed rule below), image (16:9), red CTA button. Solid 2px black border. Use on every case study page. Do not add labels like "Boarding pass" or case study numbers.
-- Case study template: header (boarding pass), overview, sections, outcome, next project.
-- Contact call to action: large heading and one button.
+- Testimonial block: large type, name and title in muted text.
+- Section heading: bold, with a top rule.
+- Closing call to action: large heading and one button.
 
 ## Tone
 - Direct, confident, plain. Short sentences. No hype words.

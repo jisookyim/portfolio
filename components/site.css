@@ -1,0 +1,125 @@
+/* Homepage base styles. Colors come from DESIGN.md. Shared by every page. */
+
+:root {
+  --ink: #111111;
+  --paper: #FFFFFF;
+  --grey: #ECECEC;
+  --muted: #5C5C5C;
+  --red: #E30613;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Archivo, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+main, .site-nav {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* nav */
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--ink);
+}
+.site-name { font-weight: 800; color: var(--ink); text-decoration: none; font-size: 18px; }
+.site-nav ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
+.site-nav a { color: var(--ink); text-decoration: none; font-size: 15px; font-weight: 600; }
+
+/* intro */
+.intro { padding: 72px 0 56px; max-width: 760px; }
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin: 0 0 16px;
+}
+.intro h1 {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin: 0 0 24px;
+}
+.lede { font-size: 19px; color: var(--muted); max-width: 58ch; margin: 0; }
+
+/* strengths */
+.strengths {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 0 0 72px;
+}
+.strength { border-top: 2px solid var(--ink); padding-top: 14px; }
+.strength .num { font-size: 13px; font-weight: 700; color: var(--red); margin: 0 0 14px; }
+.strength h3 { font-size: 22px; font-weight: 700; margin: 0 0 8px; }
+.strength p { font-size: 15px; color: var(--muted); margin: 0; }
+
+/* section titles */
+h2 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 0 0 28px;
+  padding-top: 16px;
+  border-top: 2px solid var(--ink);
+}
+
+/* projects: tickets in a two-column grid */
+.projects { padding-bottom: 72px; }
+.ticket-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+.ticket-grid .boarding-pass { max-width: none; margin: 0; }
+
+/* testimonials */
+.testimonials { padding-bottom: 72px; }
+.quotes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+blockquote {
+  margin: 0;
+  padding: 20px 0 0;
+  border-top: 1px solid var(--ink);
+}
+blockquote p { font-size: 17px; margin: 0 0 12px; }
+blockquote cite { font-size: 14px; font-style: normal; color: var(--muted); }
+
+/* closing */
+.closing { padding: 0 0 96px; }
+.closing h2 { font-size: 56px; letter-spacing: -0.02em; border-top: 2px solid var(--ink); }
+.closing-cta {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 24px;
+  text-decoration: none;
+}
+
+@media (max-width: 800px) {
+  .intro h1 { font-size: 44px; }
+  .strengths, .ticket-grid, .quotes { grid-template-columns: 1fr; }
+  .site-nav ul { display: none; }
+  .closing h2 { font-size: 40px; }
+}
