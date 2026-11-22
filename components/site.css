@@ -100,20 +100,8 @@ h2 {
 }
 .ticket-grid .boarding-pass { max-width: none; margin: 0; }
 
-/* testimonials */
+/* testimonials: cards come from components/recommendation.css */
 .testimonials { padding-bottom: 72px; }
-.quotes {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-blockquote {
-  margin: 0;
-  padding: 20px 0 0;
-  border-top: 1px solid var(--ink);
-}
-blockquote p { font-size: 17px; margin: 0 0 12px; }
-blockquote cite { font-size: 14px; font-style: normal; color: var(--muted); }
 
 /* closing */
 .closing { padding: 0 0 96px; }
@@ -130,7 +118,7 @@ blockquote cite { font-size: 14px; font-style: normal; color: var(--muted); }
 
 @media (max-width: 800px) {
   .intro h1 { font-size: 44px; }
-  .strengths, .quotes { grid-template-columns: 1fr; }
+  .strengths { grid-template-columns: 1fr; }
   .closing h2 { font-size: 40px; }
 }
 

@@ -39,7 +39,7 @@ Usage rules:
 - Boarding pass card (`components/boarding-pass.html` and `.css`): used on the homepage only. Solid 2px black border, 36px padding. Desktop: two columns. Left column, top to bottom: case study title (40px, bold), FROM → TO on one line (black ink, rule above and dashed rule below), short blurb (17px, muted), red CTA button at the bottom. Right column: image in a fixed 4:3 frame. Mobile: one column, in this order: title, FROM → TO, blurb, image, CTA. Do not add labels such as "Boarding pass" or case study numbers.
 - Strengths row: three columns, each with a top rule and no numbers.
 - From → To hero: below the intro, one rule above it, values cycle through pairs in `content/hero.json`. No CTA.
-- Testimonial block: large type, name and title in muted text.
+- Recommendation card (`components/recommendation.html` and `.css`): structure follows the cards on the current Squarespace site, visuals follow this system. Solid 2px black border, square corners, 32px padding. Quote (17px) on top, then a 1px black divider inside the padding, then a round 48px headshot (initials on grey if no photo) with name (bold) and title (muted). Two columns on desktop, one on mobile.
 - Section heading: bold, with a top rule.
 - Closing call to action: large heading and one button.
 

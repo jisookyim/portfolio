@@ -1,5 +1,6 @@
 // Builds the homepage (index.html) from templates/index.html.
 // - Each case study JSON in content/case-studies/ becomes one boarding pass card.
+// - Each recommendation JSON in content/recommendations/ becomes one recommendation card.
 // - components/passport.html is inserted where {{passport}} sits in the template.
 // - content/hero.json still feeds the From → To hero, if a {{hero}} slot is used.
 // Usage: node scripts/build-site.mjs
@@ -40,6 +41,30 @@ const tickets = files.map((file) => {
     .join("\n");
 });
 
+// --- recommendation cards ---
+// One card per JSON file in content/recommendations/, in filename order (01-, 02-, ...).
+const recommendation = stripComment(read("components/recommendation.html"));
+const recDir = path.join(root, "content/recommendations");
+const recFiles = fs.readdirSync(recDir).filter((f) => f.endsWith(".json")).sort();
+
+const initials = (name) =>
+  name.split(/\s+/).filter(Boolean).map((w) => w[0]).slice(0, 2).join("").toUpperCase();
+
+const recCards = recFiles.map((file) => {
+  const data = JSON.parse(fs.readFileSync(path.join(recDir, file), "utf8"));
+  for (const key of ["quote", "name", "title"]) {
+    if (!data[key]) throw new Error(`content/recommendations/${file}: missing "${key}"`);
+  }
+  const avatar = data.photo
+    ? `<img class="rec-avatar" src="${escapeHtml(data.photo)}" alt="${escapeHtml(data.name)}">`
+    : `<span class="rec-avatar" aria-hidden="true">${escapeHtml(initials(data.name))}</span>`;
+  return recommendation
+    .replace(/\{\{(\w+)\}\}/g, (_, key) => (key === "avatar" ? avatar : escapeHtml(data[key] ?? "")))
+    .split("\n")
+    .map((line) => (line ? "      " + line : line))
+    .join("\n");
+});
+
 // --- hero: From → To cycle ---
 const hero = JSON.parse(read("content/hero.json"));
 if (!Array.isArray(hero.pairs) || hero.pairs.length < 1) {
@@ -75,7 +100,8 @@ const heroHtml = `<section class="hero" aria-label="From and to" data-interval="
 const home = homeTemplate
   .replace("{{passport}}", passport)
   .replace("{{hero}}", heroHtml)
-  .replace("{{tickets}}", tickets.join("\n\n"));
+  .replace("{{tickets}}", tickets.join("\n\n"))
+  .replace("{{recommendations}}", recCards.join("\n\n"));
 
 fs.writeFileSync(path.join(root, "index.html"), home);
-console.log(`built index.html: hero with ${hero.pairs.length} pair(s), ${files.length} boarding pass card(s)`);
+console.log(`built index.html: hero with ${hero.pairs.length} pair(s), ${files.length} boarding pass card(s), ${recFiles.length} recommendation card(s)`);
