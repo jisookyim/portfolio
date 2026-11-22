@@ -35,7 +35,7 @@ Usage rules:
 - Text: flush-left, ragged-right. Never center long text.
 - Spacing: multiples of 8px.
 - Sections: no rules above section headings. Separate sections with space (96px desktop, 56–64px mobile) and color blocking. Section headings are 40px bold (30px mobile).
-- Color blocking (interim, until the bolder color foundation): white for who Ji-Sook is and the work (passport, Featured Work); a full-width grey (#ECECEC) band for what others say (Recommendations + Reviews by my mentees); white for Let's connect. Cards stay white with their black borders, so they are the only lines on the page.
+- Color blocking (interim, until the bolder color foundation): white for who Ji-Sook is and the work (passport, Featured Work); a full-width grey (#ECECEC) band for what others say (Recommendations + Reviews by my mentees); then a slim ink footer bar. Cards stay white with their black borders, so they are the only lines on the page.
 - Rules inside components (FROM → TO, recommendation divider, passport dividers) stay, inset inside the card padding.
 
 ## Components
@@ -55,7 +55,7 @@ Usage rules:
 - From → To hero: below the intro, one rule above it, values cycle through pairs in `content/hero.json`. No CTA.
 - Recommendation card (`components/recommendation.html` and `.css`): structure follows the cards on the current Squarespace site, visuals follow this system. Solid 2px black border, square corners, 32px padding. Quote (17px) on top, then a 1px black divider inside the padding, then a round 48px headshot (initials on grey if no photo) with name (bold) and title (muted). Two columns on desktop, one on mobile.
 - Section heading: bold, 40px, no top rule.
-- Closing call to action: large heading and one button.
+- Footer bar: slim full-width ink (#111111) band at the bottom, white text. Minimal: 20px vertical padding, one line (15px, regular weight), then email and LinkedIn icons at 24 x 24, with 24 x 24 tap targets spaced 16px apart (meets WCAG 2.5.8), each with a readable name. Icon hover turns red; keyboard focus shows a white outline. Icons sit right after the line (not pushed to the far edge). Mobile: still one row, 13px text. Replaces the old large closing section and button.
 
 ## Tone
 - Direct, confident, plain. Short sentences. No hype words.
