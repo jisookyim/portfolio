@@ -42,9 +42,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  /* rules run out to the card's left edge, like the passport */
-  margin-left: -36px;
-  padding: 16px 0 16px 36px;
+  /* desktop: rules stay inside the text column (the image sits to the right).
+     mobile: rules run edge to edge, like the passport (see media query). */
+  padding: 16px 0;
   border-top: 2px solid var(--ink);
   border-bottom: 2px dashed var(--ink);
   align-self: start;
