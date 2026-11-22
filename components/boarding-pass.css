@@ -42,7 +42,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  padding: 16px 0;
+  /* rules run out to the card's left edge, like the passport */
+  margin-left: -36px;
+  padding: 16px 0 16px 36px;
   border-top: 2px solid var(--ink);
   border-bottom: 2px dashed var(--ink);
   align-self: start;
@@ -111,7 +113,8 @@
     padding: 20px 18px;
   }
   .bp-title { font-size: 28px; margin: 0 0 18px; align-self: stretch; }
-  .bp-route { padding: 12px 0; margin-bottom: 18px; gap: 10px; align-self: stretch; }
+  /* rules run edge to edge across the card, like the passport */
+  .bp-route { margin: 0 -18px 18px; padding: 12px 18px; gap: 10px; align-self: stretch; }
   .bp-v { font-size: 18px; }
   .bp-arrow { font-size: 18px; }
   .bp-blurb { order: 1; margin: 0 0 18px; font-size: 16px; }
