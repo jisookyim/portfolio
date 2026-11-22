@@ -1,6 +1,7 @@
 // Builds the homepage (index.html) from templates/index.html.
 // - Each case study JSON in content/case-studies/ becomes one boarding pass card.
-// - content/hero.json becomes the animated From → To hero at the top.
+// - components/passport.html is inserted where {{passport}} sits in the template.
+// - content/hero.json still feeds the From → To hero, if a {{hero}} slot is used.
 // Usage: node scripts/build-site.mjs
 //
 // Inputs:  templates/index.html, components/boarding-pass.html, content/case-studies/*.json, content/hero.json
@@ -21,6 +22,7 @@ const stripComment = (s) => s.replace(/^\s*<!--[\s\S]*?-->\s*/, "");
 
 const boardingPass = stripComment(read("components/boarding-pass.html"));
 const homeTemplate = stripComment(read("templates/index.html"));
+const passport = stripComment(read("components/passport.html"));
 
 // --- case study cards ---
 const dataDir = path.join(root, "content/case-studies");
@@ -71,6 +73,7 @@ const heroHtml = `<section class="hero" aria-label="From and to" data-interval="
 
 // --- assemble ---
 const home = homeTemplate
+  .replace("{{passport}}", passport)
   .replace("{{hero}}", heroHtml)
   .replace("{{tickets}}", tickets.join("\n\n"));
 
