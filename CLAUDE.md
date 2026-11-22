@@ -30,3 +30,4 @@ This repository holds the portfolio website for Ji-Sook Yim (Product & UX Design
 - Reuse shared components and styles instead of one-off styling.
 - Make small, focused commits with clear messages.
 - Ask before deleting content or changing the site's navigation.
+- Page titles, section headings and card titles use initial caps (title case). See "Capitalization" in `DESIGN.md`.

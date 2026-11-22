@@ -30,7 +30,7 @@ I’m Ji-Sook, a product design leader and mentor. I’m also a language learnin
 3. Swatch x 007 Pop-Up Store
 4. Multisensory Dining
 
-## Recommendations from senior leaders
+## Recommendations from Senior Leaders
 - Mike Altier (VP, Product Design)
 - Elliott Smith (Director, Product Operations)
 - Karla Rosales (Director, Product Design)
@@ -38,8 +38,8 @@ I’m Ji-Sook, a product design leader and mentor. I’m also a language learnin
 - Ross Evan (VP, Data & Analytics)
 - Deborah Ortega (Director, Product Management)
 
-## Reviews by my mentees
-- For now: ADPList reviews widget embedded (iframe) under "Reviews by my mentees". Plan: replace with hand-picked review cards plus a link to the ADPList profile.
+## Reviews by My Mentees
+- For now: ADPList reviews widget embedded (iframe) under "Reviews by My Mentees". Plan: replace with hand-picked review cards plus a link to the ADPList profile.
 
 ## Footer
 - Line: "Let’s plan your product’s next journey together." (Ji-Sook's wording)
