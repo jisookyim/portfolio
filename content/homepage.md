@@ -39,7 +39,7 @@ I’m Ji-Sook, a product design leader and mentor. I’m also a language learnin
 - Deborah Ortega (Director, Product Management)
 
 ## Reviews by my mentees
-- TBD (heading only on current site; content to be added)
+- For now: ADPList reviews widget embedded (iframe) under "Reviews by my mentees". Plan: replace with hand-picked review cards plus a link to the ADPList profile.
 
 ## Closing
 - "Let's connect!"

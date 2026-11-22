@@ -33,7 +33,9 @@ Usage rules:
 - Maximum content width: 1120px. Two-column card grid on desktop, one column on mobile.
 - Text: flush-left, ragged-right. Never center long text.
 - Spacing: multiples of 8px.
-- Rules: 1–2px black lines to separate sections, used as structure.
+- Sections: no rules above section headings. Separate sections with space (96px desktop, 56–64px mobile) and color blocking. Section headings are 40px bold (30px mobile).
+- Color blocking (interim, until the bolder color foundation): white for who Ji-Sook is and the work (passport, Featured Work); a full-width grey (#ECECEC) band for what others say (Recommendations + Reviews by my mentees); white for Let's connect. Cards stay white with their black borders, so they are the only lines on the page.
+- Rules inside components (FROM → TO, recommendation divider, passport dividers) stay, inset inside the card padding.
 
 ## Components
 - Boarding pass card (`components/boarding-pass.html` and `.css`): used on the homepage under "Featured Work". Solid 2px black border, square corners, 36px padding. Desktop: two columns. Left column, top to bottom: case study title (40px, bold), FROM ✈ TO on one line (TO right-aligned; rule above and dashed rule below, both inset inside the padding), then the CTA sentence (17px). Right column: image in a fixed 4:3 frame. Mobile: one column: title, FROM ✈ TO, CTA sentence, image. Do not add labels such as "Boarding pass" or case study numbers, and do not add a separate CTA button.
@@ -44,7 +46,7 @@ Usage rules:
 - Strengths row: three columns, each with a top rule and no numbers.
 - From → To hero: below the intro, one rule above it, values cycle through pairs in `content/hero.json`. No CTA.
 - Recommendation card (`components/recommendation.html` and `.css`): structure follows the cards on the current Squarespace site, visuals follow this system. Solid 2px black border, square corners, 32px padding. Quote (17px) on top, then a 1px black divider inside the padding, then a round 48px headshot (initials on grey if no photo) with name (bold) and title (muted). Two columns on desktop, one on mobile.
-- Section heading: bold, with a top rule.
+- Section heading: bold, 40px, no top rule.
 - Closing call to action: large heading and one button.
 
 ## Tone
