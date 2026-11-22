@@ -41,8 +41,10 @@ I’m Ji-Sook, a product design leader and mentor. I’m also a language learnin
 ## Reviews by my mentees
 - For now: ADPList reviews widget embedded (iframe) under "Reviews by my mentees". Plan: replace with hand-picked review cards plus a link to the ADPList profile.
 
-## Closing
-- "Let's connect!"
+## Footer
+- Line: "Let’s plan your product’s next journey together." (Ji-Sook's wording)
+- Email: yim.jisook@gmail.com (mail icon)
+- LinkedIn: https://www.linkedin.com/in/jisookyim/ (LinkedIn icon, opens in a new tab)
 
 ## Notes
 - Recommendation quotes are in `content/recommendations/` (copied from the current site). Headshots in `assets/recommendations/` (copied from the current site).
