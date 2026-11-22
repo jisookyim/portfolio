@@ -28,6 +28,7 @@ Usage rules:
 - Headings: bold (700–800), tight leading.
 - Body: regular (400), 17px, line height about 1.5.
 - Labels and data (FROM, TO): uppercase, small, letter-spaced.
+- Passport machine-readable lines only: Courier New (monospace), as a stand-in for the OCR-B type on real passports. Not used anywhere else.
 
 ## Layout
 - Maximum content width: 1120px. Two-column card grid on desktop, one column on mobile.
@@ -43,6 +44,11 @@ Usage rules:
   - With a case study URL: the sentence is red and underlined, and the link is stretched over the whole card so the whole card is clickable. Hover/focus: underline thickens to 2px, the plane flies straight (level, no arc or trail) from FROM to TO and stays there, the arrow nudges right. The border stays black (no red border, no lift or shadow). Keyboard focus adds a red outline around the card. Reduced motion: no flight or nudge.
   - Without a URL yet: the sentence is muted grey and not a link. Every featured card should have its case study page before launch.
   - Plane icon: Material Icons "flight" (Apache 2.0), rotated to point right, in ink. Used between FROM and TO on the boarding pass and the passport. Not an emoji.
+- Passport (`components/passport.html` and `.css`): the homepage hero, styled as a passport data page. Red header bar, 2px black border, square corners.
+  - Security print: a faint guilloche pattern (thin concentric circles at about 4% ink) behind the whole page. Keep it faint so text keeps full contrast.
+  - Data fields: small uppercase labels (NAME, PROFESSION, EXPERIENCE, FOCUS) above the values, next to the photo.
+  - Interests are entry stamps in ink, tilted a few degrees, each with one detail of its own: framed with a plane (Mentorship), round seal with curved text (SXSW), dashed with stars (Solo travel), perforated postage edge with a monochrome Swiss flag (Swatch), two-ring oval with curved text (Piano). Stamps are real text in a list; seals and ovals are SVG with a screen-reader label. Desktop: one row, stamps stretch to fill it. Phones: two-column grid, Piano oval centered on its own row.
+  - Machine-readable lines: two 44-character lines at the foot of the page, full width (font up to 30px, then letter-spacing fills the rest). Decorative, hidden from screen readers.
 - Strengths row: three columns, each with a top rule and no numbers.
 - From → To hero: below the intro, one rule above it, values cycle through pairs in `content/hero.json`. No CTA.
 - Recommendation card (`components/recommendation.html` and `.css`): structure follows the cards on the current Squarespace site, visuals follow this system. Solid 2px black border, square corners, 32px padding. Quote (17px) on top, then a 1px black divider inside the padding, then a round 48px headshot (initials on grey if no photo) with name (bold) and title (muted). Two columns on desktop, one on mobile.
