@@ -166,3 +166,19 @@
     .postage-paper { padding: 8px; }
     .postage-inner { padding: 8px 4px; letter-spacing: .04em; }
   }
+
+  /* Impact: four results, big number then what it means.
+     Desktop: two columns (2 x 2), no dividers inside (a split rule looked choppy); rows separated by space.
+     Phones: one column with a thin rule between rows. */
+  /* Number columns size to their widest number (subgrid), so the gap to the text stays tight. */
+  .impact { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: auto minmax(0, 1fr) auto minmax(0, 1fr); gap: 16px 40px; }
+  .impact li { grid-column: span 2; display: grid; grid-template-columns: subgrid; column-gap: 20px; align-items: baseline; }
+  .im-num { font-size: 32px; font-weight: 800; line-height: 1; letter-spacing: -.02em; }
+  .im-text { font-size: 17px; line-height: 1.35; }
+  @media (max-width: 800px) {
+    .impact { grid-template-columns: minmax(0, 1fr); gap: 0; margin-top: 4px; }
+    .impact li { grid-column: auto; grid-template-columns: 108px minmax(0, 1fr); gap: 12px; padding: 10px 0; border-bottom: 1px solid #d6d6d6; }
+    .impact li:last-child { border-bottom: none; padding-bottom: 4px; }
+    .im-num { font-size: 24px; }
+    .im-text { font-size: 15px; }
+  }

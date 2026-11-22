@@ -47,6 +47,7 @@ Usage rules:
 - Passport (`components/passport.html` and `.css`): the homepage hero, styled as a passport data page. Red header bar, 2px black border, square corners.
   - Security print: a faint guilloche pattern (thin concentric circles at about 4% ink) behind the whole page. Keep it faint so text keeps full contrast.
   - Data fields: small uppercase labels (NAME, PROFESSION, EXPERIENCE, FOCUS) above the values, next to the photo.
+  - Impact: the first field under FROM → TO. Big bold number (+56%, +4.9 pts, 35M, 4) followed by a short plain description; no category tags. Desktop: two columns (2 x 2), each number column only as wide as its widest number, 20px to the text, no dividers inside. Phones: one column with thin rules between rows. "pts" is read to screen readers as "percentage points".
   - Interests are entry stamps in ink, tilted a few degrees, each with one detail of its own: framed with a plane (Mentorship), round seal with curved text (SXSW), dashed with stars (Solo travel), perforated postage edge with a monochrome Swiss flag (Swatch), two-ring oval with curved text (Piano). Stamps are real text in a list; seals and ovals are SVG with a screen-reader label. Desktop: one row, stamps stretch to fill it. Phones: two-column grid, Piano oval centered on its own row.
   - Machine-readable lines: two 44-character lines at the foot of the page, full width (font up to 30px, then letter-spacing fills the rest). Decorative, hidden from screen readers.
 - Strengths row: three columns, each with a top rule and no numbers.
