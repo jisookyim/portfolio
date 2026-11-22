@@ -35,7 +35,7 @@ Usage rules:
 - Text: flush-left, ragged-right. Never center long text.
 - Spacing: multiples of 8px.
 - Sections: no rules above section headings. Separate sections with space (96px desktop, 56–64px mobile) and color blocking. Section headings are 40px bold (30px mobile).
-- Color blocking (interim, until the bolder color foundation): white for who Ji-Sook is and the work (passport, Featured Work); a full-width grey (#ECECEC) band for what others say (Recommendations + Reviews by my mentees); then a slim ink footer bar. Cards stay white with their black borders, so they are the only lines on the page.
+- Color blocking (interim, until the bolder color foundation): white for who Ji-Sook is and the work (passport, Featured Work); a full-width grey (#ECECEC) band for what others say (Recommendations + Reviews by My Mentees); then a slim ink footer bar. Cards stay white with their black borders, so they are the only lines on the page.
 - Rules inside components (FROM → TO, recommendation divider, passport dividers) stay, inset inside the card padding.
 
 ## Components
@@ -60,3 +60,9 @@ Usage rules:
 ## Tone
 - Direct, confident, plain. Short sentences. No hype words.
 - Warm where it counts: the values (FROM ambiguity TO clarity) carry the personality.
+
+## Capitalization
+- Page titles, section headings and case study card titles use initial caps (title case): capitalize every major word, e.g. "Recommendations from Senior Leaders", "Leave of Absence Request".
+- Keep these lowercase unless they are the first or last word: articles (a, an, the), short conjunctions (and, but, or, nor), and short prepositions (at, by, for, from, in, of, on, to, with).
+- Always capitalize nouns, verbs, adjectives, adverbs and pronouns (including "My", "Your", "Is").
+- Not covered: body text, CTA sentences and the footer line stay in sentence case; small labels (FROM, TO, field labels, stamps) stay uppercase.
