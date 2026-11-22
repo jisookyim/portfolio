@@ -103,6 +103,16 @@ h2 {
 /* testimonials: cards come from components/recommendation.css */
 .testimonials { padding-bottom: 72px; }
 
+/* mentee reviews: ADPList embed (temporary). Frame follows DESIGN.md: square, 2px black border, no shadow. */
+.adplist-frame {
+  width: 100%;
+  max-width: 650px;
+  height: 560px;
+  border: 2px solid var(--ink);
+  overflow: hidden;
+}
+.adplist-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+
 /* closing */
 .closing { padding: 0 0 96px; }
 .closing h2 { font-size: 56px; letter-spacing: -0.02em; border-top: 2px solid var(--ink); }
