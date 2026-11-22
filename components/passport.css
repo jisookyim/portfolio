@@ -52,3 +52,117 @@
   /* the passport closes its own edge; the first heading below it drops its top rule */
   .passport { margin-bottom: 56px; }
   .passport + .projects h2 { border-top: none; padding-top: 0; }
+
+  /* --- data page details: what makes it read as a passport --- */
+  /* faint guilloche pattern behind the page, like the security print on a real passport.
+     Very low contrast so text keeps full contrast. */
+  .passport {
+    container-type: inline-size;
+    background-color: var(--paper);
+    background-image:
+      repeating-radial-gradient(circle at 78% 18%, transparent 0 9px, rgba(17,17,17,.045) 9px 10px),
+      repeating-radial-gradient(circle at 18% 92%, transparent 0 13px, rgba(17,17,17,.035) 13px 14px);
+  }
+  .pp-data .fk { margin-bottom: 2px; }
+  .pp-data .name { margin-bottom: 18px; }
+  .pp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px 24px; margin: 0; }
+  .pp-grid dd { margin: 0; font-size: 15px; font-weight: 600; line-height: 1.35; }
+
+  /* interests as entry stamps: real text, tilted only slightly so it stays readable */
+  .stamps { list-style: none; margin: 10px 0 4px; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 20px 28px; }
+  /* stamps stretch to fill each row edge to edge at every size; the round seal keeps its circle */
+  .stamps > .stamp { flex: 1 1 auto; }
+  .stamps > .stamp-seal, .stamps > .stamp-oval { flex: 0 0 auto; }
+  .stamp {
+    border: 2px solid var(--ink);
+    padding: 10px 14px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    line-height: 1.35;
+    transform: rotate(-3deg);
+  }
+  .stamp strong { display: block; font-size: 24px; font-weight: 800; letter-spacing: 0; line-height: 1.1; margin: 2px 0; }
+  .stamp-dashed { border-style: dashed; transform: rotate(2deg); }
+  .stamp .nowrap { white-space: nowrap; }
+
+  /* stamp details: small things real stamps have, used once each */
+  /* framed: a thin second frame just outside the border, and a ruled top line with the plane */
+  .stamp-framed { outline: 1px solid var(--ink); outline-offset: 4px; }
+  .stamp-top { display: flex; justify-content: center; border-bottom: 1px solid var(--ink); padding-bottom: 4px; margin-bottom: 5px; font-size: 13px; }
+  /* seal: round stamp drawn as SVG. Outer ring, inner ring, curved text between them.
+     The curved text sits on a 43px radius so its letters stay clear of the outer ring. */
+  .stamp-seal { border: none; padding: 0; width: 128px; height: 128px; transform: rotate(6deg); }
+  .stamp-seal svg { display: block; width: 100%; height: 100%; overflow: visible; }
+  .seal-arc { font-size: 9px; font-weight: 700; letter-spacing: .1em; fill: currentColor; }
+  /* small icon on top of a stamp (Swiss flag, music note) */
+  .stamp-icon { display: flex; justify-content: center; font-size: 16px; margin-bottom: 4px; }
+  /* postage: perforated paper edge (mask cuts half-circles around the edge), outlined with
+     thin drop-shadows, and a fine inner frame. The Swiss flag (in ink, monochrome) is a nod to Swatch. */
+  .stamp-postage {
+    --r: 4px;
+    border: none;
+    padding: 0;
+    transform: rotate(-5deg);
+    filter: drop-shadow(1px 0 0 var(--ink)) drop-shadow(-1px 0 0 var(--ink)) drop-shadow(0 1px 0 var(--ink)) drop-shadow(0 -1px 0 var(--ink));
+  }
+  .postage-paper {
+    display: block;
+    background: var(--paper);
+    padding: calc(2.5 * var(--r));
+    -webkit-mask:
+      radial-gradient(var(--r), #0000 98%, #000) round calc(-1.5 * var(--r)) calc(-1.5 * var(--r)) / calc(3 * var(--r)) calc(3 * var(--r)),
+      linear-gradient(#000 0 0) no-repeat 50% / calc(100% - 3 * var(--r)) calc(100% - 3 * var(--r));
+    mask:
+      radial-gradient(var(--r), #0000 98%, #000) round calc(-1.5 * var(--r)) calc(-1.5 * var(--r)) / calc(3 * var(--r)) calc(3 * var(--r)),
+      linear-gradient(#000 0 0) no-repeat 50% / calc(100% - 3 * var(--r)) calc(100% - 3 * var(--r));
+  }
+  .postage-inner { display: block; border: 1px solid var(--ink); padding: 8px 12px; }
+  .swiss-flag { display: block; }
+  /* oval: drawn as SVG like the seal, so it keeps its shape and everything is centered.
+     Outer ring, inner ring, "Piano" curving along the top, the subtitle along the bottom,
+     stars at the sides, music note and YouTube in the middle. */
+  .stamp-oval { border: none; padding: 0; width: 240px; aspect-ratio: 200 / 124; height: auto; transform: rotate(-2deg); }
+  .stamp-oval svg { display: block; width: 100%; height: 100%; overflow: visible; }
+  .seal-star { font-size: 9px; fill: currentColor; }
+  .seal-arc-small { font-size: 7.5px; letter-spacing: .08em; }
+  .seal-main { font-size: 19px; font-weight: 800; fill: currentColor; }
+
+  /* machine-readable lines at the foot of the page. Decorative (aria-hidden); the real info is above.
+     Always spans the full passport width: the font grows up to 30px, then letter-spacing
+     fills the rest. Courier New characters are 0.6em wide, so 44 characters = 26.4em. */
+  .mrz {
+    --mrz-pad: 22px;
+    --mrz-w: calc(100cqw - 2 * var(--mrz-pad) - 4px);
+    --mrz-fs: min(30px, calc(var(--mrz-w) / 26.4));
+    margin: 0;
+    border-top: 2px solid var(--ink);
+    padding: 14px var(--mrz-pad) 16px;
+    font-family: "Courier New", ui-monospace, monospace;
+    font-size: var(--mrz-fs);
+    letter-spacing: calc((var(--mrz-w) - 26.4 * var(--mrz-fs)) / 44);
+    line-height: 1.5;
+    white-space: pre;
+    overflow: hidden;
+    color: var(--ink);
+  }
+  @media (max-width: 800px) {
+    .mrz { --mrz-pad: 16px; padding-top: 12px; padding-bottom: 14px; }
+    .pp-data .name { margin-bottom: 12px; }
+    .pp-grid { grid-template-columns: 1fr; gap: 8px; }
+    .pp-grid dd { font-size: 13px; }
+    /* phones: a balanced two-column grid. Mentorship + SXSW, Solo travel + Swatch,
+       then the Piano oval centered on its own row at its normal size. */
+    .stamps { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px 16px; align-items: center; }
+    .stamps > .stamp { min-width: 0; }
+    .stamps > .stamp-seal { justify-self: center; }
+    .stamps > .stamp-oval { grid-column: 1 / -1; justify-self: center; width: 240px; }
+    .stamp-seal { width: 114px; height: 114px; }
+    /* tighter stamps on phones so each line stays whole in its column */
+    .stamp { padding: 10px; font-size: 10px; letter-spacing: .08em; }
+    .stamp strong { font-size: 18px; white-space: nowrap; }
+    .postage-paper { padding: 8px; }
+    .postage-inner { padding: 8px 4px; letter-spacing: .04em; }
+  }
