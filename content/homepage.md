@@ -45,5 +45,5 @@ I’m Ji-Sook, a product design leader and mentor. I’m also a language learnin
 - "Let's connect!"
 
 ## Notes
-- Recommendation quotes are in `content/recommendations/` (copied from the current site). Headshots not added yet.
+- Recommendation quotes are in `content/recommendations/` (copied from the current site). Headshots in `assets/recommendations/` (copied from the current site).
 - Project case study pages are not yet captured.
