@@ -106,7 +106,6 @@ h2 {
 /* mentee reviews: ADPList embed (temporary). Frame follows DESIGN.md: square, 2px black border, no shadow. */
 .adplist-frame {
   width: 100%;
-  max-width: 650px;
   height: 560px;
   border: 2px solid var(--ink);
   overflow: hidden;
