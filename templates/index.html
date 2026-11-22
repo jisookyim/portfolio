@@ -1,5 +1,6 @@
 <!-- Homepage template. Do not edit index.html at the root; edit this file, then run: node scripts/build-site.mjs
-     {{tickets}} is filled with one boarding pass per file in content/case-studies/. -->
+     {{tickets}} is filled with one boarding pass per file in content/case-studies/.
+     {{recommendations}} is filled with one recommendation card per file in content/recommendations/. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +13,7 @@
 <link rel="stylesheet" href="components/boarding-pass.css">
 <link rel="stylesheet" href="components/hero.css">
 <link rel="stylesheet" href="components/passport.css">
+<link rel="stylesheet" href="components/recommendation.css">
 </head>
 <body>
 
@@ -40,13 +42,8 @@
 
   <section class="testimonials">
     <h2>Recommendations from senior leaders</h2>
-    <div class="quotes">
-      <blockquote><p>[Quote to add]</p><cite>Mike Altier, VP, Product Design</cite></blockquote>
-      <blockquote><p>[Quote to add]</p><cite>Elliott Smith, Director, Product Operations</cite></blockquote>
-      <blockquote><p>[Quote to add]</p><cite>Karla Rosales, Director, Product Design</cite></blockquote>
-      <blockquote><p>[Quote to add]</p><cite>Brad Poole, Director, User Research</cite></blockquote>
-      <blockquote><p>[Quote to add]</p><cite>Ross Evan, VP, Data &amp; Analytics</cite></blockquote>
-      <blockquote><p>[Quote to add]</p><cite>Deborah Ortega, Director, Product Management</cite></blockquote>
+    <div class="rec-grid">
+{{recommendations}}
     </div>
   </section>
 

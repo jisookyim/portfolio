@@ -1,0 +1,13 @@
+<!-- Recommendation card template. Do not edit individual cards on the page.
+     Edit this file, then run: node scripts/build-site.mjs
+     Placeholders: quote, name, title, avatar (avatar is built by the script: headshot if "photo" is set, initials if not) -->
+<figure class="rec-card">
+  <blockquote class="rec-quote"><p>“{{quote}}”</p></blockquote>
+  <figcaption class="rec-meta">
+    {{avatar}}
+    <div>
+      <p class="rec-name">{{name}}</p>
+      <p class="rec-title">{{title}}</p>
+    </div>
+  </figcaption>
+</figure>
