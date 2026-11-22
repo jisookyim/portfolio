@@ -1,6 +1,7 @@
 <!-- Boarding pass component template. Do not edit individual pages.
      Edit this file, then run: node scripts/build-site.mjs
      Placeholders: title, from, to, image_src, image_alt, cta
+     bp-stub draws the tear-off perforation and notches (decorative).
      Plane icon: Material Icons "flight" (Apache 2.0), rotated to point right.
      (cta is built by the script from cta_text and cta_href: a link if cta_href is set, plain text if not) -->
 <article class="boarding-pass">
@@ -11,5 +12,6 @@
     <div class="bp-point bp-to"><p class="bp-k">To</p><p class="bp-v">{{to}}</p></div>
   </div>
   {{cta}}
+  <span class="bp-stub" aria-hidden="true"></span>
   <img class="bp-image" src="{{image_src}}" alt="{{image_alt}}">
 </article>

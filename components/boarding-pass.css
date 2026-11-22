@@ -23,10 +23,47 @@
   position: relative;
   background: var(--paper);
   border: 2px solid var(--ink);
-  padding: 36px;
+  padding: 48px 36px 36px; /* extra 12px on top for the red trim band */
   font-family: Archivo, Helvetica, Arial, sans-serif;
   color: var(--ink);
 }
+
+/* red trim band across the top, inside the black border (same idea as the passport's red header bar).
+   No text in it. */
+.boarding-pass::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 12px;
+  background: var(--red);
+}
+
+/* tear-off stub: a half-circle notch cut into the top and bottom edges, between the text and the image
+   (no perforation line: it competed with the dashed route line and split the image off).
+   Desktop: centered in the column gap (exactly 50%).
+   The notches are paper-colored circles with an ink border, centered on the card border and
+   clipped to the half inside the card, so they hide the straight border where they cut in. */
+.bp-stub {
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  left: calc(50% - 1px);
+  pointer-events: none;
+}
+.bp-stub::before,
+.bp-stub::after {
+  content: "";
+  position: absolute;
+  left: -15px;
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+}
+.bp-stub::before { top: -32px; clip-path: inset(calc(50% - 2px) 0 0 0); }
+.bp-stub::after { bottom: -32px; clip-path: inset(0 0 calc(50% - 2px) 0); }
 
 /* left column: title at the top, route under it, CTA sentence under that */
 .bp-title {
@@ -156,8 +193,19 @@ a.bp-cta:focus-visible { outline: none; }
   .boarding-pass {
     display: flex;
     flex-direction: column;
-    padding: 20px 18px;
+    padding: 30px 18px 20px; /* extra 10px on top for the trim band */
   }
+  .boarding-pass::before { height: 10px; }
+  /* phones: the notches move to the side edges, just above the image */
+  .bp-stub {
+    position: relative;
+    top: auto; bottom: auto; left: auto;
+    height: 2px;
+    margin: 0 -18px 18px;
+  }
+  .bp-stub::before, .bp-stub::after { width: 24px; height: 24px; top: -11px; bottom: auto; }
+  .bp-stub::before { left: -13px; clip-path: inset(0 0 0 calc(50% - 2px)); }
+  .bp-stub::after { left: auto; right: -13px; clip-path: inset(0 calc(50% - 2px) 0 0); }
   .bp-title { font-size: 28px; margin: 0 0 18px; align-self: stretch; }
   .bp-route { padding: 12px 0; margin-bottom: 18px; gap: 10px; align-self: stretch; }
   .bp-v { font-size: 18px; }
