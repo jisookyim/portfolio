@@ -20,7 +20,9 @@
   /* the From → To band. Rules are inset inside the passport padding, same as the boarding pass. */
   .journey { margin: 0 22px; border-top: 2px solid var(--ink); border-bottom: 2px dashed var(--ink); padding: 22px 0 16px; display:grid; grid-template-columns: 1fr 56px 1fr; align-items:end; }
   .jp { min-width: 0; text-align: left; padding: 0 16px 0 0; }
-  .jp.to { padding: 0 0 0 16px; }
+  /* TO is right-aligned at every size, matching the boarding pass */
+  .jp.to { padding: 0 0 0 16px; text-align: right; }
+  .jp.to .cycle { justify-items: end; }
   .jk { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px; }
   .cycle { display: grid; grid-template-columns: minmax(0,1fr); justify-items: start; }
   .cycle > span { grid-area: 1 / 1; font-size: clamp(30px, 4vw, 52px); font-weight: 800; line-height: 1.04; letter-spacing: -.02em; opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
@@ -41,8 +43,6 @@
     .passport { border-bottom: 2px solid var(--ink); }
     .journey { grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); column-gap: 10px; align-items: center; margin: 0 16px; padding: 16px 0; }
     .jp, .jp.to { padding: 0; }
-    .jp.to { text-align: right; }
-    .jp.to .cycle { justify-items: end; }
     .jk { margin: 0 0 2px; }
     .jarrow { font-size: 18px; }
     .cycle > span { font-size: 18px; font-weight: 700; line-height: 1.1; letter-spacing: 0; }

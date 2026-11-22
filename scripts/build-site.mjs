@@ -29,10 +29,26 @@ const passport = stripComment(read("components/passport.html"));
 const dataDir = path.join(root, "content/case-studies");
 const files = fs.readdirSync(dataDir).filter((f) => f.endsWith(".json")).sort();
 
+// The CTA sentence is the card's only link. With cta_href it becomes a link
+// (stretched over the card in CSS); without it, plain text so nothing links nowhere.
+const ctaHtml = (data) => {
+  const text = escapeHtml(data.cta_text.trim());
+  // keep the arrow on the same line as the last word
+  const cut = text.lastIndexOf(" ");
+  const body = `${text.slice(0, cut + 1)}<span class="bp-cta-end">${text.slice(cut + 1)}<span class="bp-cta-arrow" aria-hidden="true">→</span></span>`;
+  return data.cta_href
+    ? `<a class="bp-cta" href="${escapeHtml(data.cta_href)}">${body}</a>`
+    : `<p class="bp-cta">${body}</p>`;
+};
+
 const tickets = files.map((file) => {
   const data = JSON.parse(fs.readFileSync(path.join(dataDir, file), "utf8"));
   return boardingPass
     .replace(/\{\{(\w+)\}\}/g, (_, key) => {
+      if (key === "cta") {
+        if (!data.cta_text) throw new Error(`${file}: missing "cta_text"`);
+        return ctaHtml(data);
+      }
       if (!(key in data)) throw new Error(`${file}: missing "${key}"`);
       return escapeHtml(data[key]);
     })

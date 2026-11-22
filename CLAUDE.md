@@ -10,7 +10,8 @@ This repository holds the portfolio website for Ji-Sook Yim (Product & UX Design
 - `templates/index.html`: homepage layout (editable source).
 - `index.html`: generated homepage. Do not hand-edit.
 - `components/`: reusable pieces. `boarding-pass.html` and `.css` are the case study cards; `site.css` is the shared base styling.
-- `content/case-studies/`: one JSON file per case study (title, from, to, image, CTA).
+- `content/case-studies/`: one JSON file per Featured Work card (title, from, to, cta_text, cta_href, image_src, image_alt). Filename prefix (01-, 02-) sets the order. Leave `cta_href` empty until the case study page exists; the card then shows the sentence as plain text.
+- `assets/case-studies/`: card cover images (WebP, about 1000px wide).
 - `content/recommendations/`: one JSON file per recommendation (quote, name, title, optional photo). Filename prefix (01-, 02-) sets the order.
 - `components/recommendation.html` and `.css`: the recommendation card, shared by every recommendation.
 - `content/homepage.md`: homepage text.

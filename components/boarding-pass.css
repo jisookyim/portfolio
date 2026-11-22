@@ -1,6 +1,10 @@
 /* Boarding pass component: homepage project card.
    Desktop: text on the left, image in a fixed 4:3 frame on the right.
-   Mobile: stacks title, route, image, CTA.
+   Mobile: stacks title, route, CTA sentence, image.
+   The CTA sentence is the card's only link. When a case study page exists
+   (cta_href set), the link is stretched over the whole card so the card is
+   clickable; screen readers still hear just the sentence as the link name.
+   Without a page, the sentence shows as plain muted text and the card is not clickable.
    Shared by every card. Change styles here. Colors come from DESIGN.md. */
 
 :root {
@@ -15,7 +19,8 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 40px;
   align-items: stretch;
-  grid-template-rows: auto auto 1fr auto;
+  grid-template-rows: auto auto 1fr;
+  position: relative;
   background: var(--paper);
   border: 2px solid var(--ink);
   padding: 36px;
@@ -23,7 +28,7 @@
   color: var(--ink);
 }
 
-/* left column: title at the top, route under it, CTA at the bottom */
+/* left column: title at the top, route under it, CTA sentence under that */
 .bp-title {
   grid-column: 1;
   grid-row: 1;
@@ -49,37 +54,65 @@
   align-self: start;
 }
 
-/* row 3: short blurb under FROM → TO */
-.bp-blurb {
+/* row 3: the CTA sentence. A link when the case study page exists, plain text when not. */
+.bp-cta {
   grid-column: 1;
   grid-row: 3;
   align-self: start;
+  margin: 20px 0 0;
   font-size: 17px;
   line-height: 1.5;
   color: var(--muted);
-  margin: 20px 0 0;
+}
+a.bp-cta {
+  color: var(--red);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+/* the arrow always ends the CTA copy and stays on the same line as the last word */
+.bp-cta-end { white-space: nowrap; }
+.bp-cta-arrow { display: inline-block; margin-left: 4px; }
+a.bp-cta .bp-cta-arrow {
+  display: inline-block;
+  margin-left: 4px;
+  text-decoration: none;
+  transition: transform .2s ease;
+}
+/* stretch the link over the whole card */
+a.bp-cta::after { content: ""; position: absolute; inset: 0; }
+/* hover and keyboard focus cues on the card (only cards with a link).
+   Resting: the CTA is already red and underlined, so it reads as a link.
+   Hover/focus: thicker underline, the plane flies straight from FROM to TO, the CTA arrow nudges right.
+   The card border stays black. Keyboard focus also gets a red outline. */
+a.bp-cta { transition: text-decoration-thickness .2s ease; }
+.boarding-pass:has(a.bp-cta:hover) a.bp-cta,
+a.bp-cta:focus-visible { text-decoration-thickness: 2px; }
+.boarding-pass:has(a.bp-cta:hover) .plane,
+.boarding-pass:has(a.bp-cta:focus-visible) .plane { animation: bp-fly .9s ease-in-out forwards; }
+.boarding-pass:has(a.bp-cta:hover) .bp-cta-arrow,
+.boarding-pass:has(a.bp-cta:focus-visible) .bp-cta-arrow { transform: translateX(4px); }
+a.bp-cta:focus-visible { outline: none; }
+.boarding-pass:has(a.bp-cta:focus-visible) { outline: 3px solid var(--red); outline-offset: 4px; }
+
+/* the flight: leaves from the FROM side, lands next to TO, and stays there while hovered */
+@keyframes bp-fly {
+  0%   { left: 0;    translate: 0 -50%;     opacity: 0; }
+  15%  { opacity: 1; }
+  100% { left: 100%; translate: -100% -50%; opacity: 1; }
 }
 
-.bp-cta {
-  grid-column: 1;
-  grid-row: 4;
-  align-self: end;
-  justify-self: start;
-  display: inline-block;
-  background: var(--red);
-  color: #FFFFFF;
-  font-size: 16px;
-  font-weight: 700;
-  padding: 16px 24px;
-  margin-top: 28px;
-  text-decoration: none;
-  letter-spacing: 0.02em;
+/* reduced motion: keep the underline change, drop the movement */
+@media (prefers-reduced-motion: reduce) {
+  a.bp-cta, a.bp-cta .bp-cta-arrow { transition: none; }
+  .boarding-pass:has(a.bp-cta:hover) .plane, .boarding-pass:has(a.bp-cta:focus-visible) .plane { animation: none; }
+  .boarding-pass:has(a.bp-cta:hover) .bp-cta-arrow, .boarding-pass:has(a.bp-cta:focus-visible) .bp-cta-arrow { transform: none; }
 }
 
 /* right column: image in a fixed frame */
 .bp-image {
   grid-column: 2;
-  grid-row: 1 / span 4;
+  grid-row: 1 / span 3;
   display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -103,7 +136,21 @@
   line-height: 1.1;
   margin: 0;
 }
-.bp-arrow { font-size: 22px; font-weight: 800; color: var(--ink); }
+/* the plane's runway: fills the space between FROM and TO; the plane rests in the middle */
+.bp-arrow {
+  flex: 1 1 auto;
+  align-self: stretch;
+  position: relative;
+  min-width: 2em;
+  font-size: 22px;
+  color: var(--ink);
+}
+.bp-arrow .plane {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
 
 @media (max-width: 600px) {
   .boarding-pass {
@@ -115,7 +162,6 @@
   .bp-route { padding: 12px 0; margin-bottom: 18px; gap: 10px; align-self: stretch; }
   .bp-v { font-size: 18px; }
   .bp-arrow { font-size: 18px; }
-  .bp-blurb { order: 1; margin: 0 0 18px; font-size: 16px; }
-  .bp-image { order: 3; margin: 18px 0; }
-  .bp-cta { order: 4; align-self: stretch; justify-self: stretch; margin-top: 0; text-align: center; font-size: 15px; padding: 14px 16px; }
+  .bp-cta { margin: 0 0 18px; font-size: 16px; }
+  .bp-image { margin: 0; }
 }

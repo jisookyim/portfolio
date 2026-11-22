@@ -146,3 +146,6 @@ h2 {
   .closing { padding-bottom: 64px; }
   .closing h2 { font-size: 34px; }
 }
+
+/* plane icon between FROM and TO (boarding pass and passport). Sized by the parent's font-size. */
+.plane { display: block; width: 1em; height: 1em; }
