@@ -12,12 +12,7 @@
 .cs-page .page-width, .cs-page .site-nav, .cs-page .footer-inner { max-width: 1360px; }
 
 body.cs-page { background: var(--mist); }
-.cs-nav-band, .cs-hero-band { background: var(--route); }
-
-/* the darkest route color needs light text */
-[data-route="indigo"] .cs-nav-band .site-name,
-[data-route="indigo"] .cs-nav-band .site-nav a { color: var(--paper); }
-[data-route="indigo"] .cs-nav-band a:focus-visible { outline-color: var(--paper); }
+.cs-hero-band { background: var(--route); }
 
 .cs-hero { padding-top: 40px; padding-bottom: 72px; }
 

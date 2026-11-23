@@ -75,6 +75,7 @@ Usage rules:
   - Type steps: label, then 40px subheading, then body. All body copy is one size (18px desktop, 17px phone); do not enlarge opening paragraphs.
   - Blocks: text, subhead, list, image, gallery (two images side by side), video, cards and compare. Images and video sit on a white plate at full column width; tall photos use the portrait option (up to 640px high). Cards have the route trim and a line icon, no emoji; 2 or 4 cards use two columns, 3 use three.
   - Case study pages run wider than the homepage (max 1360px) so screenshots stay legible.
+- Global header (`components/site-header.html`, shared by every page): a full-width white bar with a 2px black bottom rule, pinned to the top while scrolling, with no animation. Navigation stays neutral so it separates cleanly from every section and project color. Every link has a 32px-tall tap target. Phones: one slim row.
 - Footer bar: slim full-width indigo (#1A1466) band at the bottom, white text. Minimal: 20px vertical padding, one line (15px, regular weight), then email and LinkedIn icons at 24 x 24, with 24 x 24 tap targets spaced 16px apart (meets WCAG 2.5.8), each with a readable name. Icon hover turns yellow; keyboard focus shows a white outline. Icons sit right after the line (not pushed to the far edge). Mobile: still one row, 13px text. Replaces the old large closing section and button.
 
 ## Tone
