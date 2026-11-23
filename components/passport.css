@@ -199,3 +199,7 @@
     .im-num { font-size: 24px; }
     .im-text { font-size: 15px; }
   }
+
+/* space between the header bar and the passport */
+.page-width > .passport:first-child { margin-top: 40px; }
+@media (max-width: 600px) { .page-width > .passport:first-child { margin-top: 24px; } }
