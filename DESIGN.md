@@ -29,6 +29,7 @@ Usage rules:
 - Body: regular (400), 17px, line height about 1.5.
 - Labels and data (FROM, TO): uppercase, small, letter-spaced.
 - Passport machine-readable lines only: Courier New (monospace), as a stand-in for the OCR-B type on real passports. Not used anywhere else.
+- Handwritten postcards only: Caveat (600–700, free on Google Fonts), for the writing side of the stamp postcards (notes, place names, mentor quotes and sender details). Not used anywhere else.
 
 ## Layout
 - Maximum content width: 1120px. Two-column card grid on desktop, one column on mobile.

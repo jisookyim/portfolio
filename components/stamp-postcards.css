@@ -1,0 +1,257 @@
+/* Stamp postcards: each passport stamp opens an open postcard over a dark overlay.
+   Colored frame, picture on the left, handwritten side with a stamp and postmark on the right.
+   Hover: the stamp straightens slightly. Click, tap or Enter: the postcard opens.
+   Photos are never cropped. Content lives in content/stamps.json. */
+
+.stamps > .stamp { position: relative; transition: transform .3s cubic-bezier(.2, .7, .3, 1); }
+.stamp-trigger {
+  position: absolute;
+  inset: -4px;
+  z-index: 1;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.stamp-trigger:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+
+/* the stamp eases straight and lifts a little, with no bounce */
+@media (hover: hover) {
+  .stamps > .stamp:has(.stamp-trigger:hover) { transform: rotate(0deg) scale(1.05); }
+}
+.stamps > .stamp:has(.stamp-trigger:focus-visible) { transform: rotate(0deg) scale(1.05); }
+
+.pc-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  place-items: center;
+  padding: 64px 24px 24px;
+  overflow: auto;
+  background: rgba(17, 17, 17, .78);
+  animation: pc-fade .2s ease;
+}
+.pc-overlay[hidden] { display: none; }
+@keyframes pc-fade { from { opacity: 0; } to { opacity: 1; } }
+
+.pc-pop {
+  --deck: var(--grey);
+  position: relative;
+  width: min(860px, calc((100vh - 200px) * 2));
+  max-width: 100%;
+  padding: 16px;
+  background: var(--deck);
+  border: 2px solid var(--ink);
+  font-family: Archivo, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  outline: none;
+  animation: pc-in .24s cubic-bezier(.2, .7, .3, 1);
+}
+@keyframes pc-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+.pc-card { transition: opacity .14s ease, transform .14s ease; }
+.pc-card.leaving-next { opacity: 0; transform: translateX(16px); }
+.pc-card.leaving-prev { opacity: 0; transform: translateX(-16px); }
+
+/* the postcard: picture left, writing side right */
+.pc-postcard {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); /* the picture side is about 4:3, so most photos fill it */
+  aspect-ratio: 2 / 1;
+  margin: 0;
+  overflow: hidden;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+}
+.pc-picture {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+  background: var(--deck);
+  border-right: 2px solid var(--ink);
+}
+.pc-picture > img { display: block; width: 100%; height: 100%; object-fit: contain; }
+
+/* piano: the video only loads after pressing play, then fills the whole card */
+.pc-video-box { position: relative; width: 100%; aspect-ratio: 16 / 9; background: var(--ink); }
+.pc-play { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: var(--ink); cursor: pointer; }
+.pc-play img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.pc-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  transform: translate(-50%, -50%);
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  color: var(--ink);
+}
+.pc-play:focus-visible { outline: 3px solid var(--paper); outline-offset: -6px; }
+.pc-video-box iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.pc-postcard.is-playing { grid-template-columns: minmax(0, 1fr); }
+.pc-postcard.is-playing .pc-picture { background: var(--ink); border-right: 0; }
+.pc-postcard.is-playing .pc-back { display: none; }
+
+/* the writing side */
+.pc-back {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 118px 18px 18px;
+  font-family: Caveat, "Segoe Print", cursive;
+  color: var(--indigo, var(--ink));
+}
+.pc-note { margin: 0; font-size: 27px; font-weight: 600; line-height: 1.12; }
+.pc-place {
+  margin: auto 0 0;
+  padding: 0 0 3px;
+  border-bottom: 1px solid var(--ink);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.05;
+}
+.pc-postage {
+  --r: 3px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 84px;
+  color: var(--ink);
+  font-size: 28px;
+  -webkit-mask:
+    radial-gradient(var(--r), #0000 98%, #000) round calc(-1.5 * var(--r)) calc(-1.5 * var(--r)) / calc(3 * var(--r)) calc(3 * var(--r)),
+    linear-gradient(#000 0 0) no-repeat 50% / calc(100% - 3 * var(--r)) calc(100% - 3 * var(--r));
+  mask:
+    radial-gradient(var(--r), #0000 98%, #000) round calc(-1.5 * var(--r)) calc(-1.5 * var(--r)) / calc(3 * var(--r)) calc(3 * var(--r)),
+    linear-gradient(#000 0 0) no-repeat 50% / calc(100% - 3 * var(--r)) calc(100% - 3 * var(--r));
+}
+.pc-postmark {
+  position: absolute;
+  top: 24px;
+  right: 74px;
+  display: grid;
+  place-items: center;
+  width: 78px;
+  height: 78px;
+  border: 2px solid var(--indigo, var(--ink));
+  border-radius: 50%;
+  color: var(--indigo, var(--ink));
+  font-family: Archivo, Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0;
+  transform: rotate(-14deg);
+}
+
+/* mentor quotes: the whole card is the written side */
+.pc-letter { grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); padding: 24px; }
+.pc-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  padding-right: 24px;
+  border-right: 1px solid var(--ink);
+  font-family: Caveat, "Segoe Print", cursive;
+  color: var(--indigo, var(--ink));
+}
+.pc-message blockquote { margin: 0; font-size: 30px; font-weight: 600; line-height: 1.14; }
+.pc-sign { margin: 0; font-size: 29px; font-weight: 700; line-height: 1; }
+.pc-address { position: relative; display: flex; flex-direction: column; justify-content: flex-end; padding-left: 24px; }
+.pc-letter .pc-postage { top: 0; right: 0; }
+.pc-letter .pc-postmark { top: 8px; right: 58px; }
+.pc-from-label { margin: 0 0 4px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.pc-from-line {
+  display: block;
+  padding: 6px 0 1px;
+  border-bottom: 1px solid var(--ink);
+  font-family: Caveat, "Segoe Print", cursive;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.05;
+  color: var(--indigo, var(--ink));
+}
+.pc-from-line.is-name { font-size: 25px; font-weight: 700; }
+
+/* footer on the colored frame: link on the left, arrows on the right */
+.pc-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 48px;
+  padding-top: 12px;
+}
+.pc-link { color: var(--ink); font-size: 15px; font-weight: 700; text-underline-offset: 3px; }
+.pc-link[hidden] { display: none; }
+.pc-nav { display: flex; flex: none; align-items: center; gap: 8px; margin-left: auto; }
+.pc-pop.is-single .pc-nav { display: none; }
+.pc-count { min-width: 44px; font-size: 14px; font-weight: 700; text-align: center; }
+.pc-btn {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  font: 700 18px/1 Archivo, Helvetica, Arial, sans-serif;
+  cursor: pointer;
+}
+.pc-btn:hover { background: var(--ink); color: var(--paper); }
+.pc-btn:focus-visible, .pc-link:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+.pc-close { position: absolute; top: -48px; right: -2px; width: 40px; height: 40px; font-size: 22px; }
+.pc-close:focus-visible { outline-color: var(--paper); }
+
+@media (max-width: 720px) {
+  .pc-overlay { padding: 60px 12px 12px; }
+  .pc-pop { width: min(100%, 480px); padding: 10px; }
+  .pc-foot { gap: 8px; }
+  .pc-link { font-size: 14px; }
+  .pc-nav { gap: 6px; }
+  .pc-postcard { display: flex; flex-direction: column; aspect-ratio: auto; }
+  .pc-picture { aspect-ratio: 4 / 3; border-right: 0; border-bottom: 2px solid var(--ink); }
+  .pc-postcard.is-playing .pc-picture { aspect-ratio: 16 / 9; border-bottom: 0; }
+  .pc-back { min-height: 136px; padding: 12px 84px 12px 12px; }
+  .pc-note { font-size: 24px; }
+  .pc-place { padding-top: 6px; font-size: 22px; }
+  .pc-back .pc-postage { top: 12px; right: 10px; width: 60px; height: 74px; font-size: 24px; }
+  .pc-postmark { display: none; }
+  .pc-letter {
+    justify-content: space-between;
+    gap: 14px;
+    min-height: 410px;
+    padding: 12px 8px;
+  }
+  .pc-message { flex: 1; padding-right: 0; border-right: 0; }
+  .pc-message blockquote { font-size: 27px; }
+  .pc-sign { font-size: 26px; }
+  .pc-address { min-height: 92px; padding: 12px 88px 0 0; border-top: 1px solid var(--ink); }
+  .pc-letter .pc-postage { top: 12px; width: 60px; height: 74px; font-size: 24px; }
+  .pc-from-line { font-size: 20px; }
+  .pc-from-line.is-name { font-size: 23px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stamps > .stamp, .pc-card { transition: none; }
+  .stamps > .stamp:has(.stamp-trigger:hover),
+  .stamps > .stamp:has(.stamp-trigger:focus-visible) { transform: none; }
+  .pc-overlay, .pc-pop { animation: none; }
+  .pc-card.leaving-next, .pc-card.leaving-prev { opacity: 1; transform: none; }
+}
