@@ -137,8 +137,28 @@ body.cs-page { background: var(--mist); }
 /* tall photos keep a readable size instead of filling the column */
 .cs-media--portrait { width: fit-content; max-width: 100%; }
 .cs-media--portrait img { width: auto; max-width: 100%; max-height: 640px; }
-.cs-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.cs-gallery { display: grid; grid-template-columns: var(--cols, repeat(2, minmax(0, 1fr))); gap: 16px; }
+/* a video that hasn't been added yet and has no usable still */
+.cs-video-empty {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  background: var(--grey);
+  color: var(--muted);
+  font-size: 15px;
+}
 .cs-media figcaption { margin-top: 12px; color: var(--muted); font-size: 14px; }
+
+/* small label above an image, such as Initial Wireframe or Final Design */
+.cs-media figcaption.cs-media-label {
+  margin: 0 0 12px;
+  color: var(--indigo);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.cs-content > .cs-media + .cs-media { margin-top: 24px; }
 
 /* cards: a small ticket with its route trim and an icon */
 .cs-content > .cs-cards, .cs-content > h3 + .cs-cards { margin-top: 36px; }
@@ -166,6 +186,10 @@ body.cs-page { background: var(--mist); }
 .cs-card h3 { margin: 0 0 8px; font-size: 19px; font-weight: 500; font-stretch: 112%; line-height: 1.25; letter-spacing: -0.012em; }
 .cs-content .cs-card p { margin: 0; color: var(--ink); font-size: 16px; line-height: 1.5; }
 .cs-content .cs-card p + p { margin-top: 12px; }
+.cs-content .cs-card .cs-list { padding-left: 1.1em; }
+.cs-content .cs-card li { font-size: 16px; line-height: 1.45; }
+.cs-content .cs-card li + li { margin-top: 6px; }
+.cs-content > .cs-cards:first-child { margin-top: 0; }
 
 .cs-compare { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; max-width: 880px; }
 .cs-compare h4 { margin: 0 0 8px; color: var(--ink); font-size: 18px; font-weight: 600; }

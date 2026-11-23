@@ -158,6 +158,12 @@ const cardIcons = {
   person: "M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z",
   people: "M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z",
   star: "M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z",
+  target: "M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3c-.46-4.17-3.77-7.48-7.94-7.94V1h-2v2.06C6.83 3.52 3.52 6.83 3.06 11H1v2h2.06c.46 4.17 3.77 7.48 7.94 7.94V23h2v-2.06c4.17-.46 7.48-3.77 7.94-7.94H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z",
+  chat: "M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z",
+  checklist: "M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z",
+  tune: "M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z",
+  bulb: "M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z",
+  eye: "M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z",
 };
 const cardIcon = (name) => {
   if (!name) return "";
@@ -177,24 +183,26 @@ const blockRenderers = {
   subhead: (b) => `<h3>${escapeHtml(b.text)}</h3>`,
   list: (b) => list(b.items),
   image: (b) =>
-    `<figure class="cs-media cs-wide${b.portrait ? " cs-media--portrait" : ""}"><img src="${assetPath(b.src)}" alt="${escapeHtml(b.alt)}" width="${b.width}" height="${b.height}" loading="lazy"></figure>`,
+    `<figure class="cs-media cs-wide${b.portrait ? " cs-media--portrait" : ""}">${b.label ? `<figcaption class="cs-media-label">${escapeHtml(b.label)}</figcaption>` : ""}<img src="${assetPath(b.src)}" alt="${escapeHtml(b.alt)}" width="${b.width}" height="${b.height}" loading="lazy">${b.caption ? `<figcaption>${escapeHtml(b.caption)}</figcaption>` : ""}</figure>`,
   // Two images side by side on one plate.
   gallery: (b) =>
-    `<figure class="cs-media cs-gallery cs-wide">${b.items
+    `<figure class="cs-media cs-gallery cs-wide"${b.columns ? ` style="--cols: ${b.columns.split(" ").map((c) => `minmax(0, ${c})`).join(" ")}"` : ""}>${b.items
       .map((i) => `<img src="${assetPath(i.src)}" alt="${escapeHtml(i.alt)}" width="${i.width}" height="${i.height}" loading="lazy">`)
       .join("")}</figure>`,
   // A video with no src yet shows its poster and a visible note.
   video: (b) =>
-    b.src
+    !b.src && !b.poster
+      ? `<figure class="cs-media cs-wide"><div class="cs-video-empty" role="img" aria-label="${escapeHtml(b.alt)}">${escapeHtml(b.note || "")}</div></figure>`
+      : b.src
       ? `<figure class="cs-media cs-wide"><video src="${assetPath(b.src)}" poster="${assetPath(b.poster)}" width="${b.width}" height="${b.height}" controls playsinline preload="metadata" aria-label="${escapeHtml(b.alt)}"></video></figure>`
       : `<figure class="cs-media cs-wide"><img src="${assetPath(b.poster)}" alt="${escapeHtml(b.alt)}" width="${b.width}" height="${b.height}" loading="lazy"><figcaption>${escapeHtml(b.note || "")}</figcaption></figure>`,
   cards: (b) =>
     `<div class="cs-cards cs-wide">${b.items
       .map(
         (c) =>
-          `<div class="cs-card">${cardIcon(c.icon)}${c.title ? `<h3>${escapeHtml(c.title)}</h3>` : ""}${c.text
+          `<div class="cs-card">${cardIcon(c.icon)}${c.title ? `<h3>${escapeHtml(c.title)}</h3>` : ""}${(c.text || [])
             .map((t) => `<p>${escapeHtml(t)}</p>`)
-            .join("")}</div>`,
+            .join("")}${c.list ? list(c.list) : ""}</div>`,
       )
       .join("")}</div>`,
   compare: (b) =>
