@@ -142,7 +142,7 @@ fs.writeFileSync(path.join(root, "index.html"), fingerprint(home));
 // One page per JSON in content/case-study-pages/. The title, FROM, TO and cover come from its
 // homepage card ("card"). Each section is a list of reusable blocks, rendered below.
 const caseTemplate = stripComment(read("templates/case-study.html"));
-const routeColors = ["coral", "signal-yellow", "pink", "periwinkle", "indigo"];
+const routeColors = ["coral", "signal-yellow", "pink", "periwinkle", "lime"];
 
 // Card icons: Material Icons (Apache 2.0). Decorative, so hidden from screen readers.
 const cardIcons = {

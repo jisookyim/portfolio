@@ -20,7 +20,8 @@ Departure Board palette (`components/theme-departure-board.css`):
 - Mint: #5FF0C0 (page background: passport and Featured Work)
 - Periwinkle: #9AA8FF (Recommendations and Reviews section)
 - Indigo: #1A1466 (passport header, footer, name, impact numbers, links)
-- Route colors for trims and postcard frames: Coral #FF7350, Signal Yellow #FFD400, Pink #FF9BE0, Periwinkle, Mint, Indigo
+- Case study route colors, one per project, used on its boarding pass trim and case study header: Coral #FF7350, Signal Yellow #FFD400, Pink #FF9BE0, Periwinkle #9AA8FF, Lime #C6F24E. All are bright, with ink text.
+- Postcard frames use Coral, Signal Yellow, Pink, Periwinkle and Mint.
 
 Stamp inks (dark enough for text on white): Indigo #1A1466, Magenta #C2108C, Teal #00686B, Rust #C2410C, Plum #7A1F5C, Violet #4F3BC9.
 
@@ -70,7 +71,7 @@ Usage rules:
 - Section heading: medium weight, 40px on desktop, no top rule.
 - Case study page (`templates/case-study.html`, `components/case-study.css`, content in `content/case-study-pages/`): the Swiss index template.
   - POV: color is the ticket, white is the work. The header takes that project's boarding pass color; the reading area stays a quiet mist tint, with images and cards on white. Do not color-block individual reading sections.
-  - Header: a white ticket on the route color with no trim band (the background already carries the color). Main area: title, FROM ✈ TO, summary. Stub: Role, Team and Timeline as small print, with open notches at the tear line. The cover below is that case study’s own image from the original site, not the homepage card image. Transparent device mockups sit directly on the color with no frame; photos keep the black border. On the indigo header only, the cover image has a crisp white outline built in (`cover-outlined.webp`) so the dark device frames stay visible. Phones: stub drops below and notches move to the side edges.
+  - Header: a white ticket on the route color with no trim band (the background already carries the color). Main area: title, FROM ✈ TO, summary. Stub: Role, Team and Timeline as small print, with open notches at the tear line. The cover below is that case study’s own image from the original site, not the homepage card image. Transparent device mockups sit directly on the color with no frame; photos keep the black border. Phones: stub drops below and notches move to the side edges.
   - Sections: a narrow 176px rail holds the section name as a small tracked label (12px, indigo). Everything else shares one wide column with a single left edge. Hairlines separate sections.
   - Type steps: label, then 40px subheading, then body. All body copy is one size (18px desktop, 17px phone); do not enlarge opening paragraphs.
   - Blocks: text, subhead, list, image, gallery (two images side by side), video, cards and compare. Images and video sit on a white plate at full column width; tall or small images use the portrait option (natural size, up to 640px high). Case study images keep up to 2200px for sharp Retina display, with a 1100px version for phones (`name-1100.webp`); the build serves the right one. Images can have a small label above them (such as Initial Wireframe or Final Design) or a caption below. A video with no usable still shows a grey placeholder. Cards have the route trim and a line icon, no emoji; 2 or 4 cards use two columns, 3 use three.

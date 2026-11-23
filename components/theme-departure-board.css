@@ -8,6 +8,7 @@
   --pink: #FF9BE0;
   --coral: #FF7350;
   --periwinkle: #9AA8FF;
+  --lime: #C6F24E;
   /* darker inks for text on white stamps (each at least 4.5:1) */
   --ink-magenta: #C2108C;
   --ink-teal: #00686B;
@@ -59,7 +60,7 @@ body { background: var(--page); }
 .ticket-grid > .boarding-pass:nth-child(5n+2) { --route: var(--signal-yellow); }
 .ticket-grid > .boarding-pass:nth-child(5n+3) { --route: var(--pink); }
 .ticket-grid > .boarding-pass:nth-child(5n+4) { --route: var(--periwinkle); }
-.ticket-grid > .boarding-pass:nth-child(5n+5) { --route: var(--indigo); }
+.ticket-grid > .boarding-pass:nth-child(5n+5) { --route: var(--lime); }
 .boarding-pass::before { background: var(--route); }
 .bp-stub::before, .bp-stub::after { background: var(--page); }
 a.bp-cta { color: var(--indigo); }

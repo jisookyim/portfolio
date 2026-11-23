@@ -1,8 +1,8 @@
 {
   "card": "05-personalized-guidance",
   "cover_alt": "The personalized homepage on a tablet and a phone, with a greeting for Carlos, a 5-year service message, and an action plan.",
-  "cover_width": 1608,
-  "cover_height": 1051,
+  "cover_width": 1657,
+  "cover_height": 1080,
   "summary": "Ahead of an HR tech company’s annual sales kickoff, executive leadership recognized the need for a major redesign to our flagship product, the employee benefits portal. Clients had expressed dissatisfaction with the portal over the past year, citing a lack of personalization and employee difficulty in finding the information they needed.",
   "details": [
     {
@@ -381,6 +381,6 @@
       ]
     }
   ],
-  "cover_src": "assets/case-studies/personalized-guidance/cover-outlined.webp",
+  "cover_src": "assets/case-studies/personalized-guidance/cover.webp",
   "cover_cutout": true
 }
