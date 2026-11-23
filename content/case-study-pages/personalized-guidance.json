@@ -1,0 +1,380 @@
+{
+  "card": "05-personalized-guidance",
+  "cover_alt": "A phone on a desk showing the personalized homepage, with a greeting for Carlos, a service anniversary message, and an action plan.",
+  "cover_width": 1000,
+  "cover_height": 680,
+  "summary": "Ahead of an HR tech company’s annual sales kickoff, executive leadership recognized the need for a major redesign to our flagship product, the employee benefits portal. Clients had expressed dissatisfaction with the portal over the past year, citing a lack of personalization and employee difficulty in finding the information they needed.",
+  "details": [
+    {
+      "label": "Role",
+      "items": [
+        "Product design lead: Design direction and strategy for the homepage",
+        "Guidance for 2 product designers and 1 content designer"
+      ]
+    },
+    {
+      "label": "Team",
+      "items": [
+        "Core: 2 product designers, 1 content designer, 1 director of product management, 2 user researchers",
+        "Peripheral: 4 product design leads and seniors, 4 product managers"
+      ]
+    },
+    {
+      "label": "Timeline",
+      "items": [
+        "10 weeks"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Problem",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "User surveys consistently revealed low satisfaction due to a common issue: users struggled to find what they needed. The homepage lacked content hierarchy and had become a link farm, due to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Past decisions made by the organization’s domain owners, who vied for homepage visibility, with owners carrying the loudest voice dominating the page",
+            "Lack of distinct definition and guidelines for each content section",
+            "No dedicated section for client content, resulting in clients forcing their content in multiple areas"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Additionally, on the employer side, site engagement remained low despite significant spending on employee benefits. Employees typically visited the site only for major events such as annual enrollment. Employers also struggle with retention rates due to their employees feeling a lack of sense of belonging in their organization."
+        }
+      ]
+    },
+    {
+      "heading": "Solution",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "If an employee only has 5 minutes to spend on the site, how might we help focus their attention on the things they need to accomplish, while proactively surfacing content to optimize their benefits utilization?"
+        },
+        {
+          "type": "cards",
+          "items": [
+            {
+              "icon": "checklist",
+              "title": "Action Plan",
+              "text": [
+                "Create a single section for personalized, actionable items that include must-dos and should-dos"
+              ]
+            },
+            {
+              "icon": "eye",
+              "title": "Contextual Actions",
+              "text": [
+                "Show actionable items in context with relevant, “at-a-glance” content"
+              ]
+            },
+            {
+              "icon": "sparkle",
+              "title": "Simplification",
+              "text": [
+                "Consolidate redundant sections, and be deliberate in page hierarchy with must-dos, should-dos, and could-dos"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "subhead",
+          "text": "Desktop Prototype"
+        },
+        {
+          "type": "video",
+          "src": "",
+          "width": 1400,
+          "height": 788,
+          "alt": "Desktop prototype still: the homepage greeting, action plan progress, and top actions.",
+          "note": "Desktop prototype video to add",
+          "poster": "assets/case-studies/personalized-guidance/desktop-poster.webp"
+        },
+        {
+          "type": "subhead",
+          "text": "Mobile Responsive Prototype"
+        },
+        {
+          "type": "video",
+          "src": "",
+          "width": 1400,
+          "height": 788,
+          "alt": "Mobile prototype still: the action plan with a menu open on a top action card.",
+          "note": "Mobile prototype video to add",
+          "poster": "assets/case-studies/personalized-guidance/mobile-poster.webp"
+        }
+      ]
+    },
+    {
+      "heading": "Process",
+      "blocks": [
+        {
+          "type": "subhead",
+          "text": "Gather Pain Points"
+        },
+        {
+          "type": "text",
+          "text": "I worked with the Product Management team to collect user and client feedback, analyzed clients’ page configurations, and reviewed site analytics. Key themes from the original design:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Page navigation",
+            "Content organization and hierarchy",
+            "Inefficient use of space to present account data"
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/personalized-guidance/original-homepage.webp",
+          "width": 1400,
+          "height": 1167,
+          "alt": "Original homepage annotated with issues: low click rate, two quick navigations, unclear content hierarchy, and inefficient data card design."
+        },
+        {
+          "type": "subhead",
+          "text": "Content Audit"
+        },
+        {
+          "type": "text",
+          "text": "I guided my designers to create an inventory of all action-driving content categories to understand where and how each action could appear."
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/personalized-guidance/content-audit.webp",
+          "width": 1400,
+          "height": 1550,
+          "alt": "Content audit grouping actions into must-do, should-do, and could-do categories."
+        },
+        {
+          "type": "subhead",
+          "text": "User Journey"
+        },
+        {
+          "type": "text",
+          "text": "To get into the mindset of our target user, I created and led a user journey activity with our core team, and as a result, we gained a shared understanding for the homepage’s objectives (must-do, should-do, could-do) based on user triggers (external and internal)."
+        },
+        {
+          "type": "text",
+          "text": "Key target user traits:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Complacent with status quo",
+            "Wants to spend minimal time on HR decisions",
+            "Will engage only if personal value or outcome is clear",
+            "Frustrated by complex processes"
+          ]
+        },
+        {
+          "type": "gallery",
+          "columns": "28fr 72fr",
+          "items": [
+            {
+              "src": "assets/case-studies/personalized-guidance/persona.webp",
+              "width": 487,
+              "height": 660,
+              "alt": "Persona profile for Complacent Carlos, with goals, frustrations, and needs."
+            },
+            {
+              "src": "assets/case-studies/personalized-guidance/user-journey.webp",
+              "width": 1385,
+              "height": 721,
+              "alt": "User journey map across awareness, action, engagement, and behavior change."
+            }
+          ]
+        },
+        {
+          "type": "subhead",
+          "text": "Breadboarding"
+        },
+        {
+          "type": "text",
+          "text": "After seeing intersections with workstreams outside of homepage, I initiated a breadboarding activity with 4 designers overseeing each workstream to assess the scope of the overlaps. I chose the breadboarding activity over a user flow to keep key features and user tasks at a high level."
+        },
+        {
+          "type": "text",
+          "text": "Key outcomes from breadboarding:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Established the insight that all workstreams are interconnected to form a cohesive ecosystem",
+            "Helped break down silos within Product Management team",
+            "Defined the essential categories of actionable content for homepage"
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/personalized-guidance/breadboarding.webp",
+          "width": 1400,
+          "height": 1124,
+          "alt": "Breadboarding diagram connecting sticky notes across workstreams."
+        }
+      ]
+    },
+    {
+      "heading": "Design Iterations",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "The primary homepage POV began with a content hierarchy of must-dos, should-dos, and could-dos to guide users on priority of actions. Through user research and stakeholder feedback, the final design streamlined key actionable items into a single section."
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/personalized-guidance/before.webp",
+          "width": 1400,
+          "height": 1143,
+          "alt": "Initial wireframe annotated: too many sections for actions, recommended actions should drive engagement, and the progress tracker lacks prominence.",
+          "label": "Initial Wireframe"
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/personalized-guidance/after.webp",
+          "width": 1400,
+          "height": 1466,
+          "alt": "Final design annotated: a simplified Action Plan, a highlighted progress tracker, a minimized account summary, and a dedicated client content section.",
+          "label": "Final Design"
+        }
+      ]
+    },
+    {
+      "heading": "Challenges & Insights",
+      "blocks": [
+        {
+          "type": "subhead",
+          "text": "Action Plan"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Actionable content was scattered across multiple repositories, resulting in users seeing duplicate content",
+            "Proposed a single area for action items, which underlined the business need to consolidate content into a single repository to prevent further tech debt"
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/personalized-guidance/action-plan.webp",
+          "width": 684,
+          "height": 322,
+          "alt": "Close-up of the Action Plan, with a progress card and top action cards.",
+          "portrait": true
+        },
+        {
+          "type": "subhead",
+          "text": "Compact Account Data Cards"
+        },
+        {
+          "type": "list",
+          "items": [
+            "On average, users had 15 account data cards and they cared about only a handful of those cards",
+            "To make better use of page real estate, the “highlights” of top 3 data cards appeared on the homepage, and the full data cards appeared on a separate page with a more compact design to afford more info density and reduce unnecessary scrolling"
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/personalized-guidance/data-cards.webp",
+          "width": 1400,
+          "height": 1669,
+          "alt": "Account Summary page with compact data cards for pay, savings, and benefits.",
+          "portrait": true
+        },
+        {
+          "type": "subhead",
+          "text": "Contextual Actions"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Product team was concerned with removal of the “Quick Actions” left rail",
+            "Research showed that clients were using left rail as a workaround for poor information architecture, and these links were easily embedded in context with account data"
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/personalized-guidance/contextual-actions.webp",
+          "width": 464,
+          "height": 428,
+          "alt": "A 401(k) card with a contextual menu: view details, manage investments, and manage contributions.",
+          "portrait": true
+        },
+        {
+          "type": "subhead",
+          "text": "Client Service Documentation"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The company has many services which affect types of content throughout the site, but there was no centralized documentation of offerings broken down by revenue and participant volume",
+            "After I stressed the importance of solving for the 80% of clients, product managers created central documentation, which informed our approach to prioritize our core offering (comprehensive health, wealth and wellbeing), followed by secondary services that the company wants to strengthen"
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/personalized-guidance/client-service.webp",
+          "width": 888,
+          "height": 495,
+          "alt": "Treemap chart of client offerings, with labels blurred for confidentiality.",
+          "caption": "Client offering breakdown (labels blurred for confidentiality)",
+          "portrait": true
+        }
+      ]
+    },
+    {
+      "heading": "Impact",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "This project not only resulted in an improved design and product output, but it also sparked new initiatives to reduce tech debt. Additionally, processes from the project served as an example for other teams to embrace a more collaborative, data-driven approach."
+        },
+        {
+          "type": "cards",
+          "items": [
+            {
+              "icon": "star",
+              "text": [
+                "The design presentation at the sales kickoff positioned the product & design team as thought leaders within the company, and set the tone and direction for the sales team"
+              ]
+            },
+            {
+              "icon": "people",
+              "text": [
+                "The design process broke down silos within the Product Management team, and established process of starting all projects with client and user feedback and analytics"
+              ]
+            },
+            {
+              "icon": "bulb",
+              "text": [
+                "The design concept surfaced need to reassess the site’s information architecture and content inventory, resulting in product managers prioritizing these initiatives"
+              ]
+            },
+            {
+              "icon": "trend",
+              "text": [
+                "Over 500 clients are eligible for new personalized guidance experience"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Key Learnings",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Guide designers to design with best hypotheses based on limited knowns, while constantly raising questions and surfacing gaps to product team. This helped product team understand the value of data informing design",
+            "Design for an 11-star experience so that a scaled down design will still have an excellent experience, and also help other teams see what’s possible",
+            "Ask multiple layers of “why” to truly understand the root pain point"
+          ]
+        }
+      ]
+    }
+  ]
+}
