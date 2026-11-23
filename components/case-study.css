@@ -1,0 +1,218 @@
+/* Case study page: Swiss index template.
+   POV: color is the ticket, white is the work. The header takes this project's boarding pass color;
+   the reading area stays a quiet tint, with images and cards on white.
+
+   Layout: a narrow rail holds the section name as a small label. Everything else shares one wide
+   column with a single left edge, so screenshots get the room.
+   Type steps: small label > large headline > body. All body copy is one size. Loaded after the theme. */
+
+:root { --mist: #F4F5FF; --hairline: #D6D6D6; }
+
+/* case studies use a wider page so screenshots stay legible */
+.cs-page .page-width, .cs-page .site-nav, .cs-page .footer-inner { max-width: 1360px; }
+
+body.cs-page { background: var(--mist); }
+.cs-nav-band, .cs-hero-band { background: var(--route); }
+
+/* the darkest route color needs light text */
+[data-route="indigo"] .cs-nav-band .site-name,
+[data-route="indigo"] .cs-nav-band .site-nav a { color: var(--paper); }
+[data-route="indigo"] .cs-nav-band a:focus-visible { outline-color: var(--paper); }
+
+.cs-hero { padding-top: 40px; padding-bottom: 72px; }
+
+/* the ticket: the color block is the setting, this is the object. No trim band here,
+   because the background already carries the route color. Role, team and timeline are the stub's small print. */
+.cs-ticket {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  color: var(--ink);
+}
+.cs-ticket-main { padding: 48px; }
+.cs-title {
+  margin: 0 0 28px;
+  font-size: 48px;
+  font-weight: 500;
+  font-stretch: 112%;
+  line-height: 1.05;
+  letter-spacing: -0.033em;
+}
+.cs-route {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 0;
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px dashed var(--ink);
+}
+.cs-to { text-align: right; }
+.cs-k, .cs-stub dt {
+  margin: 0 0 3px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.cs-v { margin: 0; font-size: 22px; font-weight: 500; font-stretch: 112%; line-height: 1.1; letter-spacing: -0.015em; }
+.cs-plane { font-size: 22px; }
+.cs-summary { max-width: 40em; margin: 24px 0 0; font-size: 18px; line-height: 1.55; }
+
+.cs-stub {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 0;
+  padding: 48px 32px 40px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+.cs-stub dd { margin: 0; }
+.cs-stub ul { margin: 0; padding: 0; list-style: none; }
+.cs-stub li + li { margin-top: 4px; }
+
+/* half-circle notches where the stub tears off. Each one sits on the border and paints over it,
+   so the curve is open with no line closing it. */
+.cs-notch { position: absolute; top: -2px; bottom: -2px; right: 340px; width: 0; pointer-events: none; }
+.cs-notch::before, .cs-notch::after {
+  content: "";
+  position: absolute;
+  left: -16px;
+  width: 32px;
+  height: 18px;
+  background: var(--route);
+  border: 2px solid var(--ink);
+}
+.cs-notch::before { top: 0; border-top: 0; border-radius: 0 0 16px 16px; }
+.cs-notch::after { bottom: 0; border-bottom: 0; border-radius: 16px 16px 0 0; }
+
+.cs-cover { display: block; width: 100%; height: auto; margin-top: 24px; border: 2px solid var(--ink); }
+
+/* the index */
+.cs-body { padding: 0 0 48px; background: var(--mist); }
+.cs-section { padding: 96px 0; }
+.cs-section + .cs-section { padding-top: 0; }
+.cs-section + .cs-section .cs-grid { padding-top: 96px; border-top: 1px solid var(--hairline); }
+.cs-grid {
+  display: grid;
+  grid-template-columns: 176px minmax(0, 1fr);
+  column-gap: 48px;
+  align-items: start;
+}
+.cs-grid > .cs-label {
+  margin: 0;
+  padding-top: 7px;
+  color: var(--indigo);
+  font-size: 12px;
+  font-weight: 600;
+  font-stretch: 100%;
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+/* type steps */
+.cs-content > * { margin-top: 20px; margin-bottom: 0; }
+.cs-content > :first-child { margin-top: 0; }
+.cs-content p, .cs-content li { max-width: 44em; color: var(--ink); font-size: 18px; line-height: 1.65; }
+.cs-content strong { color: var(--ink); font-weight: 600; }
+.cs-content > h3 {
+  margin-top: 88px;
+  color: var(--ink);
+  font-size: 40px;
+  font-weight: 500;
+  font-stretch: 112%;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+.cs-content > h3:first-child { margin-top: 0; }
+.cs-content > h3 + * { margin-top: 20px; }
+
+.cs-list { padding-left: 1.2em; }
+.cs-list li + li { margin-top: 8px; }
+
+/* images and video sit on a white plate, so white screenshots always look framed on purpose */
+.cs-content > .cs-media, .cs-content > h3 + .cs-media { margin-top: 36px; }
+.cs-media { margin-left: 0; margin-right: 0; padding: 16px; background: var(--paper); }
+.cs-media img, .cs-media video { display: block; width: 100%; height: auto; }
+.cs-media figcaption { margin-top: 12px; color: var(--muted); font-size: 14px; }
+
+/* cards: a small ticket with its route trim and an icon */
+.cs-content > .cs-cards, .cs-content > h3 + .cs-cards { margin-top: 36px; }
+.cs-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+/* 2 or 4 cards sit in two columns, so a row never ends with an orphan */
+.cs-cards:has(> :nth-child(2):last-child),
+.cs-cards:has(> :nth-child(4):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cs-card {
+  position: relative;
+  padding: 40px 24px 28px;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  color: var(--ink);
+}
+.cs-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: var(--route);
+}
+.cs-icon { display: block; width: 28px; height: 28px; margin-bottom: 16px; color: var(--indigo); }
+.cs-card h3 { margin: 0 0 8px; font-size: 19px; font-weight: 500; font-stretch: 112%; line-height: 1.25; letter-spacing: -0.012em; }
+.cs-content .cs-card p { margin: 0; color: var(--ink); font-size: 16px; line-height: 1.5; }
+.cs-content .cs-card p + p { margin-top: 12px; }
+
+.cs-compare { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; max-width: 880px; }
+.cs-compare h4 { margin: 0 0 8px; color: var(--ink); font-size: 18px; font-weight: 600; }
+.cs-compare .cs-list li { font-size: 17px; }
+
+@media (max-width: 1000px) {
+  .cs-grid { grid-template-columns: 128px minmax(0, 1fr); column-gap: 32px; }
+  .cs-content > h3 { font-size: 34px; }
+}
+
+@media (max-width: 800px) {
+  .cs-title { font-size: 40px; }
+  .cs-ticket { display: block; }
+  .cs-ticket-main { padding: 32px 24px 24px; }
+  .cs-stub { padding: 24px; }
+  /* phones and tablets: the stub drops below, so the notches move to the side edges */
+  .cs-notch { display: block; position: relative; top: auto; right: auto; bottom: auto; width: auto; height: 0; }
+  .cs-notch::before, .cs-notch::after { top: -12px; bottom: auto; width: 14px; height: 24px; }
+  .cs-notch::before { left: -2px; border: 2px solid var(--ink); border-left: 0; border-radius: 0 12px 12px 0; }
+  .cs-notch::after { left: auto; right: -2px; border: 2px solid var(--ink); border-right: 0; border-radius: 12px 0 0 12px; }
+  .cs-grid { grid-template-columns: minmax(0, 1fr); row-gap: 16px; }
+  .cs-grid > .cs-label { padding-top: 0; }
+  .cs-cards,
+  .cs-cards:has(> :nth-child(2):last-child),
+  .cs-cards:has(> :nth-child(4):last-child) { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+}
+
+@media (max-width: 600px) {
+  .cs-hero { padding-top: 24px; padding-bottom: 48px; }
+  .cs-ticket-main { padding: 28px 18px 20px; }
+  .cs-title { margin-bottom: 24px; font-size: 32px; }
+  .cs-route { gap: 10px; padding: 12px 0; }
+  .cs-v, .cs-plane { font-size: 18px; }
+  .cs-v { font-stretch: 100%; }
+  .cs-summary { font-size: 17px; }
+  .cs-stub { padding: 20px 18px; }
+  .cs-cover { margin-top: 16px; }
+  .cs-card::before { height: 10px; }
+  .cs-body { padding-bottom: 16px; }
+  .cs-section { padding: 56px 0; }
+  .cs-section + .cs-section .cs-grid { padding-top: 56px; }
+  .cs-grid > .cs-label { font-size: 11px; }
+  .cs-content p, .cs-content li { font-size: 17px; }
+  .cs-content > h3 { margin-top: 56px; font-size: 28px; }
+  .cs-content > .cs-media, .cs-content > h3 + .cs-media,
+  .cs-content > .cs-cards, .cs-content > h3 + .cs-cards { margin-top: 24px; }
+  .cs-media { padding: 8px; }
+  .cs-compare { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+}

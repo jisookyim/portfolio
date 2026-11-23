@@ -41,38 +41,38 @@
 /* tear-off stub: a half-circle notch cut into the top and bottom edges, between the text and the image
    (no perforation line: it competed with the dashed route line and split the image off).
    Desktop: centered in the column gap (exactly 50%).
-   The notches are paper-colored circles with an ink border, centered on the card border and
-   clipped to the half inside the card, so they hide the straight border where they cut in. */
+   Each notch is a half-circle that sits on the card border and paints over it,
+   so the curve stays open with no line closing it. */
 .bp-stub {
   position: absolute;
-  top: 15px;
-  bottom: 15px;
-  left: calc(50% - 1px);
+  top: -2px;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
   pointer-events: none;
 }
 .bp-stub::before,
 .bp-stub::after {
   content: "";
   position: absolute;
-  left: -15px;
+  left: -16px;
   width: 32px;
-  height: 32px;
-  box-sizing: border-box;
-  border-radius: 50%;
+  height: 18px;
   background: var(--paper);
   border: 2px solid var(--ink);
 }
-.bp-stub::before { top: -32px; clip-path: inset(calc(50% - 2px) 0 0 0); }
-.bp-stub::after { bottom: -32px; clip-path: inset(0 0 calc(50% - 2px) 0); }
+.bp-stub::before { top: 0; border-top: 0; border-radius: 0 0 16px 16px; }
+.bp-stub::after { bottom: 0; border-bottom: 0; border-radius: 16px 16px 0 0; }
 
 /* left column: title at the top, route under it, CTA sentence under that */
 .bp-title {
   grid-column: 1;
   grid-row: 1;
-  font-size: 40px;
-  font-weight: 800;
+  font-size: 28px;
+  font-weight: 500;
+  font-stretch: 112%;
   line-height: 1.05;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   margin: 0 0 24px;
   align-self: start;
 }
@@ -169,7 +169,9 @@ a.bp-cta:focus-visible { outline: none; }
 }
 .bp-v {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 500;
+  font-stretch: 112%;
+  letter-spacing: -0.015em;
   line-height: 1.1;
   margin: 0;
 }
@@ -200,15 +202,16 @@ a.bp-cta:focus-visible { outline: none; }
   .bp-stub {
     position: relative;
     top: auto; bottom: auto; left: auto;
+    width: auto;
     height: 2px;
     margin: 0 -18px 18px;
   }
-  .bp-stub::before, .bp-stub::after { width: 24px; height: 24px; top: -11px; bottom: auto; }
-  .bp-stub::before { left: -13px; clip-path: inset(0 0 0 calc(50% - 2px)); }
-  .bp-stub::after { left: auto; right: -13px; clip-path: inset(0 calc(50% - 2px) 0 0); }
-  .bp-title { font-size: 28px; margin: 0 0 18px; align-self: stretch; }
+  .bp-stub::before, .bp-stub::after { top: -11px; bottom: auto; width: 14px; height: 24px; }
+  .bp-stub::before { left: -2px; border: 2px solid var(--ink); border-left: 0; border-radius: 0 12px 12px 0; }
+  .bp-stub::after { left: auto; right: -2px; border: 2px solid var(--ink); border-right: 0; border-radius: 12px 0 0 12px; }
+  .bp-title { font-size: 24px; margin: 0 0 18px; align-self: stretch; }
   .bp-route { padding: 12px 0; margin-bottom: 18px; gap: 10px; align-self: stretch; }
-  .bp-v { font-size: 18px; }
+  .bp-v { font-size: 18px; font-stretch: 100%; }
   .bp-arrow { font-size: 18px; }
   .bp-cta { margin: 0 0 18px; font-size: 16px; }
   .bp-image { margin: 0; }
