@@ -34,10 +34,11 @@ body { background: var(--page); }
   right: 0;
   height: 6px;
   background: linear-gradient(90deg,
-    var(--coral) 0 25%,
-    var(--signal-yellow) 25% 50%,
-    var(--pink) 50% 75%,
-    var(--periwinkle) 75% 100%);
+    var(--coral) 0 20%,
+    var(--signal-yellow) 20% 40%,
+    var(--pink) 40% 60%,
+    var(--periwinkle) 60% 80%,
+    var(--lime) 80% 100%);
 }
 .pp-data .name { color: var(--indigo); }
 .im-num { color: var(--indigo); }
