@@ -1,0 +1,250 @@
+{
+  "card": "01-hq-digital-installation",
+  "cover_alt": "The digital wall wrapping a corner of the HQ lobby, showing the message “Welcome to Alight HQ Cloudlife Chicago.”",
+  "cover_width": 1000,
+  "cover_height": 771,
+  "summary": "When Alight opened its new headquarters, the space needed to provide a sense of belonging and cultural connection for employees, and instill confidence and trust for clients. My role was to define the experience strategy, where digital and physical design worked together to evoke a third space.",
+  "details": [
+    {
+      "label": "Role",
+      "items": [
+        "Experience strategist"
+      ]
+    },
+    {
+      "label": "Team",
+      "items": [
+        "Design Directors & VP",
+        "Design Co-Lead",
+        "Third-party digital agency"
+      ],
+      "inline": true
+    },
+    {
+      "label": "Timeline",
+      "items": [
+        "4 months (1 month internal strategy; 3 months agency collaboration)"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Problem",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "The challenge was to create a genuine third space that encouraged authentic interaction, collaboration, and creativity for employees, while signaling Alight’s innovative spirit to clients. As the first touchpoint for both audiences, the lobby needed to make a strong first impression without feeling like a gimmick."
+        }
+      ]
+    },
+    {
+      "heading": "Solution",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "I developed the experience strategy around Alight’s existing design principles (Win Moments, Spark Ease, Flex Modern, and Instill Confidence) governing every decision across the HQ. The resulting digital wall had three modes:"
+        },
+        {
+          "type": "cards",
+          "items": [
+            {
+              "icon": "chart",
+              "title": "Ambient Data (Default)",
+              "text": [
+                "Visualizes data to tell a story on employee engagement"
+              ]
+            },
+            {
+              "icon": "lines",
+              "title": "Content",
+              "text": [
+                "Configurable to display personalized, event-specific, or evergreen content"
+              ]
+            },
+            {
+              "icon": "touch",
+              "title": "Play",
+              "text": [
+                "An outlet for creative expression to connect people to the space"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "src": "",
+          "poster": "assets/case-studies/hq-digital-installation/wall-video-poster.webp",
+          "width": 1400,
+          "height": 788,
+          "alt": "Still of the digital wall in the HQ lobby, with colorful ambient shapes and content panels.",
+          "note": "Installation video to add"
+        }
+      ]
+    },
+    {
+      "heading": "Process",
+      "blocks": [
+        {
+          "type": "subhead",
+          "text": "Workshop"
+        },
+        {
+          "type": "text",
+          "text": "To align on what the overall HQ experience should accomplish, I led a workshop with our design VP and directors to map out how employees and clients would move through the space. The lobby surfaced as a key point for a strong first impression, and the most direct channel for telling Alight’s story through data and content."
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/hq-digital-installation/workshop.webp",
+          "width": 1500,
+          "height": 1279,
+          "alt": "Workshop journey maps for employees and clients, with sticky notes across each stage of their day at the HQ."
+        },
+        {
+          "type": "subhead",
+          "text": "Data Visualization Concepts"
+        },
+        {
+          "type": "text",
+          "text": "I explored data visualization ideas that made data feel alive and ambient without the need to decode it."
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/hq-digital-installation/dataviz-concepts.webp",
+          "width": 807,
+          "height": 611,
+          "alt": "Moodboard of data visualization concepts: colorful generative landscapes, patterns, and wave forms."
+        },
+        {
+          "type": "subhead",
+          "text": "Content Strategy"
+        },
+        {
+          "type": "text",
+          "text": "To ensure that the installation had a clear POV, I brainstormed possible content ideas. This ultimately guided the third-party agency on the digital wall’s layout and CMS."
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/hq-digital-installation/content-strategy.webp",
+          "width": 1500,
+          "height": 698,
+          "alt": "Content strategy brainstorm board with columns for welcome, brand moments, ambient content, and narrative content."
+        }
+      ]
+    },
+    {
+      "heading": "The Installation",
+      "blocks": [
+        {
+          "type": "subhead",
+          "text": "Data Visualization"
+        },
+        {
+          "type": "text",
+          "text": "By default, the wall tells a story about employee engagement. Shapes are proportional to Alight’s employee platform visit volume, comparing month over month at a glance. For subtle motion reactivity, the data shapes follow your movement through the lobby."
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/hq-digital-installation/dataviz-follow.webp",
+          "width": 1400,
+          "height": 948,
+          "alt": "A person walks past the digital wall as clusters of data shapes follow their movement."
+        },
+        {
+          "type": "subhead",
+          "text": "Content"
+        },
+        {
+          "type": "text",
+          "text": "Configurable content displays client-personalized, event-specific, or evergreen content, updated through a CMS. A monthly color palette updates automatically to reflect the season, holidays, or cultural moments."
+        },
+        {
+          "type": "gallery",
+          "items": [
+            {
+              "src": "assets/case-studies/hq-digital-installation/about-hq-content.webp",
+              "width": 1100,
+              "height": 825,
+              "alt": "The wall showing a “Get to know Alight HQ” panel and a large brand image."
+            },
+            {
+              "src": "assets/case-studies/hq-digital-installation/seasonal-content.webp",
+              "width": 1100,
+              "height": 825,
+              "alt": "The wall in a bright seasonal palette, with a panel asking “Planning some time off this summer?”"
+            }
+          ]
+        },
+        {
+          "type": "subhead",
+          "text": "Play Mode"
+        },
+        {
+          "type": "text",
+          "text": "Hover your hand to form shapes and release them into the wall."
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/hq-digital-installation/play-mode.webp",
+          "width": 900,
+          "height": 1348,
+          "alt": "A person holds their hands up to the wall, forming a cluster of shapes.",
+          "portrait": true
+        }
+      ]
+    },
+    {
+      "heading": "Impact",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "The digital installation, alongside the rest of the HQ space, brought to life a third space where employees wanted to be and clients wanted to return."
+        },
+        {
+          "type": "cards",
+          "items": [
+            {
+              "icon": "person",
+              "text": [
+                "Personalized client experience for meetings, events, and after-hours"
+              ]
+            },
+            {
+              "icon": "people",
+              "text": [
+                "More organic facetime across teams and leadership, with remote employees voluntarily coming in"
+              ]
+            },
+            {
+              "icon": "star",
+              "text": [
+                "Positive reception of the HQ space, with the digital installation a consistent highlight"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Challenges & Learnings",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            {
+              "lead": "Budget constraints",
+              "text": "Working with a physical installation meant the possibility space was much larger than what was buildable. Several interaction and motion ideas had to be scaled back to fit within budget and timeline."
+            },
+            {
+              "lead": "Designing for a constrained physical space",
+              "text": "The lobby corridor was narrower than ideal, which factored into decisions around motion sensing, interaction range, and flow."
+            },
+            {
+              "lead": "Physical space as a UX problem",
+              "text": "Designing for a physical space adds a layer that screen-based UX doesn't have, accounting for how people move through a physical environment, and how a single touchpoint needs to feel cohesive with the overall space around it."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
