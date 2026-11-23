@@ -1,6 +1,5 @@
-/* DRAFT color exploration: Departure Board (issue #10).
-   Loaded last, so it only overrides colors. Remove this file and its <link>
-   in templates/index.html to return to the black, white and red palette. */
+/* Departure Board: the site's color palette (see DESIGN.md).
+   Loaded last, so it sets the colors on top of the shared components. */
 
 :root {
   --indigo: #1A1466;
