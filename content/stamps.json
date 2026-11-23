@@ -1,0 +1,223 @@
+{
+  "mentorship": {
+    "open_label": "Open Mentorship postcards",
+    "link": {
+      "text": "See my ADPList profile",
+      "href": "https://adplist.org/mentors/ji-sook-yim"
+    },
+    "cards": [
+      {
+        "type": "quote",
+        "quote": "I left the session feeling much clearer and encouraged about my next steps. Highly recommend talking to her if you’re navigating the UX field or feeling stressed about your career search.",
+        "name": "Kiyo Yang",
+        "title": "UX Designer, HungerRush",
+        "sign": "Kiyo",
+        "mark": "ADPLIST"
+      },
+      {
+        "type": "quote",
+        "quote": "After listening to my unique situation, she had various ideas to help me increase my influence within my design team and across my organization.",
+        "name": "Eric Wagner",
+        "title": "Senior Product Designer, Thrive Global",
+        "sign": "Eric",
+        "mark": "ADPLIST"
+      },
+      {
+        "type": "quote",
+        "quote": "She was incredibly helpful in reviewing my resume and providing a fresh perspective on how to stand out in the current market.",
+        "name": "Kuo-Chen (Kacy) Jung",
+        "title": "UX design student, Design Lab",
+        "sign": "Kacy",
+        "mark": "ADPLIST"
+      },
+      {
+        "type": "quote",
+        "quote": "She has exceptional communication skills and deep subject knowledge and the structured approach to the session and review made the session incredibly valuable to me.",
+        "name": "Hammad Javaid",
+        "title": "UX Student, Purdue",
+        "sign": "Hammad",
+        "mark": "ADPLIST"
+      }
+    ]
+  },
+  "sxsw": {
+    "open_label": "Open SXSW postcards",
+    "cards": [
+      {
+        "type": "photo",
+        "src": "assets/stamps/sxsw-01.webp",
+        "alt": "Ji-Sook wearing a SXSW 2025 lanyard beside a table sign reading Interactive and Convergence Mentor",
+        "caption": "SXSW 2025, Interactive & Convergence Mentor",
+        "mark": "SXSW",
+        "note": "Table 7, tea in hand, ready to mentor."
+      },
+      {
+        "type": "photo",
+        "src": "assets/stamps/sxsw-02.webp",
+        "alt": "Ji-Sook at a table with a SXSW 2026 sign reading Innovation Mentors",
+        "caption": "SXSW 2026, Innovation Mentor",
+        "mark": "SXSW",
+        "note": "Back again! Table 2 this year."
+      }
+    ]
+  },
+  "solo": {
+    "open_label": "Open Solo travel postcards",
+    "cards": [
+      {
+        "type": "photo",
+        "src": "assets/stamps/travel-01.webp",
+        "alt": "Ji-Sook holding a Swiss flag in the snow at Jungfraujoch, with mountains behind",
+        "caption": "Jungfraujoch, Switzerland",
+        "mark": "JUNGFRAU",
+        "note": "Made it to the Top of Europe. Bundle up!"
+      },
+      {
+        "type": "photo",
+        "src": "assets/stamps/travel-02.webp",
+        "alt": "Ji-Sook sitting on a boulder during a mountain hike, with pine trees and a rocky peak behind",
+        "caption": "South Lake Tahoe, CA",
+        "mark": "TAHOE",
+        "note": "Found the perfect rock for a break."
+      },
+      {
+        "type": "photo",
+        "src": "assets/stamps/travel-03.webp",
+        "alt": "Ji-Sook in a pale blue dress beside a pond and a traditional Korean pavilion",
+        "caption": "Seoul, Korea",
+        "mark": "SEOUL",
+        "note": "Fall colors by the pond."
+      },
+      {
+        "type": "photo",
+        "src": "assets/stamps/travel-04.webp",
+        "alt": "Ji-Sook in a patterned scarf in front of old brick and stone ruins",
+        "caption": "Düsseldorf, Germany",
+        "mark": "DÜSSELDORF",
+        "note": "Exploring the imperial palace ruins."
+      },
+      {
+        "type": "photo",
+        "src": "assets/stamps/travel-05.webp",
+        "alt": "Ji-Sook in a colorful top in front of a large domed terracotta church",
+        "caption": "Bologna, Italy",
+        "mark": "BOLOGNA",
+        "note": "San Luca after a 1-hour uphill walk."
+      },
+      {
+        "type": "photo",
+        "src": "assets/stamps/travel-06.webp",
+        "alt": "Ji-Sook smiling in a maroon jacket above a lake with icebergs, a glacier and green mountains in Chugach National Forest",
+        "caption": "Seward, Alaska",
+        "mark": "SEWARD",
+        "note": "Had no idea the glaciers were so blue!"
+      }
+    ]
+  },
+  "swatch": {
+    "open_label": "Open Swatch postcards",
+    "cards": [
+      {
+        "type": "photo",
+        "src": "assets/stamps/swatch-02.webp",
+        "alt": "Dozens of colorful Swatch watches pinned in rows on a cork board",
+        "caption": "The Cork Board",
+        "mark": "SWATCH",
+        "note": "Running out of space."
+      },
+      {
+        "type": "photo",
+        "src": "assets/stamps/swatch-01.webp",
+        "alt": "A shelf of boxed art and travel Swatch watches, with more watches laid out in front",
+        "caption": "The Art & Travel Shelf",
+        "mark": "SWATCH",
+        "note": "Bought a bookshelf to display more Swatches."
+      }
+    ]
+  },
+  "piano": {
+    "open_label": "Open Piano videos",
+    "link": {
+      "text": "See my YouTube channel",
+      "href": "https://www.youtube.com/@JiSookYim"
+    },
+    "cards": [
+      {
+        "type": "video",
+        "id": "_chJXBZL-HQ",
+        "title": "If the Music from Squid Games Were Unnecessarily Dramatic",
+        "poster": "https://i.ytimg.com/vi/_chJXBZL-HQ/hqdefault.jpg",
+        "mark": "PIANO",
+        "note": "Squid Game, but unnecessarily dramatic.",
+        "caption": "Squid Game Cover"
+      },
+      {
+        "type": "video",
+        "id": "TF-0oq9ELRo",
+        "title": "Muse - Thought Contagion Piano Duet Cover (+9 More Muse Songs)",
+        "poster": "https://i.ytimg.com/vi/TF-0oq9ELRo/hqdefault.jpg",
+        "mark": "PIANO",
+        "note": "A piano duet with myself, 10 Muse songs.",
+        "caption": "Muse Piano Duet"
+      },
+      {
+        "type": "video",
+        "id": "hhZQkEef_lk",
+        "title": "Can't Help Falling in Love x Whatever You Like x The Real Slim Shady",
+        "poster": "https://i.ytimg.com/vi/hhZQkEef_lk/hqdefault.jpg",
+        "mark": "PIANO",
+        "note": "Three songs that should not work together.",
+        "caption": "Elvis x T.I. x Eminem Mashup"
+      }
+    ]
+  },
+  "jigsaw": {
+    "open_label": "Open Jigsaw puzzle postcards",
+    "link": {
+      "text": "See my puzzles on Instagram",
+      "href": "https://www.instagram.com/last3puzzlepieces"
+    },
+    "cards": [
+      {
+        "type": "photo",
+        "src": "assets/stamps/jigsaw-04.webp",
+        "alt": "Finished jigsaw puzzle showing rows of colorful toy minifigures",
+        "mark": "JIGSAW",
+        "note": "Spot your favorite minifigure.",
+        "caption": "LEGO Minifigures, 1000 pieces"
+      },
+      {
+        "type": "photo",
+        "src": "assets/stamps/jigsaw-01.webp",
+        "alt": "Finished all-gold jigsaw puzzle with pieces arranged in circles",
+        "mark": "JIGSAW",
+        "note": "All gold. One of my hardest puzzles ever.",
+        "caption": "Krypt Gold, 631 pieces"
+      },
+      {
+        "type": "photo",
+        "src": "assets/stamps/jigsaw-05.webp",
+        "alt": "Finished jigsaw puzzle shaped like a head in profile, filled with people doing yoga by a waterfall",
+        "mark": "JIGSAW",
+        "note": "A meditative puzzling experience.",
+        "caption": "Mental Wealth Collection 03, 1064 pieces"
+      },
+      {
+        "type": "photo",
+        "src": "assets/stamps/jigsaw-02.webp",
+        "alt": "Finished jigsaw puzzle of an Art Deco painting of a woman in a green dress and white hat",
+        "mark": "JIGSAW",
+        "note": "Experiencing art up-close through a puzzle.",
+        "caption": "Young Girl in Green, 1000 pieces"
+      },
+      {
+        "type": "photo",
+        "src": "assets/stamps/jigsaw-03.webp",
+        "alt": "Finished University of Chicago alumni jigsaw puzzle showing a grid of campus doorways",
+        "mark": "JIGSAW",
+        "note": "Walking down memory lane.",
+        "caption": "The University of Chicago Doors, 1000 pieces"
+      }
+    ]
+  }
+}

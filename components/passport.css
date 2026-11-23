@@ -87,6 +87,23 @@
   .stamp strong { display: block; font-size: 24px; font-weight: 800; letter-spacing: 0; line-height: 1.1; margin: 2px 0; }
   .stamp-dashed { border-style: dashed; transform: rotate(2deg); }
   .stamp .nowrap { white-space: nowrap; }
+  .stamp-jigsaw { transform: rotate(4deg); }
+  /* six stamps: one row on wide screens, two rows of three on tablets */
+  .stamp strong { white-space: nowrap; }
+  @media (min-width: 1180px) {
+    .stamps { flex-wrap: nowrap; gap: 12px; justify-content: space-between; padding: 0 6px; }
+    .stamps > .stamp { flex: 0 0 auto; padding: 10px; font-size: 10px; letter-spacing: .08em; }
+    .stamps > .stamp-postage { padding: 0; }
+    .stamps > .stamp-seal { padding: 0; width: 116px; height: 116px; }
+    .stamps > .stamp-oval { padding: 0; width: 172px; }
+    .stamps .stamp strong { font-size: 20px; }
+    .stamps .postage-paper { padding: 8px; }
+    .stamps .postage-inner { padding: 7px 8px; }
+  }
+  @media (min-width: 801px) and (max-width: 1179px) {
+    .stamps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: center; justify-items: center; }
+    .stamps > .stamp-oval { width: 190px; }
+  }
 
   /* stamp details: small things real stamps have, used once each */
   /* framed: a thin second frame just outside the border, and a ruled top line with the plane */
@@ -153,12 +170,12 @@
     .pp-data .name { margin-bottom: 12px; }
     .pp-grid { grid-template-columns: 1fr; gap: 8px; }
     .pp-grid dd { font-size: 13px; }
-    /* phones: a balanced two-column grid. Mentorship + SXSW, Solo travel + Swatch,
-       then the Piano oval centered on its own row at its normal size. */
+    /* phones: a balanced two-column grid. Mentorship + SXSW, Solo travel + Swatch, Piano + Jigsaw. */
     .stamps { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px 16px; align-items: center; }
     .stamps > .stamp { min-width: 0; }
     .stamps > .stamp-seal { justify-self: center; }
-    .stamps > .stamp-oval { grid-column: 1 / -1; justify-self: center; width: 240px; }
+    .stamps > .stamp-oval { justify-self: center; width: 100%; max-width: 190px; }
+    .seal-arc-small { font-size: 10px; letter-spacing: .02em; }
     .stamp-seal { width: 114px; height: 114px; }
     /* tighter stamps on phones so each line stays whole in its column */
     .stamp { padding: 10px; font-size: 10px; letter-spacing: .08em; }

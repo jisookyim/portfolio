@@ -1,0 +1,73 @@
+/* Departure Board: the site's color palette (see DESIGN.md).
+   Loaded last, so it sets the colors on top of the shared components. */
+
+:root {
+  --indigo: #1A1466;
+  --signal-yellow: #FFD400;
+  --mint: #5FF0C0;
+  --pink: #FF9BE0;
+  --coral: #FF7350;
+  --periwinkle: #9AA8FF;
+  /* darker inks for text on white stamps (each at least 4.5:1) */
+  --ink-magenta: #C2108C;
+  --ink-teal: #00686B;
+  --ink-rust: #C2410C;
+  --ink-plum: #7A1F5C;
+  --ink-violet: #4F3BC9;
+  --page: var(--mint);
+}
+
+body { background: var(--page); }
+
+/* nav and section heading on mint */
+.site-name, .site-nav a, .projects h2 { color: var(--ink); }
+.site-nav a:focus-visible, .site-name:focus-visible { outline: 2px solid var(--indigo); outline-offset: 4px; }
+
+/* passport: indigo header with a route stripe that previews the boarding pass colors */
+.pp-head { position: relative; margin-bottom: 6px; background: var(--indigo); color: var(--paper); }
+.pp-head::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg,
+    var(--coral) 0 25%,
+    var(--signal-yellow) 25% 50%,
+    var(--pink) 50% 75%,
+    var(--periwinkle) 75% 100%);
+}
+.pp-data .name { color: var(--indigo); }
+.im-num { color: var(--indigo); }
+.stamps > .stamp:nth-child(1) { --ink: var(--indigo); color: var(--indigo); }
+.stamps > .stamp:nth-child(2) { --ink: var(--ink-magenta); color: var(--ink-magenta); }
+.stamps > .stamp:nth-child(3) { --ink: var(--ink-teal); color: var(--ink-teal); }
+.stamps > .stamp:nth-child(4) { --ink: var(--ink-rust); color: var(--ink-rust); }
+.stamps > .stamp:nth-child(5) { --ink: var(--ink-plum); color: var(--ink-plum); }
+.stamps > .stamp:nth-child(6) { --ink: var(--ink-violet); color: var(--ink-violet); }
+
+/* postcard deck color for each stamp */
+.pc-pop[data-stamp="mentorship"], .pc-pop[data-stamp="jigsaw"] { --deck: var(--periwinkle); }
+.pc-pop[data-stamp="sxsw"] { --deck: var(--pink); }
+.pc-pop[data-stamp="solo"] { --deck: var(--mint); }
+.pc-pop[data-stamp="swatch"] { --deck: var(--coral); }
+.pc-pop[data-stamp="piano"] { --deck: var(--signal-yellow); }
+
+/* boarding passes: each case study gets its own route color on the trim */
+.boarding-pass { --route: var(--coral); }
+.ticket-grid > .boarding-pass:nth-child(5n+2) { --route: var(--signal-yellow); }
+.ticket-grid > .boarding-pass:nth-child(5n+3) { --route: var(--pink); }
+.ticket-grid > .boarding-pass:nth-child(5n+4) { --route: var(--periwinkle); }
+.ticket-grid > .boarding-pass:nth-child(5n+5) { --route: var(--indigo); }
+.boarding-pass::before { background: var(--route); }
+.bp-stub::before, .bp-stub::after { background: var(--page); }
+a.bp-cta { color: var(--indigo); }
+.boarding-pass:has(a.bp-cta:focus-visible) { outline-color: var(--indigo); }
+
+/* "what others say" band */
+.band-grey { background: var(--periwinkle); }
+
+/* footer */
+.site-footer { background: var(--indigo); }
+.footer-links a:hover { color: var(--signal-yellow); }

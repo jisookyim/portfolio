@@ -112,8 +112,12 @@ const heroHtml = `<section class="hero" aria-label="From and to" data-interval="
     .join(" ")}</p>
 </section>`;
 
+// --- stamp postcards: content/stamps.json, read by components/stamp-postcards.js ---
+const stampData = JSON.stringify(JSON.parse(read("content/stamps.json"))).replace(/</g, "\\u003c");
+
 // --- assemble ---
 const home = homeTemplate
+  .replace("{{stamp_data}}", () => stampData)
   .replace("{{passport}}", passport)
   .replace("{{hero}}", heroHtml)
   .replace("{{tickets}}", tickets.join("\n\n"))

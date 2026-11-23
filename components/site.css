@@ -19,7 +19,8 @@ body {
   line-height: 1.5;
 }
 
-main, .site-nav {
+/* content width. Color sections sit outside it so their color runs edge to edge. */
+.page-width, .site-nav {
   max-width: 1120px;
   margin: 0 auto;
   padding-left: 24px;
@@ -101,12 +102,10 @@ h2 {
 .ticket-grid .boarding-pass { max-width: none; margin: 0; }
 
 /* testimonials: cards come from components/recommendation.css */
-/* grey band: groups "what others say" (recommendations + mentee reviews).
-   Full-bleed background while the content keeps the page width. */
+/* color band: groups "what others say" (recommendations + mentee reviews).
+   A true full-width section; the .page-width inside it keeps the content aligned. */
 .band-grey {
   background: var(--grey);
-  box-shadow: 0 0 0 100vmax var(--grey);
-  clip-path: inset(0 -100vmax);
   padding: 96px 0;
 }
 .testimonials + .testimonials { margin-top: 96px; }
@@ -155,7 +154,7 @@ h2 {
 }
 
 @media (max-width: 600px) {
-  main, .site-nav { padding-left: 20px; padding-right: 20px; }
+  .page-width, .site-nav { padding-left: 20px; padding-right: 20px; }
 
   /* one rule per section on mobile: traits drop their own top rules */
   .strength { border-top: none; padding-top: 0; }
