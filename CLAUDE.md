@@ -15,7 +15,9 @@ This repository holds the portfolio website for Ji-Sook Yim (Product & UX Design
 - `content/recommendations/`: one JSON file per recommendation (quote, name, title, optional photo). Filename prefix (01-, 02-) sets the order.
 - `components/recommendation.html` and `.css`: the recommendation card, shared by every recommendation.
 - `content/homepage.md`: homepage text.
-- `scripts/build-site.mjs`: builds `index.html` from the template and the case study files.
+- `content/case-study-pages/`: one JSON file per case study page (summary, details, sections made of reusable blocks). Each builds to `/<file-name>/index.html`; do not hand-edit those generated pages.
+- `components/site-header.html` and `site-footer.html`: the nav and footer shared by every page.
+- `scripts/build-site.mjs`: builds the homepage and case study pages.
 - `DESIGN.md`: the visual system.
 
 ## Components (required)
@@ -24,7 +26,7 @@ This repository holds the portfolio website for Ji-Sook Yim (Product & UX Design
 - To change how every card looks, edit `components/boarding-pass.css` or `.html`, then rebuild.
 - To add or change a recommendation, edit or add a file in `content/recommendations/`, then rebuild. To change how every recommendation card looks, edit `components/recommendation.css` or `.html`. Without a photo, the card shows the person's initials.
 - To change the homepage layout, edit `templates/index.html`, then rebuild.
-- Case study pages are not designed yet. Do not create them or assume a layout for them until Ji-Sook decides.
+- Case study pages use `templates/case-study.html` and `components/case-study.css`. To add one, create `content/case-study-pages/<url-slug>.json` (its `card` points to the homepage card file), set that card's `cta_href` to `<url-slug>/`, then rebuild. Keep the wording from Ji-Sook's current site unless asked to change it.
 
 ## Rules
 - Reuse shared components and styles instead of one-off styling.

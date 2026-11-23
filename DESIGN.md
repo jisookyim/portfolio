@@ -14,6 +14,7 @@ Base:
 - Paper: #FFFFFF (passport and card surfaces)
 - Muted text: #5C5C5C (secondary copy on white)
 - Grey: #ECECEC (initials circle when a recommendation has no photo)
+- Mist: #F4F5FF (case study reading area only; a very pale tint of periwinkle)
 
 Departure Board palette (`components/theme-departure-board.css`):
 - Mint: #5FF0C0 (page background: passport and Featured Work)
@@ -32,7 +33,8 @@ Usage rules:
 ## Typography
 - Headings and body: Archivo (neo-grotesque sans-serif, Helvetica-like, free on Google Fonts). Swap only if Ji-Sook asks.
 - Do not use Inter, system defaults, or serif display faces unless added here.
-- Headings: bold (700–800), tight leading.
+- Headings: medium weight (500), slightly wide (`font-stretch: 112%`), tight tracking and leading. Hierarchy comes from clear size steps, not heavy weight.
+- Heading scale (desktop / tablet / phone): hero and passport name 48 / 48 / 32; section headers and case study headlines 40 / 34 / 28; boarding pass titles 28 / 28 / 24.
 - Body: regular (400), 17px, line height about 1.5.
 - Labels and data (FROM, TO): uppercase, small, letter-spaced.
 - Passport machine-readable lines only: Courier New (monospace), as a stand-in for the OCR-B type on real passports. Not used anywhere else.
@@ -42,13 +44,13 @@ Usage rules:
 - Maximum content width: 1120px. Two-column card grid on desktop, one column on mobile.
 - Text: flush-left, ragged-right. Never center long text.
 - Spacing: multiples of 8px.
-- Sections: no rules above section headings. Separate sections with space (96px desktop, 56–64px mobile) and color blocking. Section headings are 40px bold (30px mobile).
+- Sections: no rules above section headings. Separate sections with space (96px desktop, 56–64px mobile) and color blocking. Section headings follow the heading scale.
 - Color blocking: mint for who Ji-Sook is and the work (passport, Featured Work); a full-width periwinkle section for what others say (Recommendations + Reviews by My Mentees); then a slim indigo footer bar. Passport and cards stay white with black borders.
 - Rules inside components (FROM → TO, recommendation divider, passport dividers) stay, inset inside the card padding.
 
 ## Components
-- Boarding pass card (`components/boarding-pass.html` and `.css`): used on the homepage under "Featured Work". Solid 2px black border, square corners, 36px padding. Desktop: two columns. Left column, top to bottom: case study title (40px, bold), FROM ✈ TO on one line (TO right-aligned; rule above and dashed rule below, both inset inside the padding), then the CTA sentence (17px). Right column: image in a fixed 4:3 frame. Mobile: one column: title, FROM ✈ TO, CTA sentence, image. Do not add labels such as "Boarding pass" or case study numbers, and do not add a separate CTA button.
-  - Ticket cues: a route-color trim band across the top inside the black border (12px desktop, 10px mobile; no text in it), a different color per card. Half-circle notches cut into the edges like a tear-off stub: top and bottom edges at the middle of the column gap on desktop (32px), left and right edges just above the image on mobile (24px). No perforation line: it competed with the dashed route line and split the image off. Notches are decorative (aria-hidden).
+- Boarding pass card (`components/boarding-pass.html` and `.css`): used on the homepage under "Featured Work". Solid 2px black border, square corners, 36px padding. Desktop: two columns. Left column, top to bottom: case study title (28px, medium), FROM ✈ TO on one line (TO right-aligned; rule above and dashed rule below, both inset inside the padding), then the CTA sentence (17px). Right column: image in a fixed 4:3 frame. Mobile: one column: title, FROM ✈ TO, CTA sentence, image. Do not add labels such as "Boarding pass" or case study numbers, and do not add a separate CTA button.
+  - Ticket cues: a route-color trim band across the top inside the black border (12px desktop, 10px mobile; no text in it), a different color per card. Open half-circle notches cut into the edges like a tear-off stub (each one paints over the border, so no line closes the curve): top and bottom edges at the middle of the column gap on desktop (32px), left and right edges just above the image on mobile (24px). No perforation line: it competed with the dashed route line and split the image off. Notches are decorative (aria-hidden).
   - CTA sentence: a descriptive sentence (e.g. "Explore how an analytics portal helps build efficiency for benefits administrators") ending in →, which stays on the same line as the last word. It is the card's only link, so link text is unique per card (WCAG 2.4.4).
   - With a case study URL: the sentence is indigo and underlined, and the link is stretched over the whole card so the whole card is clickable. Hover/focus: underline thickens to 2px, the plane flies straight (level, no arc or trail) from FROM to TO and stays there, the arrow nudges right. The border stays black (no colored border, no lift or shadow). Keyboard focus adds an indigo outline around the card. Reduced motion: no flight or nudge.
   - Without a URL yet: the sentence is muted grey and not a link. Every featured card should have its case study page before launch.
@@ -65,7 +67,14 @@ Usage rules:
 - Strengths row: three columns, each with a top rule and no numbers.
 - From → To hero: below the intro, one rule above it, values cycle through pairs in `content/hero.json`. No CTA.
 - Recommendation card (`components/recommendation.html` and `.css`): structure follows the cards on the current Squarespace site, visuals follow this system. Solid 2px black border, square corners, 32px padding. Quote (17px) on top, then a 1px black divider inside the padding, then a round 48px headshot (initials on grey if no photo) with name (bold) and title (muted). Two columns on desktop, one on mobile.
-- Section heading: bold, 40px, no top rule.
+- Section heading: medium weight, 40px on desktop, no top rule.
+- Case study page (`templates/case-study.html`, `components/case-study.css`, content in `content/case-study-pages/`): the Swiss index template.
+  - POV: color is the ticket, white is the work. The header takes that project's boarding pass color; the reading area stays a quiet mist tint, with images and cards on white. Do not color-block individual reading sections.
+  - Header: a white ticket on the route color with no trim band (the background already carries the color). Main area: title, FROM ✈ TO, summary. Stub: Role, Team and Timeline as small print, with open notches at the tear line. Full-width cover image below. Phones: stub drops below and notches move to the side edges.
+  - Sections: a narrow 176px rail holds the section name as a small tracked label (12px, indigo). Everything else shares one wide column with a single left edge. Hairlines separate sections.
+  - Type steps: label, then 40px subheading, then body. All body copy is one size (18px desktop, 17px phone); do not enlarge opening paragraphs.
+  - Blocks: text, subhead, list, image, video, cards and compare. Images and video sit on a white plate at full column width. Cards have the route trim and a line icon, no emoji; 2 or 4 cards use two columns, 3 use three.
+  - Case study pages run wider than the homepage (max 1360px) so screenshots stay legible.
 - Footer bar: slim full-width indigo (#1A1466) band at the bottom, white text. Minimal: 20px vertical padding, one line (15px, regular weight), then email and LinkedIn icons at 24 x 24, with 24 x 24 tap targets spaced 16px apart (meets WCAG 2.5.8), each with a readable name. Icon hover turns yellow; keyboard focus shows a white outline. Icons sit right after the line (not pushed to the far edge). Mobile: still one row, 13px text. Replaces the old large closing section and button.
 
 ## Tone
