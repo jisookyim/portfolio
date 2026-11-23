@@ -148,25 +148,28 @@
   .seal-main { font-size: 19px; font-weight: 800; fill: currentColor; }
 
   /* machine-readable lines at the foot of the page. Decorative (aria-hidden); the real info is above.
-     Always spans the full passport width: the font grows up to 30px, then letter-spacing
-     fills the rest. Courier New characters are 0.6em wide, so 44 characters = 26.4em. */
+     Small, muted fine print. Each line runs long and is cut at the edge on a whole character,
+     so it spans the full width at any screen size. */
   .mrz {
     --mrz-pad: 22px;
-    --mrz-w: calc(100cqw - 2 * var(--mrz-pad) - 4px);
-    --mrz-fs: min(30px, calc(var(--mrz-w) / 26.4));
     margin: 0;
     border-top: 2px solid var(--ink);
     padding: 14px var(--mrz-pad) 16px;
     font-family: "Courier New", ui-monospace, monospace;
-    font-size: var(--mrz-fs);
-    letter-spacing: calc((var(--mrz-w) - 26.4 * var(--mrz-fs)) / 44);
-    line-height: 1.5;
-    white-space: pre;
+    font-size: 15px;
+    letter-spacing: .14em;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+  .mrz span {
+    display: block;
+    width: 100%;
+    width: round(down, 100%, calc(1ch + .14em));
     overflow: hidden;
-    color: var(--ink);
+    white-space: pre;
   }
   @media (max-width: 800px) {
-    .mrz { --mrz-pad: 16px; padding-top: 12px; padding-bottom: 14px; }
+    .mrz { --mrz-pad: 16px; padding-top: 12px; padding-bottom: 14px; font-size: 12px; }
     .pp-data .name { margin-bottom: 12px; }
     .pp-grid { grid-template-columns: 1fr; gap: 8px; }
     .pp-grid dd { font-size: 13px; }
@@ -203,3 +206,6 @@
 /* space between the header bar and the passport */
 .page-width > .passport:first-child { margin-top: 40px; }
 @media (max-width: 600px) { .page-width > .passport:first-child { margin-top: 24px; } }
+
+/* smallest phones: keep the full second line visible */
+@media (max-width: 360px) { .mrz { font-size: 10px; } }
