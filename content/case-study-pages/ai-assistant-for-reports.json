@@ -1,8 +1,8 @@
 {
   "card": "03-ai-assistant-for-reports",
-  "cover_alt": "A desktop monitor showing the AI Assistant, which has created an Annual Enrollment Population 2025 report from a chat request.",
-  "cover_width": 1000,
-  "cover_height": 771,
+  "cover_alt": "Two overlapping screens: the analytics home page and the full-screen AI Assistant chat creating a report.",
+  "cover_width": 1600,
+  "cover_height": 1132,
   "summary": "To empower clients to meet their own analytics needs, the business set out to design an AI-driven report authoring experience that reduces manual support demands and improves overall client satisfaction. This initiative aimed to simplify complex reporting tasks through intuitive AI assistance, giving clients greater control and confidence with their reports.",
   "details": [
     {
@@ -327,5 +327,7 @@
         }
       ]
     }
-  ]
+  ],
+  "cover_src": "assets/case-studies/ai-assistant-for-reports/cover.webp",
+  "cover_cutout": true
 }

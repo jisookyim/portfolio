@@ -1,8 +1,8 @@
 {
   "card": "01-hq-digital-installation",
   "cover_alt": "The digital wall wrapping a corner of the HQ lobby, showing the message “Welcome to Alight HQ Cloudlife Chicago.”",
-  "cover_width": 1000,
-  "cover_height": 771,
+  "cover_width": 1400,
+  "cover_height": 1080,
   "summary": "When Alight opened its new headquarters, the space needed to provide a sense of belonging and cultural connection for employees, and instill confidence and trust for clients. My role was to define the experience strategy, where digital and physical design worked together to evoke a third space.",
   "details": [
     {
@@ -246,5 +246,6 @@
         }
       ]
     }
-  ]
+  ],
+  "cover_src": "assets/case-studies/hq-digital-installation/cover.webp"
 }

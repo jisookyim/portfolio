@@ -1,8 +1,8 @@
 {
   "card": "04-benefits-admin-portal",
-  "cover_alt": "A laptop on a desk showing the benefits admin portal dashboard with enrollment analytics.",
-  "cover_width": 1000,
-  "cover_height": 750,
+  "cover_alt": "Two overlapping screens from the benefits admin portal: the homepage with to-dos and the Annual Enrollment analytics detail page.",
+  "cover_width": 1600,
+  "cover_height": 1046,
   "summary": "The primary responsibilities of benefits administrators (ben admins) are to troubleshoot employee issues and process day-to-day administrative tasks, all while keeping a pulse on organizational metrics. Ben admins struggled with the existing portal's clunky interface and lacked confidence in their decision-making. The new portal design aimed to allow ben admins to be more efficient and strategic in their role by surfacing to-dos, insights from the analytics, and displaying standard metrics.",
   "details": [
     {
@@ -306,5 +306,7 @@
         }
       ]
     }
-  ]
+  ],
+  "cover_src": "assets/case-studies/benefits-admin-portal/cover.webp",
+  "cover_cutout": true
 }

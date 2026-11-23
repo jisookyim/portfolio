@@ -1,8 +1,8 @@
 {
   "card": "02-leave-of-absence-request",
-  "cover_alt": "A laptop on a desk showing the Plan a Leave flow, where an AI-generated response identifies the leave reason as maternity leave.",
-  "cover_width": 1000,
-  "cover_height": 563,
+  "cover_alt": "Two overlapping screens from the leave request flow: the leave reason step with an AI-generated response, and a table comparing two leave options.",
+  "cover_width": 1600,
+  "cover_height": 1046,
   "summary": "To compete as a full-service benefits platform, the company expanded into leave management. However, the core experience of requesting a leave of absence created escalations from clients and negative feedback from employees.",
   "details": [
     {
@@ -280,5 +280,7 @@
         }
       ]
     }
-  ]
+  ],
+  "cover_src": "assets/case-studies/leave-of-absence-request/cover.webp",
+  "cover_cutout": true
 }
