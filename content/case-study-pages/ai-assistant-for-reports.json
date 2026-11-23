@@ -1,8 +1,8 @@
 {
   "card": "03-ai-assistant-for-reports",
-  "cover_alt": "A desktop monitor showing the AI Assistant, which has created an Annual Enrollment Population 2025 report from a chat request.",
-  "cover_width": 1000,
-  "cover_height": 771,
+  "cover_alt": "Two overlapping screens: the analytics home page and the full-screen AI Assistant chat creating a report.",
+  "cover_width": 1943,
+  "cover_height": 1375,
   "summary": "To empower clients to meet their own analytics needs, the business set out to design an AI-driven report authoring experience that reduces manual support demands and improves overall client satisfaction. This initiative aimed to simplify complex reporting tasks through intuitive AI assistance, giving clients greater control and confidence with their reports.",
   "details": [
     {
@@ -128,8 +128,8 @@
         {
           "type": "image",
           "src": "assets/case-studies/ai-assistant-for-reports/interview-themes.webp",
-          "width": 1400,
-          "height": 721,
+          "width": 1726,
+          "height": 890,
           "alt": "Snapshot of interview theming in Miro, with sticky notes grouped into themes."
         },
         {
@@ -200,8 +200,8 @@
         {
           "type": "image",
           "src": "assets/case-studies/ai-assistant-for-reports/user-flow.webp",
-          "width": 1400,
-          "height": 485,
+          "width": 2200,
+          "height": 762,
           "alt": "User flow diagram for finding, editing, and creating a report with the AI assistant."
         }
       ]
@@ -220,8 +220,8 @@
         {
           "type": "image",
           "src": "assets/case-studies/ai-assistant-for-reports/entry-point.webp",
-          "width": 1400,
-          "height": 672,
+          "width": 1920,
+          "height": 922,
           "alt": "Three entry point concepts. Rejected: a floating icon with unclear capabilities. Rejected: on the Reports page, which hides the feature. Selected: in navigation, a button with clear call-to-action text, accessible site-wide."
         },
         {
@@ -235,8 +235,8 @@
         {
           "type": "image",
           "src": "assets/case-studies/ai-assistant-for-reports/chat-size.webp",
-          "width": 1400,
-          "height": 672,
+          "width": 1920,
+          "height": 922,
           "alt": "Three chat window concepts. Rejected: compact, too cramped for multi-step interactions. Rejected: side panel, limits embedded data visualizations. Selected: full takeover, which minimizes distractions and scales for embeds."
         },
         {
@@ -250,8 +250,8 @@
         {
           "type": "image",
           "src": "assets/case-studies/ai-assistant-for-reports/ai-patterns.webp",
-          "width": 1400,
-          "height": 643,
+          "width": 1920,
+          "height": 882,
           "alt": "Three AI output patterns. Rejected: report title only, too similar to a regular response. Rejected: a border that looks clunky. Selected: a solid background with icon and copy for strong visual differentiation."
         },
         {
@@ -265,8 +265,8 @@
         {
           "type": "image",
           "src": "assets/case-studies/ai-assistant-for-reports/guided-convo.webp",
-          "width": 1400,
-          "height": 739,
+          "width": 1854,
+          "height": 979,
           "alt": "Three conversation patterns: distinct paths with clear navigation, personalized suggestions based on interactions, and free form conversation with open-ended questions."
         }
       ]
@@ -327,5 +327,7 @@
         }
       ]
     }
-  ]
+  ],
+  "cover_src": "assets/case-studies/ai-assistant-for-reports/cover.webp",
+  "cover_cutout": true
 }

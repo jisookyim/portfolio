@@ -86,6 +86,8 @@ body.cs-page { background: var(--mist); }
 .cs-notch::after { bottom: 0; border-bottom: 0; border-radius: 16px 16px 0 0; }
 
 .cs-cover { display: block; width: 100%; height: auto; margin-top: 24px; border: 2px solid var(--ink); }
+/* transparent device mockups sit directly on the project color, with no frame */
+.cs-cover--cutout { width: min(100%, 1120px); margin: 48px auto 0; border: 0; }
 
 /* the index */
 .cs-body { padding: 0 0 48px; background: var(--mist); }
@@ -227,6 +229,7 @@ body.cs-page { background: var(--mist); }
   .cs-summary { font-size: 17px; }
   .cs-stub { padding: 20px 18px; }
   .cs-cover { margin-top: 16px; }
+  .cs-cover--cutout { margin-top: 28px; }
   .cs-card::before { height: 10px; }
   .cs-body { padding-bottom: 16px; }
   .cs-section { padding: 56px 0; }

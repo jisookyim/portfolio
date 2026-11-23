@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../components/site.css?v=3072002a">
 <link rel="stylesheet" href="../components/theme-departure-board.css?v=6ac6075b">
-<link rel="stylesheet" href="../components/case-study.css?v=e29351a1">
+<link rel="stylesheet" href="../components/case-study.css?v=2dcfb003">
 </head>
 <body class="cs-page" data-route="signal-yellow" style="--route: var(--signal-yellow)">
 
@@ -48,7 +48,7 @@
       <div><dt>Timeline</dt><dd>1 quarter</dd></div>
       </dl>
     </div>
-    <img class="cs-cover" src="../assets/case-studies/leave-of-absence-request.webp" alt="A laptop on a desk showing the Plan a Leave flow, where an AI-generated response identifies the leave reason as maternity leave." width="1000" height="563">
+    <img class="cs-cover cs-cover--cutout" src="../assets/case-studies/leave-of-absence-request/cover.webp" srcset="../assets/case-studies/leave-of-absence-request/cover-1100.webp 1100w, ../assets/case-studies/leave-of-absence-request/cover.webp 2200w" sizes="min(calc(100vw - 48px), 1120px)" alt="Two overlapping screens from the leave request flow: the leave reason step with an AI-generated response, and a table comparing two leave options." width="2200" height="1439">
   </div>
   </div>
 
@@ -95,7 +95,7 @@
       <div class="cs-compare"><div><h4>Goals</h4><ul class="cs-list"><li>Get quick approval so they can focus on what matters</li><li>Peace of mind they’re covered with pay and benefits</li><li>Avoid anxiety of pending approval</li></ul></div><div><h4>Pain Points</h4><ul class="cs-list"><li>Confusion about which leave type applies to their situation</li><li>Unsure how long to take the leave</li><li>Multiple back-and-forths after submission for clarification</li><li>Increased stress while preparing for upcoming leave</li></ul></div></div>
       <h3>User Flow</h3>
       <p>I mapped out a user flow based on the product requirements doc to use for initial discussion with the PM and engineering team, focusing on the leave reason, end date selection, and benefit impact steps.</p>
-      <figure class="cs-media cs-wide"><img src="../assets/case-studies/leave-of-absence-request/user-flow.webp" alt="End-to-end user flow diagram of the leave request, with decision branches and annotation notes." width="1500" height="328" loading="lazy"></figure>
+      <figure class="cs-media cs-wide"><img src="../assets/case-studies/leave-of-absence-request/user-flow.webp" srcset="../assets/case-studies/leave-of-absence-request/user-flow-1100.webp 1100w, ../assets/case-studies/leave-of-absence-request/user-flow.webp 2200w" sizes="(max-width: 800px) calc(100vw - 72px), min(calc(100vw - 272px), 1056px)" alt="End-to-end user flow diagram of the leave request, with decision branches and annotation notes." width="2200" height="480" loading="lazy"></figure>
         </div>
       </div>
       </div>
@@ -108,12 +108,12 @@
         <div class="cs-content">
       <h3>Leave Reason</h3>
       <p>Engineering team surfaced the use case of the AI-generated leave reason having various levels of confidence, which influenced design for various use cases and ways for users to “recover” from dead ends.</p>
-      <figure class="cs-media cs-wide"><img src="../assets/case-studies/leave-of-absence-request/leave-reason.webp" alt="Leave reason input branching into three states: strong confidence states a single leave reason, medium confidence offers 2 to 3 options to select from a list, and low confidence shows a dropdown list." width="1500" height="844" loading="lazy"></figure>
+      <figure class="cs-media cs-wide"><img src="../assets/case-studies/leave-of-absence-request/leave-reason.webp" srcset="../assets/case-studies/leave-of-absence-request/leave-reason-1100.webp 1100w, ../assets/case-studies/leave-of-absence-request/leave-reason.webp 1920w" sizes="(max-width: 800px) calc(100vw - 72px), min(calc(100vw - 272px), 1056px)" alt="Leave reason input branching into three states: strong confidence states a single leave reason, medium confidence offers 2 to 3 options to select from a list, and low confidence shows a dropdown list." width="1920" height="1080" loading="lazy"></figure>
       <h3>Leave End Date</h3>
       <p>Content design was crucial to the final design, balancing plain language with additional guidance without overwhelming the user.</p>
-      <figure class="cs-media cs-wide"><img src="../assets/case-studies/leave-of-absence-request/leave-end-date.webp" alt="Three end date concepts. Rejected: option to compare, because of cognitive overload and most leaves having 2 pre-set options. Rejected: show end date, because real-time retrieval hurts page performance. Selected: clear copy with a tool tip, using straightforward labels with contextual definitions." width="1500" height="682" loading="lazy"></figure>
+      <figure class="cs-media cs-wide"><img src="../assets/case-studies/leave-of-absence-request/leave-end-date.webp" srcset="../assets/case-studies/leave-of-absence-request/leave-end-date-1100.webp 1100w, ../assets/case-studies/leave-of-absence-request/leave-end-date.webp 1920w" sizes="(max-width: 800px) calc(100vw - 72px), min(calc(100vw - 272px), 1056px)" alt="Three end date concepts. Rejected: option to compare, because of cognitive overload and most leaves having 2 pre-set options. Rejected: show end date, because real-time retrieval hurts page performance. Selected: clear copy with a tool tip, using straightforward labels with contextual definitions." width="1920" height="873" loading="lazy"></figure>
       <p>I reframed the comparison screen to less literal about the weekly breakdown, and more on what users would care most. What would they gain or give up between the two durations?</p>
-      <figure class="cs-media cs-wide"><img src="../assets/case-studies/leave-of-absence-request/comparison.webp" alt="Three comparison concepts. Rejected: weekly breakdown table, which is not a true comparison and could leave many empty cells. Rejected: bundled cards, which lack a comparison concept. Selected: outcome-based table, anchored on core benefits to show what is gained versus lost." width="1500" height="722" loading="lazy"></figure>
+      <figure class="cs-media cs-wide"><img src="../assets/case-studies/leave-of-absence-request/comparison.webp" srcset="../assets/case-studies/leave-of-absence-request/comparison-1100.webp 1100w, ../assets/case-studies/leave-of-absence-request/comparison.webp 1920w" sizes="(max-width: 800px) calc(100vw - 72px), min(calc(100vw - 272px), 1056px)" alt="Three comparison concepts. Rejected: weekly breakdown table, which is not a true comparison and could leave many empty cells. Rejected: bundled cards, which lack a comparison concept. Selected: outcome-based table, anchored on core benefits to show what is gained versus lost." width="1920" height="924" loading="lazy"></figure>
         </div>
       </div>
       </div>

@@ -1,8 +1,8 @@
 {
   "card": "04-benefits-admin-portal",
-  "cover_alt": "A laptop on a desk showing the benefits admin portal dashboard with enrollment analytics.",
-  "cover_width": 1000,
-  "cover_height": 750,
+  "cover_alt": "Two overlapping screens from the benefits admin portal: the homepage with to-dos and the Annual Enrollment analytics detail page.",
+  "cover_width": 2200,
+  "cover_height": 1439,
   "summary": "The primary responsibilities of benefits administrators (ben admins) are to troubleshoot employee issues and process day-to-day administrative tasks, all while keeping a pulse on organizational metrics. Ben admins struggled with the existing portal's clunky interface and lacked confidence in their decision-making. The new portal design aimed to allow ben admins to be more efficient and strategic in their role by surfacing to-dos, insights from the analytics, and displaying standard metrics.",
   "details": [
     {
@@ -151,7 +151,8 @@
           "width": 773,
           "height": 603,
           "alt": "User flow for the ben admin, from configuring the dashboard through tasks, analytics, and recommendations.",
-          "portrait": true
+          "portrait": true,
+          "max_width": 773
         }
       ]
     },
@@ -169,16 +170,16 @@
         {
           "type": "image",
           "src": "assets/case-studies/benefits-admin-portal/dashboard-before.webp",
-          "width": 1400,
-          "height": 546,
+          "width": 2200,
+          "height": 858,
           "alt": "Initial setup modal asking ben admins to choose one role. Annotation: ben admins wear multiple hats, and users struggled to choose only one because their job crossed multiple roles.",
           "label": "Initial Dashboard Wireframe"
         },
         {
           "type": "image",
           "src": "assets/case-studies/benefits-admin-portal/dashboard-after.webp",
-          "width": 1400,
-          "height": 552,
+          "width": 2200,
+          "height": 867,
           "alt": "Final setup modal with a drag-and-drop list. Annotation: flexible configuration lets users set dashboard content based on their priorities.",
           "label": "Final Dashboard"
         },
@@ -193,32 +194,32 @@
         {
           "type": "image",
           "src": "assets/case-studies/benefits-admin-portal/home-wire-before.webp",
-          "width": 1400,
-          "height": 1098,
+          "width": 2200,
+          "height": 1725,
           "alt": "Initial homepage wireframe. Annotations: stakeholders said alerts shouldn’t be separated from required tasks, and analytics should tell a story.",
           "label": "Initial Homepage Wireframe"
         },
         {
           "type": "image",
           "src": "assets/case-studies/benefits-admin-portal/home-wire-after.webp",
-          "width": 1400,
-          "height": 1215,
+          "width": 2200,
+          "height": 1909,
           "alt": "Homepage wire iteration combining alerts and tasks into To-Dos, with top insights and an analytics narrative card template.",
           "label": "Homepage Wire Iteration"
         },
         {
           "type": "image",
           "src": "assets/case-studies/benefits-admin-portal/home-hifi-before.webp",
-          "width": 1400,
-          "height": 614,
+          "width": 2200,
+          "height": 965,
           "alt": "Initial high-fidelity homepage. Annotations: to-dos are hard to scan, insights are overwhelming, and standard metrics are hard to access.",
           "label": "Initial Homepage Hi-Fidelity"
         },
         {
           "type": "image",
           "src": "assets/case-studies/benefits-admin-portal/home-hifi-after.webp",
-          "width": 1400,
-          "height": 371,
+          "width": 2200,
+          "height": 583,
           "alt": "Final homepage with a list view of to-dos and compact top insights.",
           "label": "Final Homepage"
         },
@@ -233,16 +234,16 @@
         {
           "type": "image",
           "src": "assets/case-studies/benefits-admin-portal/insights-before.webp",
-          "width": 1400,
-          "height": 538,
+          "width": 2200,
+          "height": 845,
           "alt": "Initial insight card with a category dropdown. Annotations: the dropdown wouldn’t scale, and research refuted the primary versus secondary call-to-action hypothesis.",
           "label": "Initial Insight Card on Homepage"
         },
         {
           "type": "image",
           "src": "assets/case-studies/benefits-admin-portal/insights-after.webp",
-          "width": 1400,
-          "height": 472,
+          "width": 2200,
+          "height": 743,
           "alt": "Final insight card on its own detail page, with two equal-priority calls to action.",
           "label": "Final Insight Card on Insights Detail Page"
         }
@@ -306,5 +307,7 @@
         }
       ]
     }
-  ]
+  ],
+  "cover_src": "assets/case-studies/benefits-admin-portal/cover.webp",
+  "cover_cutout": true
 }

@@ -178,16 +178,24 @@ const listItem = (item) =>
 const list = (items) => `<ul class="cs-list">${items.map(listItem).join("")}</ul>`;
 const assetPath = (src) => `../${escapeHtml(src)}`;
 
+// Sharp images on any screen: if a 1100px version exists, phones load it and larger or Retina screens load the full one.
+const responsive = (src, width, sizes) => {
+  const small = src.replace(/\.webp$/, "-1100.webp");
+  if (!fs.existsSync(path.join(root, small))) return "";
+  return ` srcset="${assetPath(small)} 1100w, ${assetPath(src)} ${width}w" sizes="${sizes}"`;
+};
+const columnSizes = "(max-width: 800px) calc(100vw - 72px), min(calc(100vw - 272px), 1056px)";
+
 const blockRenderers = {
   text: (b) => `<p>${escapeHtml(b.text)}</p>`,
   subhead: (b) => `<h3>${escapeHtml(b.text)}</h3>`,
   list: (b) => list(b.items),
   image: (b) =>
-    `<figure class="cs-media cs-wide${b.portrait ? " cs-media--portrait" : ""}">${b.label ? `<figcaption class="cs-media-label">${escapeHtml(b.label)}</figcaption>` : ""}<img src="${assetPath(b.src)}" alt="${escapeHtml(b.alt)}" width="${b.width}" height="${b.height}" loading="lazy">${b.caption ? `<figcaption>${escapeHtml(b.caption)}</figcaption>` : ""}</figure>`,
+    `<figure class="cs-media cs-wide${b.portrait ? " cs-media--portrait" : ""}">${b.label ? `<figcaption class="cs-media-label">${escapeHtml(b.label)}</figcaption>` : ""}<img src="${assetPath(b.src)}"${responsive(b.src, b.width, b.max_width ? `min(100vw, ${b.max_width}px)` : columnSizes)} alt="${escapeHtml(b.alt)}" width="${b.width}" height="${b.height}"${b.max_width ? ` style="max-width: min(100%, ${b.max_width}px)"` : ""} loading="lazy">${b.caption ? `<figcaption>${escapeHtml(b.caption)}</figcaption>` : ""}</figure>`,
   // Two images side by side on one plate.
   gallery: (b) =>
     `<figure class="cs-media cs-gallery cs-wide"${b.columns ? ` style="--cols: ${b.columns.split(" ").map((c) => `minmax(0, ${c})`).join(" ")}"` : ""}>${b.items
-      .map((i) => `<img src="${assetPath(i.src)}" alt="${escapeHtml(i.alt)}" width="${i.width}" height="${i.height}" loading="lazy">`)
+      .map((i) => `<img src="${assetPath(i.src)}"${responsive(i.src, i.width, "(max-width: 600px) calc(100vw - 56px), min(calc(50vw - 150px), 520px)")} alt="${escapeHtml(i.alt)}" width="${i.width}" height="${i.height}" loading="lazy">`)
       .join("")}</figure>`,
   // A video with no src yet shows its poster and a visible note.
   video: (b) =>
@@ -258,7 +266,9 @@ ${s.blocks.map((b) => renderBlock(b, file)).join("\n")}
     cta_text: escapeHtml(card.cta_text),
     from: escapeHtml(card.from),
     to: escapeHtml(card.to),
-    image_src: escapeHtml(card.image_src),
+    cover_src: escapeHtml(page.cover_src || card.image_src),
+    cover_class: page.cover_cutout ? " cs-cover--cutout" : "",
+    cover_srcset: responsive(page.cover_src || card.image_src, page.cover_width, page.cover_cutout ? "min(calc(100vw - 48px), 1120px)" : "min(calc(100vw - 48px), 1312px)"),
     summary: escapeHtml(page.summary),
     cover_alt: escapeHtml(page.cover_alt),
     cover_width: page.cover_width,

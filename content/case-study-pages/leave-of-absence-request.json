@@ -1,8 +1,8 @@
 {
   "card": "02-leave-of-absence-request",
-  "cover_alt": "A laptop on a desk showing the Plan a Leave flow, where an AI-generated response identifies the leave reason as maternity leave.",
-  "cover_width": 1000,
-  "cover_height": 563,
+  "cover_alt": "Two overlapping screens from the leave request flow: the leave reason step with an AI-generated response, and a table comparing two leave options.",
+  "cover_width": 2200,
+  "cover_height": 1439,
   "summary": "To compete as a full-service benefits platform, the company expanded into leave management. However, the core experience of requesting a leave of absence created escalations from clients and negative feedback from employees.",
   "details": [
     {
@@ -173,8 +173,8 @@
         {
           "type": "image",
           "src": "assets/case-studies/leave-of-absence-request/user-flow.webp",
-          "width": 1500,
-          "height": 328,
+          "width": 2200,
+          "height": 480,
           "alt": "End-to-end user flow diagram of the leave request, with decision branches and annotation notes."
         }
       ]
@@ -193,8 +193,8 @@
         {
           "type": "image",
           "src": "assets/case-studies/leave-of-absence-request/leave-reason.webp",
-          "width": 1500,
-          "height": 844,
+          "width": 1920,
+          "height": 1080,
           "alt": "Leave reason input branching into three states: strong confidence states a single leave reason, medium confidence offers 2 to 3 options to select from a list, and low confidence shows a dropdown list."
         },
         {
@@ -208,8 +208,8 @@
         {
           "type": "image",
           "src": "assets/case-studies/leave-of-absence-request/leave-end-date.webp",
-          "width": 1500,
-          "height": 682,
+          "width": 1920,
+          "height": 873,
           "alt": "Three end date concepts. Rejected: option to compare, because of cognitive overload and most leaves having 2 pre-set options. Rejected: show end date, because real-time retrieval hurts page performance. Selected: clear copy with a tool tip, using straightforward labels with contextual definitions."
         },
         {
@@ -219,8 +219,8 @@
         {
           "type": "image",
           "src": "assets/case-studies/leave-of-absence-request/comparison.webp",
-          "width": 1500,
-          "height": 722,
+          "width": 1920,
+          "height": 924,
           "alt": "Three comparison concepts. Rejected: weekly breakdown table, which is not a true comparison and could leave many empty cells. Rejected: bundled cards, which lack a comparison concept. Selected: outcome-based table, anchored on core benefits to show what is gained versus lost."
         }
       ]
@@ -280,5 +280,7 @@
         }
       ]
     }
-  ]
+  ],
+  "cover_src": "assets/case-studies/leave-of-absence-request/cover.webp",
+  "cover_cutout": true
 }
