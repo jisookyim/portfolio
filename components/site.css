@@ -46,7 +46,8 @@ html { scroll-padding-top: 88px; }
 }
 /* every header link has a 32px-tall tap target */
 .site-name, .site-nav a { display: inline-flex; align-items: center; min-height: 32px; }
-.site-name { font-weight: 800; color: var(--ink); text-decoration: none; font-size: 18px; }
+.site-name { gap: 10px; font-weight: 800; color: var(--ink); text-decoration: none; font-size: 18px; }
+.site-mark { display: block; flex: none; width: 32px; height: 32px; border-radius: 50%; }
 .site-nav ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
 .site-nav a { color: var(--ink); text-decoration: none; font-size: 15px; font-weight: 600; }
 
@@ -198,6 +199,19 @@ h2 {
   /* phones: still one row, with slightly smaller text so it fits at 375px */
   .footer-inner { padding: 16px; gap: 12px; }
   .footer-line { font-size: 13px; }
+}
+
+/* phones: the JSY mark stands in for the name, which stays available to screen readers */
+@media (max-width: 480px) {
+  .site-name-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
 }
 
 /* smallest phones: tighten the header so every link stays inside the margin */

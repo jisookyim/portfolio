@@ -2,12 +2,13 @@
    Loaded last, so it sets the colors on top of the shared components. */
 
 :root {
-  --indigo: #1A1466;
+  --indigo: #2F2F85;
   --signal-yellow: #FFD400;
   --mint: #5FF0C0;
   --pink: #FF9BE0;
-  --coral: #FF7350;
+  --coral: #FF8A4C;
   --periwinkle: #9AA8FF;
+  --lime: #B4E85C;
   /* darker inks for text on white stamps (each at least 4.5:1) */
   --ink-magenta: #C2108C;
   --ink-teal: #00686B;
@@ -33,10 +34,11 @@ body { background: var(--page); }
   right: 0;
   height: 6px;
   background: linear-gradient(90deg,
-    var(--coral) 0 25%,
-    var(--signal-yellow) 25% 50%,
-    var(--pink) 50% 75%,
-    var(--periwinkle) 75% 100%);
+    var(--coral) 0 20%,
+    var(--signal-yellow) 20% 40%,
+    var(--pink) 40% 60%,
+    var(--periwinkle) 60% 80%,
+    var(--lime) 80% 100%);
 }
 .pp-data .name { color: var(--indigo); }
 .im-num { color: var(--indigo); }
@@ -59,7 +61,7 @@ body { background: var(--page); }
 .ticket-grid > .boarding-pass:nth-child(5n+2) { --route: var(--signal-yellow); }
 .ticket-grid > .boarding-pass:nth-child(5n+3) { --route: var(--pink); }
 .ticket-grid > .boarding-pass:nth-child(5n+4) { --route: var(--periwinkle); }
-.ticket-grid > .boarding-pass:nth-child(5n+5) { --route: var(--indigo); }
+.ticket-grid > .boarding-pass:nth-child(5n+5) { --route: var(--lime); }
 .boarding-pass::before { background: var(--route); }
 .bp-stub::before, .bp-stub::after { background: var(--page); }
 a.bp-cta { color: var(--indigo); }

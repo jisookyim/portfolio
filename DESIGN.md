@@ -17,12 +17,13 @@ Base:
 - Mist: #F4F5FF (case study reading area only; a very pale tint of periwinkle)
 
 Departure Board palette (`components/theme-departure-board.css`):
-- Mint: #5FF0C0 (page background: passport and Featured Work)
+- Mint: #5FF0C0, kept brighter than the logo green on purpose (page background: passport and Featured Work)
 - Periwinkle: #9AA8FF (Recommendations and Reviews section)
-- Indigo: #1A1466 (passport header, footer, name, impact numbers, links)
-- Route colors for trims and postcard frames: Coral #FF7350, Signal Yellow #FFD400, Pink #FF9BE0, Periwinkle, Mint, Indigo
+- Indigo: #2F2F85, matched to the JSY logo (passport header, footer, name, impact numbers, links)
+- Case study route colors, one per project, used on its boarding pass trim and case study header: Coral #FF8A4C, Signal Yellow #FFD400, Pink #FF9BE0, Periwinkle #9AA8FF, Lime #B4E85C. All are bright, with ink text.
+- Postcard frames use Coral, Signal Yellow, Pink, Periwinkle and Mint.
 
-Stamp inks (dark enough for text on white): Indigo #1A1466, Magenta #C2108C, Teal #00686B, Rust #C2410C, Plum #7A1F5C, Violet #4F3BC9.
+Stamp inks (dark enough for text on white): Indigo #2F2F85, Magenta #C2108C, Teal #00686B, Rust #C2410C, Plum #7A1F5C, Violet #4F3BC9.
 
 Usage rules:
 - Sections are full-width color blocks, with no trim around them.
@@ -55,7 +56,7 @@ Usage rules:
   - With a case study URL: the sentence is indigo and underlined, and the link is stretched over the whole card so the whole card is clickable. Hover/focus: underline thickens to 2px, the plane flies straight (level, no arc or trail) from FROM to TO and stays there, the arrow nudges right. The border stays black (no colored border, no lift or shadow). Keyboard focus adds an indigo outline around the card. Reduced motion: no flight or nudge.
   - Without a URL yet: the sentence is muted grey and not a link. Every featured card should have its case study page before launch.
   - Plane icon: Material Icons "flight" (Apache 2.0), rotated to point right, in ink. Used between FROM and TO on the boarding pass and the passport. Not an emoji.
-- Passport (`components/passport.html` and `.css`): the homepage hero, styled as a passport data page. Indigo header bar with a four-color route stripe below it, 2px black border, square corners.
+- Passport (`components/passport.html` and `.css`): the homepage hero, styled as a passport data page. Indigo header bar with a five-color route stripe below it (one color per case study), 2px black border, square corners.
   - Security print: a faint guilloche pattern (thin concentric circles at about 4% ink) behind the whole page. Keep it faint so text keeps full contrast.
   - Data fields: small uppercase labels (NAME, PROFESSION, EXPERIENCE, FOCUS) above the values, next to the photo.
   - Impact: the first field under FROM → TO. Big bold number (+56%, +4.9 pts, 35M, 4) followed by a short plain description; no category tags. Desktop: two columns (2 x 2), each number column only as wide as its widest number, 20px to the text, no dividers inside. Phones: one column with thin rules between rows. "pts" is read to screen readers as "percentage points".
@@ -70,13 +71,13 @@ Usage rules:
 - Section heading: medium weight, 40px on desktop, no top rule.
 - Case study page (`templates/case-study.html`, `components/case-study.css`, content in `content/case-study-pages/`): the Swiss index template.
   - POV: color is the ticket, white is the work. The header takes that project's boarding pass color; the reading area stays a quiet mist tint, with images and cards on white. Do not color-block individual reading sections.
-  - Header: a white ticket on the route color with no trim band (the background already carries the color). Main area: title, FROM ✈ TO, summary. Stub: Role, Team and Timeline as small print, with open notches at the tear line. The cover below is that case study’s own image from the original site, not the homepage card image. Transparent device mockups sit directly on the color with no frame; photos keep the black border. On the indigo header only, the cover image has a crisp white outline built in (`cover-outlined.webp`) so the dark device frames stay visible. Phones: stub drops below and notches move to the side edges.
+  - Header: a white ticket on the route color with no trim band (the background already carries the color). Main area: title, FROM ✈ TO, summary. Stub: Role, Team and Timeline as small print, with open notches at the tear line. The cover below is that case study’s own image from the original site, not the homepage card image. Transparent device mockups sit directly on the color with no frame; photos keep the black border. Phones: stub drops below and notches move to the side edges.
   - Sections: a narrow 176px rail holds the section name as a small tracked label (12px, indigo). Everything else shares one wide column with a single left edge. Hairlines separate sections.
   - Type steps: label, then 40px subheading, then body. All body copy is one size (18px desktop, 17px phone); do not enlarge opening paragraphs.
   - Blocks: text, subhead, list, image, gallery (two images side by side), video, cards and compare. Images and video sit on a white plate at full column width; tall or small images use the portrait option (natural size, up to 640px high). Case study images keep up to 2200px for sharp Retina display, with a 1100px version for phones (`name-1100.webp`); the build serves the right one. Images can have a small label above them (such as Initial Wireframe or Final Design) or a caption below. A video with no usable still shows a grey placeholder. Cards have the route trim and a line icon, no emoji; 2 or 4 cards use two columns, 3 use three.
   - Case study pages run wider than the homepage (max 1360px) so screenshots stay legible.
-- Global header (`components/site-header.html`, shared by every page): a full-width white bar with a 2px black bottom rule, pinned to the top while scrolling, with no animation. Navigation stays neutral so it separates cleanly from every section and project color. Every link has a 32px-tall tap target. Phones: one slim row.
-- Footer bar: slim full-width indigo (#1A1466) band at the bottom, white text. Minimal: 20px vertical padding, one line (15px, regular weight), then email and LinkedIn icons at 24 x 24, with 24 x 24 tap targets spaced 16px apart (meets WCAG 2.5.8), each with a readable name. Icon hover turns yellow; keyboard focus shows a white outline. Icons sit right after the line (not pushed to the far edge). Mobile: still one row, 13px text. Replaces the old large closing section and button.
+- Global header (`components/site-header.html`, shared by every page): a full-width white bar with a 2px black bottom rule, pinned to the top while scrolling, with no animation. Navigation stays neutral so it separates cleanly from every section and project color. The JSY mark (indigo circle with mint outline, `assets/brand/`) sits beside the name as one home link and is also the favicon. Every link has a 32px-tall tap target. Phones: one slim row, with the mark standing in for the name (still read by screen readers).
+- Footer bar: slim full-width indigo (#2F2F85) band at the bottom, white text. Minimal: 20px vertical padding, one line (15px, regular weight), then email and LinkedIn icons at 24 x 24, with 24 x 24 tap targets spaced 16px apart (meets WCAG 2.5.8), each with a readable name. Icon hover turns yellow; keyboard focus shows a white outline. Icons sit right after the line (not pushed to the far edge). Mobile: still one row, 13px text. Replaces the old large closing section and button.
 
 ## Tone
 - Direct, confident, plain. Short sentences. No hype words.
