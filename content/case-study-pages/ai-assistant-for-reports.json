@@ -1,0 +1,331 @@
+{
+  "card": "03-ai-assistant-for-reports",
+  "cover_alt": "A desktop monitor showing the AI Assistant, which has created an Annual Enrollment Population 2025 report from a chat request.",
+  "cover_width": 1000,
+  "cover_height": 771,
+  "summary": "To empower clients to meet their own analytics needs, the business set out to design an AI-driven report authoring experience that reduces manual support demands and improves overall client satisfaction. This initiative aimed to simplify complex reporting tasks through intuitive AI assistance, giving clients greater control and confidence with their reports.",
+  "details": [
+    {
+      "label": "Role",
+      "items": [
+        "Product design lead: Design direction and strategy",
+        "Guidance for designers, including a content designer and a researcher"
+      ]
+    },
+    {
+      "label": "Team",
+      "items": [
+        "2 product designers",
+        "1 content designer",
+        "1 user researcher",
+        "1 director of product management",
+        "1 engineering"
+      ],
+      "inline": true
+    },
+    {
+      "label": "Timeline",
+      "items": [
+        "1 quarter"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Problem",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Clients struggled to self-service access to their analytics around their employee experience, and over-reliance on client teams caused inefficiencies. High level pain points included:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Analytics were scattered across multiple platforms",
+            "Non-tech savvy users struggled with manually creating reports and dashboards",
+            "Clients’ ad-hoc requests resulted in delays, adding to client frustration"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Solution",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "How can AI help clients with different technical skills get their analytics faster and easier, while decreasing the need for client team support?"
+        },
+        {
+          "type": "cards",
+          "items": [
+            {
+              "icon": "target",
+              "title": "Narrow Down the Scope",
+              "text": [
+                "Focus on report capabilities: find, modify, create"
+              ]
+            },
+            {
+              "icon": "chat",
+              "title": "GenAI Chat Experience",
+              "text": [
+                "Intuitive conversational experience, regardless of level of data expertise"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "subhead",
+          "text": "Prototype"
+        },
+        {
+          "type": "video",
+          "src": "",
+          "width": 1400,
+          "height": 788,
+          "alt": "Prototype still: the analytics home page with an Ask about reports button in the navigation.",
+          "note": "Prototype video to add",
+          "poster": "assets/case-studies/ai-assistant-for-reports/prototype-poster.webp"
+        }
+      ]
+    },
+    {
+      "heading": "Process",
+      "blocks": [
+        {
+          "type": "subhead",
+          "text": "Discovery"
+        },
+        {
+          "type": "text",
+          "text": "I worked with the PM director and researcher to compile key questions about the clients’ use of analytics:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "How do users currently use analytics?",
+            "What drives users’ data needs?",
+            "Where are areas of friction?"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Primary research methods consisted of:"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "lead": "Client surveys",
+              "text": "Gather volume of responses to inform directional themes"
+            },
+            {
+              "lead": "Interviews with clients and client teams",
+              "text": "Understand details of their processes, goals, and pain points"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/ai-assistant-for-reports/interview-themes.webp",
+          "width": 1400,
+          "height": 721,
+          "alt": "Snapshot of interview theming in Miro, with sticky notes grouped into themes."
+        },
+        {
+          "type": "subhead",
+          "text": "Key Insights"
+        },
+        {
+          "type": "cards",
+          "items": [
+            {
+              "icon": "people",
+              "title": "Two User Types",
+              "text": [],
+              "list": [
+                "Tactical: Use analytics for daily, weekly, or monthly tasks",
+                "Strategic: Use analytics to guide long-term plans"
+              ]
+            },
+            {
+              "icon": "calendar",
+              "title": "Multiple Use Cases for Analytics",
+              "text": [],
+              "list": [
+                "Recurring status meetings",
+                "Targeting for campaigns",
+                "Ad-hoc requests from leadership"
+              ]
+            },
+            {
+              "icon": "chart",
+              "title": "Heavy Report Usage",
+              "text": [
+                "Most users were tactical, and they used reports more often than dashboards"
+              ]
+            },
+            {
+              "icon": "person",
+              "title": "Varied Level of Expertise",
+              "text": [
+                "Some users can pull their own reports, while others require client team support"
+              ]
+            },
+            {
+              "icon": "clock",
+              "title": "Backlogged Client Team Requests",
+              "text": [
+                "As client requests piled up, client teams struggled with delivering requests on time"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "subhead",
+          "text": "User Flow"
+        },
+        {
+          "type": "text",
+          "text": "Based on the key insights, I partnered with the engineering lead to map out the user flow for the 3 main paths:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Find a report",
+            "Edit an existing report",
+            "Create a new report"
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/ai-assistant-for-reports/user-flow.webp",
+          "width": 1400,
+          "height": 485,
+          "alt": "User flow diagram for finding, editing, and creating a report with the AI assistant."
+        }
+      ]
+    },
+    {
+      "heading": "Design Iterations",
+      "blocks": [
+        {
+          "type": "subhead",
+          "text": "Entry Point"
+        },
+        {
+          "type": "text",
+          "text": "Choosing the AI assistant’s entry point was crucial, as it needed to be visually prominent, while setting user expectations on the specific reporting capabilities of the chat."
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/ai-assistant-for-reports/entry-point.webp",
+          "width": 1400,
+          "height": 672,
+          "alt": "Three entry point concepts. Rejected: a floating icon with unclear capabilities. Rejected: on the Reports page, which hides the feature. Selected: in navigation, a button with clear call-to-action text, accessible site-wide."
+        },
+        {
+          "type": "subhead",
+          "text": "Chat Window Size"
+        },
+        {
+          "type": "text",
+          "text": "The chat window needed to scale to accommodate future functionality, including dashboards, report previews, and data visualizations. In collaboration with the engineering lead, we decided to design a scalable chat window upfront, rather than redesigning it in later phases."
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/ai-assistant-for-reports/chat-size.webp",
+          "width": 1400,
+          "height": 672,
+          "alt": "Three chat window concepts. Rejected: compact, too cramped for multi-step interactions. Rejected: side panel, limits embedded data visualizations. Selected: full takeover, which minimizes distractions and scales for embeds."
+        },
+        {
+          "type": "subhead",
+          "text": "Patterns for AI-Generated Output"
+        },
+        {
+          "type": "text",
+          "text": "Design iterations for indicating AI-generated output focused on clarity and transparency. The pattern required distinguishing AI-generated content from standard chat responses, helping users immediately recognize when content had been created or modified by AI."
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/ai-assistant-for-reports/ai-patterns.webp",
+          "width": 1400,
+          "height": 643,
+          "alt": "Three AI output patterns. Rejected: report title only, too similar to a regular response. Rejected: a border that looks clunky. Selected: a solid background with icon and copy for strong visual differentiation."
+        },
+        {
+          "type": "subhead",
+          "text": "Guided and Conversational AI"
+        },
+        {
+          "type": "text",
+          "text": "As the AI assistant had functionality limited to reports, it was important to clearly indicate when users had finite paths to choose from, and where users could chat freely."
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/ai-assistant-for-reports/guided-convo.webp",
+          "width": 1400,
+          "height": 739,
+          "alt": "Three conversation patterns: distinct paths with clear navigation, personalized suggestions based on interactions, and free form conversation with open-ended questions."
+        }
+      ]
+    },
+    {
+      "heading": "Impact",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "icon": "star",
+              "text": [
+                "AI assistant set to roll out to 350+ clients across 3 domains (Leaves, Health, Wealth)"
+              ]
+            },
+            {
+              "icon": "sparkle",
+              "text": [
+                "Set the foundation for AI-powered design patterns and chat voice and tone"
+              ]
+            },
+            {
+              "icon": "trend",
+              "text": [
+                "Increased client self-service and reduced ad-hoc client team requests"
+              ]
+            },
+            {
+              "icon": "people",
+              "text": [
+                "Positive feedback from alpha and beta clients, rebuilding client trust"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Challenges & Learnings",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            {
+              "lead": "Focus on outcomes, not features",
+              "text": "Although AI can support countless analytics processes, the team focused efforts on the priority use case of reports to deliver value where it mattered most"
+            },
+            {
+              "lead": "Structure vs. free-form conversation",
+              "text": "While the AI assistant supported conversational interactions, it was important to set user expectations around finite choices. Users needed to understand when they were navigating a limited set of options versus engaging in open-ended conversation with the assistant"
+            },
+            {
+              "lead": "Limited client access for user feedback",
+              "text": "The project faced challenges in recruiting client end users for feedback. I partnered with the Director of User Research and the Client Communications team to design and execute targeted recruitment efforts."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
