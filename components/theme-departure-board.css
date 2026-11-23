@@ -67,7 +67,7 @@ a.bp-cta { color: var(--indigo); }
 .boarding-pass:has(a.bp-cta:focus-visible) { outline-color: var(--indigo); }
 
 /* "what others say" band */
-.band-grey { background: var(--periwinkle); box-shadow: 0 0 0 100vmax var(--periwinkle); }
+.band-grey { background: var(--periwinkle); }
 
 /* footer */
 .site-footer { background: var(--indigo); }
