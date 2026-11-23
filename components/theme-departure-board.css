@@ -2,13 +2,13 @@
    Loaded last, so it sets the colors on top of the shared components. */
 
 :root {
-  --indigo: #1A1466;
+  --indigo: #2F2F85;
   --signal-yellow: #FFD400;
   --mint: #5FF0C0;
   --pink: #FF9BE0;
-  --coral: #FF7350;
+  --coral: #FF8A4C;
   --periwinkle: #9AA8FF;
-  --lime: #C6F24E;
+  --lime: #B4E85C;
   /* darker inks for text on white stamps (each at least 4.5:1) */
   --ink-magenta: #C2108C;
   --ink-teal: #00686B;

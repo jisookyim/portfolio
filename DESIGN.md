@@ -17,13 +17,13 @@ Base:
 - Mist: #F4F5FF (case study reading area only; a very pale tint of periwinkle)
 
 Departure Board palette (`components/theme-departure-board.css`):
-- Mint: #5FF0C0 (page background: passport and Featured Work)
+- Mint: #5FF0C0, kept brighter than the logo green on purpose (page background: passport and Featured Work)
 - Periwinkle: #9AA8FF (Recommendations and Reviews section)
-- Indigo: #1A1466 (passport header, footer, name, impact numbers, links)
-- Case study route colors, one per project, used on its boarding pass trim and case study header: Coral #FF7350, Signal Yellow #FFD400, Pink #FF9BE0, Periwinkle #9AA8FF, Lime #C6F24E. All are bright, with ink text.
+- Indigo: #2F2F85, matched to the JSY logo (passport header, footer, name, impact numbers, links)
+- Case study route colors, one per project, used on its boarding pass trim and case study header: Coral #FF8A4C, Signal Yellow #FFD400, Pink #FF9BE0, Periwinkle #9AA8FF, Lime #B4E85C. All are bright, with ink text.
 - Postcard frames use Coral, Signal Yellow, Pink, Periwinkle and Mint.
 
-Stamp inks (dark enough for text on white): Indigo #1A1466, Magenta #C2108C, Teal #00686B, Rust #C2410C, Plum #7A1F5C, Violet #4F3BC9.
+Stamp inks (dark enough for text on white): Indigo #2F2F85, Magenta #C2108C, Teal #00686B, Rust #C2410C, Plum #7A1F5C, Violet #4F3BC9.
 
 Usage rules:
 - Sections are full-width color blocks, with no trim around them.
@@ -77,7 +77,7 @@ Usage rules:
   - Blocks: text, subhead, list, image, gallery (two images side by side), video, cards and compare. Images and video sit on a white plate at full column width; tall or small images use the portrait option (natural size, up to 640px high). Case study images keep up to 2200px for sharp Retina display, with a 1100px version for phones (`name-1100.webp`); the build serves the right one. Images can have a small label above them (such as Initial Wireframe or Final Design) or a caption below. A video with no usable still shows a grey placeholder. Cards have the route trim and a line icon, no emoji; 2 or 4 cards use two columns, 3 use three.
   - Case study pages run wider than the homepage (max 1360px) so screenshots stay legible.
 - Global header (`components/site-header.html`, shared by every page): a full-width white bar with a 2px black bottom rule, pinned to the top while scrolling, with no animation. Navigation stays neutral so it separates cleanly from every section and project color. The JSY mark (indigo circle with mint outline, `assets/brand/`) sits beside the name as one home link and is also the favicon. Every link has a 32px-tall tap target. Phones: one slim row, with the mark standing in for the name (still read by screen readers).
-- Footer bar: slim full-width indigo (#1A1466) band at the bottom, white text. Minimal: 20px vertical padding, one line (15px, regular weight), then email and LinkedIn icons at 24 x 24, with 24 x 24 tap targets spaced 16px apart (meets WCAG 2.5.8), each with a readable name. Icon hover turns yellow; keyboard focus shows a white outline. Icons sit right after the line (not pushed to the far edge). Mobile: still one row, 13px text. Replaces the old large closing section and button.
+- Footer bar: slim full-width indigo (#2F2F85) band at the bottom, white text. Minimal: 20px vertical padding, one line (15px, regular weight), then email and LinkedIn icons at 24 x 24, with 24 x 24 tap targets spaced 16px apart (meets WCAG 2.5.8), each with a readable name. Icon hover turns yellow; keyboard focus shows a white outline. Icons sit right after the line (not pushed to the far edge). Mobile: still one row, 13px text. Replaces the old large closing section and button.
 
 ## Tone
 - Direct, confident, plain. Short sentences. No hype words.
