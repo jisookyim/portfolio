@@ -86,9 +86,10 @@ body {
    so the only lines on the page are the cards' own borders. */
 h2 {
   font-size: 40px;
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  font-weight: 500;
+  font-stretch: 112%;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
   margin: 0 0 32px;
 }
 
@@ -148,6 +149,11 @@ h2 {
 .footer-links a:focus-visible { outline: 2px solid var(--paper); outline-offset: 4px; }
 @media (prefers-reduced-motion: reduce) { .footer-links a { transition: none; } }
 
+/* section headers share the case study headline sizes: 40 / 34 / 28 */
+@media (max-width: 1000px) {
+  h2 { font-size: 34px; }
+}
+
 @media (max-width: 800px) {
   .intro h1 { font-size: 44px; }
   .strengths { grid-template-columns: 1fr; }
@@ -175,7 +181,7 @@ h2 {
   .testimonials + .testimonials { margin-top: 56px; }
   .ticket-grid { gap: 32px; }
 
-  h2 { font-size: 30px; margin-bottom: 24px; }
+  h2 { font-size: 28px; margin-bottom: 24px; }
   /* phones: still one row, with slightly smaller text so it fits at 375px */
   .footer-inner { padding: 16px; gap: 12px; }
   .footer-line { font-size: 13px; }
