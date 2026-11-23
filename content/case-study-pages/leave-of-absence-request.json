@@ -1,0 +1,284 @@
+{
+  "card": "02-leave-of-absence-request",
+  "cover_alt": "A laptop on a desk showing the Plan a Leave flow, where an AI-generated response identifies the leave reason as maternity leave.",
+  "cover_width": 1000,
+  "cover_height": 563,
+  "summary": "To compete as a full-service benefits platform, the company expanded into leave management. However, the core experience of requesting a leave of absence created escalations from clients and negative feedback from employees.",
+  "details": [
+    {
+      "label": "Role",
+      "items": [
+        "Product design lead: Shape design strategy while being hands-on",
+        "Guidance to content designer and researcher"
+      ]
+    },
+    {
+      "label": "Team",
+      "items": [
+        "Product manager",
+        "Engineering lead",
+        "User researcher",
+        "Content designer"
+      ],
+      "inline": true
+    },
+    {
+      "label": "Timeline",
+      "items": [
+        "1 quarter"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Problem",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Employees struggled with unclear guidance when requesting a leave of absence, resulting in rejections and multiple HR interactions, which added administrative burden to an already stressful situation. Common pain points included:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Being overwhelmed with volume of info",
+            "Uncertainty with providing incomplete info or making wrong choices",
+            "Confusion on their leave’s impact on pay and benefits"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Solution",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "The solution centered on the key friction areas around leave reason, end date selection, and benefits impact understanding."
+        },
+        {
+          "type": "text",
+          "text": "Due to timeline and client complexity, the experience around answering additional contextual questions about the employee’s leave was deferred to a future phase of the project."
+        },
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "Smart Leave Reason Matching",
+              "text": [
+                "Natural language input matches users with correct leave reason"
+              ],
+              "icon": "sparkle"
+            },
+            {
+              "title": "Leave End Date Guidance",
+              "text": [
+                "Pre-set options help users choose between scenarios"
+              ],
+              "icon": "calendar"
+            },
+            {
+              "title": "Benefits Comparison",
+              "text": [
+                "Comparison of leave durations and impact on pay, insurance, and time off"
+              ],
+              "icon": "compare"
+            }
+          ]
+        },
+        {
+          "type": "subhead",
+          "text": "Prototype"
+        },
+        {
+          "type": "video",
+          "src": "",
+          "poster": "assets/case-studies/leave-of-absence-request/prototype-poster.webp",
+          "width": 1500,
+          "height": 844,
+          "alt": "Prototype still: the leave dates step, with guided options to prioritize job protection or wage replacement.",
+          "note": "Prototype video to add"
+        }
+      ]
+    },
+    {
+      "heading": "Process",
+      "blocks": [
+        {
+          "type": "subhead",
+          "text": "Discovery"
+        },
+        {
+          "type": "text",
+          "text": "I worked with the PM to understand:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Where do employees drop off in the Request a Leave flow?",
+            "What are common reasons why employees call or email for support?",
+            "What are common reasons for leave requests being rejected?"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Primary research methods consisted of:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "CSAT surveys",
+            "Interviews with clients at risk of not renewing the contract and employees who used leave management tool"
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/leave-of-absence-request/discovery.webp",
+          "width": 1048,
+          "height": 902,
+          "alt": "Research affinity map with sticky notes grouped into four themes: leave reason confusion, leave duration uncertainty, additional questions, and post-submission."
+        },
+        {
+          "type": "subhead",
+          "text": "Key User Takeaways"
+        },
+        {
+          "type": "compare",
+          "items": [
+            {
+              "title": "Goals",
+              "items": [
+                "Get quick approval so they can focus on what matters",
+                "Peace of mind they’re covered with pay and benefits",
+                "Avoid anxiety of pending approval"
+              ]
+            },
+            {
+              "title": "Pain Points",
+              "items": [
+                "Confusion about which leave type applies to their situation",
+                "Unsure how long to take the leave",
+                "Multiple back-and-forths after submission for clarification",
+                "Increased stress while preparing for upcoming leave"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "subhead",
+          "text": "User Flow"
+        },
+        {
+          "type": "text",
+          "text": "I mapped out a user flow based on the product requirements doc to use for initial discussion with the PM and engineering team, focusing on the leave reason, end date selection, and benefit impact steps."
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/leave-of-absence-request/user-flow.webp",
+          "width": 1500,
+          "height": 328,
+          "alt": "End-to-end user flow diagram of the leave request, with decision branches and annotation notes."
+        }
+      ]
+    },
+    {
+      "heading": "Design Iterations",
+      "blocks": [
+        {
+          "type": "subhead",
+          "text": "Leave Reason"
+        },
+        {
+          "type": "text",
+          "text": "Engineering team surfaced the use case of the AI-generated leave reason having various levels of confidence, which influenced design for various use cases and ways for users to “recover” from dead ends."
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/leave-of-absence-request/leave-reason.webp",
+          "width": 1500,
+          "height": 844,
+          "alt": "Leave reason input branching into three states: strong confidence states a single leave reason, medium confidence offers 2 to 3 options to select from a list, and low confidence shows a dropdown list."
+        },
+        {
+          "type": "subhead",
+          "text": "Leave End Date"
+        },
+        {
+          "type": "text",
+          "text": "Content design was crucial to the final design, balancing plain language with additional guidance without overwhelming the user."
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/leave-of-absence-request/leave-end-date.webp",
+          "width": 1500,
+          "height": 682,
+          "alt": "Three end date concepts. Rejected: option to compare, because of cognitive overload and most leaves having 2 pre-set options. Rejected: show end date, because real-time retrieval hurts page performance. Selected: clear copy with a tool tip, using straightforward labels with contextual definitions."
+        },
+        {
+          "type": "text",
+          "text": "I reframed the comparison screen to less literal about the weekly breakdown, and more on what users would care most. What would they gain or give up between the two durations?"
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/leave-of-absence-request/comparison.webp",
+          "width": 1500,
+          "height": 722,
+          "alt": "Three comparison concepts. Rejected: weekly breakdown table, which is not a true comparison and could leave many empty cells. Rejected: bundled cards, which lack a comparison concept. Selected: outcome-based table, anchored on core benefits to show what is gained versus lost."
+        }
+      ]
+    },
+    {
+      "heading": "Impact",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "The project’s value extended beyond the expected KPIs. It demonstrated how strong partnership with engineering and thoughtfulness behind the solution can drive better outcomes across cross-team collaboration and client relationships."
+        },
+        {
+          "type": "cards",
+          "items": [
+            {
+              "text": [
+                "Prevented redesign delays due to early engineering involvement",
+                "Set example for an AI-embedded experience without forcing a chatbot"
+              ],
+              "icon": "clock"
+            },
+            {
+              "text": [
+                "Decreased escalations from a high-risk client"
+              ],
+              "icon": "shield"
+            },
+            {
+              "text": [
+                "Expected KPIs: % decrease in rejected requests, % increase in request submissions, and increase in Leaves CSAT"
+              ],
+              "icon": "trend"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Challenges & Learnings",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            {
+              "lead": "Ground rationale in data for stakeholder buy-in",
+              "text": "An exec was concerned with using natural language input for the leave reason, as his expectation was that most AI-supported guidance would be done through the chatbot. Framing the key problem on the leave reason and its trickle-down impact on the rest of the flow, along with supporting metrics on the volume of rejected requests and case manager tickets, helped get buy-in."
+            },
+            {
+              "lead": "Prioritize for majority of use cases staying cognizant of more complex edge cases",
+              "text": "A handful of clients had very complex policies that created challenges with the pre-set leave end date options and corresponding benefits comparison view. We took those as edge cases rather than over-rotating on a solution that accommodated for outlier clients."
+            },
+            {
+              "lead": "Include engineering team upfront",
+              "text": "Unlike typical projects where the engineering team was involved closer to final design handoff, the PM and I engaged the engineering team from day 1 so they had full context on the problem space. This helped surface feasibility challenges and new ideas early, creating quicker feedback loops for design iterations."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
