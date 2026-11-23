@@ -95,8 +95,8 @@
         {
           "type": "image",
           "src": "assets/case-studies/hq-digital-installation/workshop.webp",
-          "width": 1500,
-          "height": 1279,
+          "width": 1726,
+          "height": 1472,
           "alt": "Workshop journey maps for employees and clients, with sticky notes across each stage of their day at the HQ."
         },
         {
@@ -125,8 +125,8 @@
         {
           "type": "image",
           "src": "assets/case-studies/hq-digital-installation/content-strategy.webp",
-          "width": 1500,
-          "height": 698,
+          "width": 2200,
+          "height": 1023,
           "alt": "Content strategy brainstorm board with columns for welcome, brand moments, ambient content, and narrative content."
         }
       ]
@@ -145,8 +145,8 @@
         {
           "type": "image",
           "src": "assets/case-studies/hq-digital-installation/dataviz-follow.webp",
-          "width": 1400,
-          "height": 948,
+          "width": 2200,
+          "height": 1490,
           "alt": "A person walks past the digital wall as clusters of data shapes follow their movement."
         },
         {
@@ -162,14 +162,14 @@
           "items": [
             {
               "src": "assets/case-studies/hq-digital-installation/about-hq-content.webp",
-              "width": 1100,
-              "height": 825,
+              "width": 2200,
+              "height": 1650,
               "alt": "The wall showing a “Get to know Alight HQ” panel and a large brand image."
             },
             {
               "src": "assets/case-studies/hq-digital-installation/seasonal-content.webp",
-              "width": 1100,
-              "height": 825,
+              "width": 2200,
+              "height": 1650,
               "alt": "The wall in a bright seasonal palette, with a panel asking “Planning some time off this summer?”"
             }
           ]
@@ -185,10 +185,11 @@
         {
           "type": "image",
           "src": "assets/case-studies/hq-digital-installation/play-mode.webp",
-          "width": 900,
-          "height": 1348,
+          "width": 1258,
+          "height": 1884,
           "alt": "A person holds their hands up to the wall, forming a cluster of shapes.",
-          "portrait": true
+          "portrait": true,
+          "max_width": 900
         }
       ]
     },
