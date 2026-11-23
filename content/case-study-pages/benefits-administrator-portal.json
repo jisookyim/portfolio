@@ -1,0 +1,310 @@
+{
+  "card": "04-benefits-admin-portal",
+  "cover_alt": "A laptop on a desk showing the benefits admin portal dashboard with enrollment analytics.",
+  "cover_width": 1000,
+  "cover_height": 750,
+  "summary": "The primary responsibilities of benefits administrators (ben admins) are to troubleshoot employee issues and process day-to-day administrative tasks, all while keeping a pulse on organizational metrics. Ben admins struggled with the existing portal's clunky interface and lacked confidence in their decision-making. The new portal design aimed to allow ben admins to be more efficient and strategic in their role by surfacing to-dos, insights from the analytics, and displaying standard metrics.",
+  "details": [
+    {
+      "label": "Role",
+      "items": [
+        "Product design lead: Design direction and strategy",
+        "Guidance for 2 junior product designers"
+      ]
+    },
+    {
+      "label": "Team",
+      "items": [
+        "2 junior product designers",
+        "1 product manager",
+        "1 analytics lead",
+        "1 user researcher"
+      ],
+      "inline": true
+    },
+    {
+      "label": "Timeline",
+      "items": [
+        "10 weeks"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Problem",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "The complicated site interface posed significant challenges for ben admins:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Lack of confidence in decision-making, due to overwhelming and unclear presentation of data",
+            "Excessive time spent on site usage training and repetitive, daily tasks, leaving little room for proactive initiatives",
+            "Feel inadequate in contributing strategically to organization’s goals"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Solution",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "To increase ben admins’ confidence and efficiency, the portal redesign focused on 3 key features."
+        },
+        {
+          "type": "cards",
+          "items": [
+            {
+              "icon": "tune",
+              "title": "Flexibility",
+              "text": [
+                "Ability to personalize dashboard content based on user roles and priorities"
+              ]
+            },
+            {
+              "icon": "checklist",
+              "title": "Required Action Items",
+              "text": [
+                "Administrative tasks and items that need troubleshooting"
+              ]
+            },
+            {
+              "icon": "chart",
+              "title": "Key Analytics",
+              "text": [
+                "Metrics that matter (trends, insights, actionable recommendations)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "subhead",
+          "text": "Prototype"
+        },
+        {
+          "type": "video",
+          "src": "",
+          "width": 1400,
+          "height": 788,
+          "alt": "Placeholder for the benefits admin portal prototype video.",
+          "note": "Prototype video to add"
+        }
+      ]
+    },
+    {
+      "heading": "Process",
+      "blocks": [
+        {
+          "type": "subhead",
+          "text": "Design Thinking Sprint"
+        },
+        {
+          "type": "text",
+          "text": "To gain a shared understanding of the current user problem, ben admin personas, and MVP features for the new ben admin portal, I planned and facilitated a design thinking sprint. Over 5 days, I led activities and conversations with subject matter experts, designers, product managers, and stakeholders."
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/benefits-admin-portal/sprint.webp",
+          "width": 1200,
+          "height": 493,
+          "alt": "Miro board from the five-day design thinking sprint, including user journeys, task analysis, and prioritization."
+        },
+        {
+          "type": "text",
+          "text": "Key learnings from the sprint:"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "lead": "Pain points",
+              "text": "Due to the complex site interface, new ben admins require site usage training, which uses up valuable time and resources from the Human Resources team. Additionally, ben admins end up spending too much effort on the day-to-day tasks due to poor site usability and struggle to glean the \"so what\" behind the analytics."
+            },
+            {
+              "lead": "Top values",
+              "text": "Top value drivers for ben admins are actionable insights, ability to perform their role with confidence, and a simple interface that doesn't require training to use"
+            },
+            {
+              "lead": "The user",
+              "text": "Ben admins' main responsibilities are to resolve issues and monitor key stats about the organization to proactively prevent escalation. The individual contributor focuses on tactical daily tasks, whereas the managerial roles are more strategic by proposing recommendations based on analytics. Ultimately, all ben admin users aim to meet overall team and company goals."
+            }
+          ]
+        },
+        {
+          "type": "subhead",
+          "text": "Persona Prioritization & User Flow"
+        },
+        {
+          "type": "text",
+          "text": "Three key personas emerged from the user sprint: ben admin, ben admin manager, and benefits director/CHRO. In collaboration with the product manager and stakeholders, we focused on the ben admin as the primary persona for the redesign, as the other two personas’ roles were less hands-on with key features of the portal. The manager would use the site mainly for team monitoring, and the director would rarely access the site at all and would receive key updates from managers during their meetings."
+        },
+        {
+          "type": "text",
+          "text": "With a single persona in mind, I guided my designers to create a user flow to break down the complexities of the ben admin role into main features and pages of the ben admin portal."
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/benefits-admin-portal/user-flow.webp",
+          "width": 773,
+          "height": 603,
+          "alt": "User flow for the ben admin, from configuring the dashboard through tasks, analytics, and recommendations.",
+          "portrait": true
+        }
+      ]
+    },
+    {
+      "heading": "Design Iterations",
+      "blocks": [
+        {
+          "type": "subhead",
+          "text": "Dashboard Configuration"
+        },
+        {
+          "type": "text",
+          "text": "The initial dashboard configuration was based on preliminary user research and client feedback, where ben admins had distinct roles of tactical, analytical, or strategic."
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/benefits-admin-portal/dashboard-before.webp",
+          "width": 1400,
+          "height": 546,
+          "alt": "Initial setup modal asking ben admins to choose one role. Annotation: ben admins wear multiple hats, and users struggled to choose only one because their job crossed multiple roles.",
+          "label": "Initial Dashboard Wireframe"
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/benefits-admin-portal/dashboard-after.webp",
+          "width": 1400,
+          "height": 552,
+          "alt": "Final setup modal with a drag-and-drop list. Annotation: flexible configuration lets users set dashboard content based on their priorities.",
+          "label": "Final Dashboard"
+        },
+        {
+          "type": "subhead",
+          "text": "Homepage"
+        },
+        {
+          "type": "text",
+          "text": "Due to minimal info available for content and analytics requirements, I guided my designers to create preliminary wires with \"building blocks\" of key features (enrollment alerts, required tasks, analytics) to get high-level buy-in from stakeholders, and to nudge subject matter experts to consider possibilities for specific content and analytics. Given the business priority around annual enrollment, the design featured enrollment stats up front, followed by additional analytics and supporting data."
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/benefits-admin-portal/home-wire-before.webp",
+          "width": 1400,
+          "height": 1098,
+          "alt": "Initial homepage wireframe. Annotations: stakeholders said alerts shouldn’t be separated from required tasks, and analytics should tell a story.",
+          "label": "Initial Homepage Wireframe"
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/benefits-admin-portal/home-wire-after.webp",
+          "width": 1400,
+          "height": 1215,
+          "alt": "Homepage wire iteration combining alerts and tasks into To-Dos, with top insights and an analytics narrative card template.",
+          "label": "Homepage Wire Iteration"
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/benefits-admin-portal/home-hifi-before.webp",
+          "width": 1400,
+          "height": 614,
+          "alt": "Initial high-fidelity homepage. Annotations: to-dos are hard to scan, insights are overwhelming, and standard metrics are hard to access.",
+          "label": "Initial Homepage Hi-Fidelity"
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/benefits-admin-portal/home-hifi-after.webp",
+          "width": 1400,
+          "height": 371,
+          "alt": "Final homepage with a list view of to-dos and compact top insights.",
+          "label": "Final Homepage"
+        },
+        {
+          "type": "subhead",
+          "text": "Analytics Detail Page"
+        },
+        {
+          "type": "text",
+          "text": "To address the page load time, an early exploration of the homepage kept the large analytics card layout, and had a dropdown menu for users to browse various analytics categories, while focusing on one card at a time. Initially, the CTA for insights was deemed more important so users could truly understand the data before taking action."
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/benefits-admin-portal/insights-before.webp",
+          "width": 1400,
+          "height": 538,
+          "alt": "Initial insight card with a category dropdown. Annotations: the dropdown wouldn’t scale, and research refuted the primary versus secondary call-to-action hypothesis.",
+          "label": "Initial Insight Card on Homepage"
+        },
+        {
+          "type": "image",
+          "src": "assets/case-studies/benefits-admin-portal/insights-after.webp",
+          "width": 1400,
+          "height": 472,
+          "alt": "Final insight card on its own detail page, with two equal-priority calls to action.",
+          "label": "Final Insight Card on Insights Detail Page"
+        }
+      ]
+    },
+    {
+      "heading": "Impact",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "With a more intuitive ben admin portal, employers were empowered to self-service analytics on their own, and make more informed decisions to impact their employee engagement."
+        },
+        {
+          "type": "cards",
+          "items": [
+            {
+              "icon": "chart",
+              "text": [
+                "Informed analytics team’s approach to creating a more simplified way to tell a story around analytics"
+              ]
+            },
+            {
+              "icon": "trend",
+              "text": [
+                "Enabled employers to understand employee behavior across 4 million touchpoints, resulting in increased engagement in over 80 benefits categories"
+              ]
+            },
+            {
+              "icon": "star",
+              "text": [
+                "Prototype used by commercial sales team for client demos and meetings"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Challenges & Key Learnings",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "As a product design lead, I had authority in making decisions directly with the product manager while coaching junior designers — both of which built my leadership skills."
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "lead": "Prioritize for impact",
+              "text": "Based on 3 personas identified in the design sprint, the initial project scope aimed to cater to all 3, resulting in numerous features with limited relevance to the primary user, the ben admin. By emphasizing the fact that ben admins spent the most time in the portal, I convinced the team to prioritize the MVP for this user and focused the scope accordingly."
+            },
+            {
+              "lead": "Proactively present designs to advance the project",
+              "text": "Despite analytics being a key factor in the redesign, the analytics team struggled to articulate ideas and requirements for the portal. To prevent project delays, I guided my designers to create concepts based on research of other analytics experiences. This enabled the analytics team to see what was possible and pinpoint gaps, leading to clearer definition for the analytics section."
+            },
+            {
+              "lead": "Filter out the noise",
+              "text": "Most meetings were “messy” with a lot of background information before reaching alignment on next steps, and not all meetings were productive for juniors. To help juniors focus on work that matters, I learned to find the right balance of providing clear action items and takeaways, while providing enough background info to set the context."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
